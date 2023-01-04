@@ -30,9 +30,9 @@ public class Truck : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Box"))
         {
             currentBoxnum += 1;
             isbildingbox = true;
