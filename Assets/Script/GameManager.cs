@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         BSceneSystem();
         CSceneSystem();
     }
+
     void ASceneSystem()
     {
         if (aScene)
