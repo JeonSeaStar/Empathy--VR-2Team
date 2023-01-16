@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using OVR;
+using Oculus;
+using OculusSampleFramework;
 
 public class GameManager : MonoBehaviour
 {
