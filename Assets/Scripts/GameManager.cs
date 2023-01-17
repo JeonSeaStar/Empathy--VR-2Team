@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public Transform aSpawn;
     public Transform bSpawn;
     public Transform cSpawn;
+    [Header("¹Ì¼Ç")]
+    public bool missionClear = false;
 
     private void Awake()
     {
@@ -49,13 +51,19 @@ public class GameManager : MonoBehaviour
 
     void ASceneSystem()
     {
-        if (aScene && SceneManager.sceneCount == 1)
+        if (SceneManager.sceneCount == 1)
         {
+            aScene = true;
+            bScene = false;
+            cScene = false;
             if (aSpawn == null)
             {
                 aSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
                 player.transform.position = aSpawn.position;
+                if(missionClear == true)
+                {
 
+                }
             }
             bSpawn = null;
             cSpawn = null;

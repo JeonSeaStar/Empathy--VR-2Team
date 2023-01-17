@@ -4,42 +4,35 @@ using UnityEngine;
 
 public class Truck : MonoBehaviour
 {
-    public GameObject box;//트럭에 쌓아줄 박스 프리팹
     public int maxBoxnum = 20;//치워야하는 박스 수
-    public int currentBoxnum = 0;//치운 박스 수
-    public Transform[] bildingBox = new Transform[20];//치운 박스가 쌓이는 위치
-    bool isbildingbox = false;//박스를 쌓는 중인지
+    public int currentBoxnum = -1;//치운 박스 수
+    public GameObject[] bildingBox = new GameObject[20];//치운 박스가 쌓이는 위치
 
     void Start()
     {
         currentBoxnum = 0;
     }
 
-
     void Update()
     {
-        InstantiateBox();
+        OnBox();
     }
 
-    void InstantiateBox()
+    void OnBox()
     {
-        if (isbildingbox)
+        bildingBox[currentBoxnum].SetActive(true);
+        if(currentBoxnum == maxBoxnum)
         {
-            Instantiate(box, bildingBox[currentBoxnum]);
-            isbildingbox = false;
+            GameManager.instance.missionClear = true;
         }
     }
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Box") && currentBoxnum < 21)
         {
             currentBoxnum += 1;
-            isbildingbox = true;
-        }
-        else
-        {
-            other = null;
+            Destroy(other.gameObject);
         }
     }
 }

@@ -10,9 +10,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Ω√¿€")]
     public GameObject Title;
-    public Button A;
-    public Button B;
-    public Button C;
+    public GameObject aSceneUI;
 
     void Start()
     {
@@ -22,6 +20,14 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameManager.instance.aScene = true;
+        AScene();
+    }
+
+    void AScene()
+    {
+        if(GameManager.instance.aScene == true)
+        {
+            aSceneUI.SetActive(true);
+        }
     }
 }
