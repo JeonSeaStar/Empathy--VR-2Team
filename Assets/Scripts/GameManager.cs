@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using OVR;
+using Oculus;
+using OculusSampleFramework;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +17,10 @@ public class GameManager : MonoBehaviour
     public bool cScene = false;
     [Header("시간관련")]
     public Time time;
+    [Header("플레이어 스폰")]
+    public Transform aSpawn;
+    public Transform bSpawn;
+    public Transform cSpawn;
 
     private void Awake()
     {
@@ -41,8 +49,16 @@ public class GameManager : MonoBehaviour
 
     void ASceneSystem()
     {
-        if (aScene)
+        if (aScene && SceneManager.sceneCount == 1)
         {
+            if (aSpawn == null)
+            {
+                aSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+                player.transform.position = aSpawn.position;
+
+            }
+            bSpawn = null;
+            cSpawn = null;
 
         }
     }
