@@ -35,6 +35,7 @@ public class Gun : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.forward, out hit, lm))
             {
                 position = hit.collider.gameObject;
+                position.transform.position = hit.transform.position;
             }
         }
         if (OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger) && isGet == false)
