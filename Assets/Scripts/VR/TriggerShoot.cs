@@ -24,7 +24,6 @@ public class TriggerShoot : MonoBehaviour
     {
        if(other.CompareTag("Box"))
         {
-            // box = other.gameObject;
             isGrabbed = true;
         }
     }
@@ -32,7 +31,6 @@ public class TriggerShoot : MonoBehaviour
     {
         if (other.CompareTag("Box"))
         {
-            // box = null;
             isGrabbed = false;
         }
     }

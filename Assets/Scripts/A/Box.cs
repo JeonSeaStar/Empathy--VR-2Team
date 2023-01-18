@@ -6,16 +6,17 @@ public class Box : MonoBehaviour
 {
     public GameObject abletoGrab;
     public TriggerShoot triggerShoot;
+    BoxCollider bc;
 
     void Start()
     {
         triggerShoot = null;
+        bc = gameObject.GetComponent<BoxCollider>();
     }
 
     void Update()
     {
         ShootBox();
-        Attached();
     }
 
 
@@ -23,21 +24,9 @@ public class Box : MonoBehaviour
     {
         if(triggerShoot.shoot)
         {
-            Debug.Log("던져던져던져");
             abletoGrab.SetActive(false);
-            transform.Translate(Vector3.forward * 100 * Time.deltaTime);
-        }
-    }
-
-    void Attached()
-    {
-        if(triggerShoot.isGrabbed)
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-        }
-        else
-        {
-            gameObject.GetComponent<BoxCollider>().enabled = true;
+            transform.Translate(Vector3.forward * 50 * Time.deltaTime);
+            bc.enabled = true;
         }
     }
 
@@ -46,10 +35,15 @@ public class Box : MonoBehaviour
         if(col.gameObject.CompareTag("Player"))
         {
             triggerShoot = col.gameObject.GetComponent<TriggerShoot>();
+            if (triggerShoot != null)
+            {
+                bc.enabled = false;
+            }
         }
         if(col.gameObject.CompareTag("Ground"))
         {
             abletoGrab.SetActive(true);
+            bc.enabled = true;
         }
     }
 }

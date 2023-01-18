@@ -28,11 +28,11 @@ public class UIManager : MonoBehaviour
 
     void AScene()
     {
-        if(GameManager.instance.aScene == true)
-        {
-            aSceneUI.SetActive(true);
+        //if(GameManager.instance.aScene == true)
+        //{
+            //aSceneUI.SetActive(true);
             currentBoxNum = GameManager.instance.currentBoxNum + 1;
             boxNum.text = currentBoxNum.ToString();
-        }
+        //}
     }
 }
