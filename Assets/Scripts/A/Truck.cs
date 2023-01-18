@@ -21,6 +21,7 @@ public class Truck : MonoBehaviour
     void OnBox()
     {
         bildingBox[currentBoxnum].SetActive(true);
+        GameManager.instance.currentBoxNum = currentBoxnum;
         if(currentBoxnum == maxBoxnum)
         {
             GameManager.instance.missionClear = true;

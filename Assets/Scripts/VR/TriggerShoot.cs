@@ -7,13 +7,13 @@ using OculusSampleFramework;
 
 public class TriggerShoot : MonoBehaviour
 {
-    bool isGived = false;
+    public bool isGrabbed = false;
     public bool shoot = false;
     //public GameObject box;
 
      void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) && isGived == true || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) && isGived == true)
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) && isGrabbed == true || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) && isGrabbed == true)
         {
             shoot = true;
         }
@@ -24,16 +24,16 @@ public class TriggerShoot : MonoBehaviour
     {
        if(other.CompareTag("Box"))
         {
-           // box = other.gameObject;
-            isGived = true;
+            // box = other.gameObject;
+            isGrabbed = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Box"))
         {
-           // box = null;
-            isGived = false;
+            // box = null;
+            isGrabbed = false;
         }
     }
 }

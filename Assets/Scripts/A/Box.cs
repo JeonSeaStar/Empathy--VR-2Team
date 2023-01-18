@@ -15,16 +15,29 @@ public class Box : MonoBehaviour
     void Update()
     {
         ShootBox();
+        Attached();
     }
 
 
     void ShootBox()
     {
-        if(triggerShoot.shoot == true)
+        if(triggerShoot.shoot)
         {
             Debug.Log("던져던져던져");
             abletoGrab.SetActive(false);
             transform.Translate(Vector3.forward * 100 * Time.deltaTime);
+        }
+    }
+
+    void Attached()
+    {
+        if(triggerShoot.isGrabbed)
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            gameObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
