@@ -1214,7 +1214,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6558594320911910927}
-  - component: {fileID: 7968032291064431857}
+  - component: {fileID: 4797682481598479334}
+  - component: {fileID: 9219840707937321097}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Untagged
@@ -1251,41 +1252,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7968032291064431857
-MonoBehaviour:
+--- !u!65 &4797682481598479334
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5786877468177142453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0189177d55e3d4da160aaade857715, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxBoxnum: 20
-  currentBoxnum: 0
-  bildingBox:
-  - {fileID: 7210751472980982564}
-  - {fileID: 4180160519365025478}
-  - {fileID: 7940507255861421355}
-  - {fileID: 6019248331144494160}
-  - {fileID: 2899625942476983510}
-  - {fileID: 4730484399426704673}
-  - {fileID: 8419413470616542974}
-  - {fileID: 4186464386828320190}
-  - {fileID: 6956272282591404330}
-  - {fileID: 8112786353477869565}
-  - {fileID: 6780176543230716461}
-  - {fileID: 3321401830726932531}
-  - {fileID: 4996400663584156191}
-  - {fileID: 5799698404581889978}
-  - {fileID: 8615092160216024631}
-  - {fileID: 4643506983944562360}
-  - {fileID: 8796110644017841050}
-  - {fileID: 1449744473061502048}
-  - {fileID: 2552385141036864866}
-  - {fileID: 169643317688443742}
+  serializedVersion: 2
+  m_Size: {x: 4.1223006, y: 1.7596321, z: 14.425605}
+  m_Center: {x: -0.036671244, y: 0.8740063, z: -3.6100256}
+--- !u!65 &9219840707937321097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786877468177142453}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1616583, y: 2.633926, z: 3.5696113}
+  m_Center: {x: -0.035456818, y: 3.0886753, z: 1.824696}
 --- !u!1 &5799698404581889978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1436,8 @@ GameObject:
   - component: {fileID: 6858557904443128455}
   - component: {fileID: 4398590401136467824}
   - component: {fileID: 8777079817103936741}
+  - component: {fileID: 5339925857006748127}
+  - component: {fileID: 4395711227122542046}
   m_Layer: 0
   m_Name: PickupTrailer
   m_TagString: Untagged
@@ -1517,6 +1511,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5339925857006748127
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586941084543338822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.261355, y: 2.0595658, z: 50.705494}
+  m_Center: {x: -0.07890504, y: 0.123568244, z: 17.761784}
+--- !u!114 &4395711227122542046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586941084543338822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0189177d55e3d4da160aaade857715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBoxnum: 20
+  currentBoxnum: 0
+  bildingBox:
+  - {fileID: 7210751472980982564}
+  - {fileID: 4180160519365025478}
+  - {fileID: 7940507255861421355}
+  - {fileID: 6019248331144494160}
+  - {fileID: 2899625942476983510}
+  - {fileID: 4730484399426704673}
+  - {fileID: 8419413470616542974}
+  - {fileID: 4186464386828320190}
+  - {fileID: 6956272282591404330}
+  - {fileID: 8112786353477869565}
+  - {fileID: 6780176543230716461}
+  - {fileID: 3321401830726932531}
+  - {fileID: 4996400663584156191}
+  - {fileID: 5799698404581889978}
+  - {fileID: 8615092160216024631}
+  - {fileID: 4643506983944562360}
+  - {fileID: 8796110644017841050}
+  - {fileID: 1449744473061502048}
+  - {fileID: 2552385141036864866}
+  - {fileID: 169643317688443742}
 --- !u!1 &6703895318951976813
 GameObject:
   m_ObjectHideFlags: 0
