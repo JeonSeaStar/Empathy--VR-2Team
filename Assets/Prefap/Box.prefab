@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _travellingData:
-    _travelSpeed: 10
+    _travelSpeed: 20
     _useFixedTravelTime: 0
     _travelCurve:
       serializedVersion: 2
