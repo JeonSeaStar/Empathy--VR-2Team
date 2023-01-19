@@ -9,7 +9,7 @@ public class TriggerShoot : MonoBehaviour
 {
     public bool isGrabbed = false;
     public bool shoot = false;
-    //public GameObject box;
+    public GameObject box = null;
 
      void Update()
     {
@@ -25,8 +25,14 @@ public class TriggerShoot : MonoBehaviour
        if(other.CompareTag("Box"))
         {
             isGrabbed = true;
+            box = other.gameObject;
+            if(shoot)
+            {
+                box.transform.Translate(Vector3.forward * 500 * Time.deltaTime);
+            }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Box"))

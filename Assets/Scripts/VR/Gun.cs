@@ -31,7 +31,7 @@ public class Gun : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) && isGet == false)
         {
-            Debug.DrawRay(transform.position, Vector3.forward * 99999, Color.cyan);
+            Debug.DrawRay(transform.position, Vector3.forward *100, Color.cyan);
             if (Physics.Raycast(transform.position, transform.forward, out hit, lm))
             {
                 position = hit.collider.gameObject;
