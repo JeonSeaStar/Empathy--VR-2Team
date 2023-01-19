@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        instance = this;
     }
 
     // Update is called once per frame
@@ -28,11 +29,11 @@ public class UIManager : MonoBehaviour
 
     void AScene()
     {
-        if(GameManager.instance.aScene == true)
-        {
-            aSceneUI.SetActive(true);
+        //if(GameManager.instance.aScene == true)
+        //{
+            //aSceneUI.SetActive(true);
             currentBoxNum = GameManager.instance.currentBoxNum + 1;
-            boxNum.text = currentBoxNum.ToString();
-        }
+            boxNum.text = (20 - currentBoxNum).ToString();
+        //}
     }
 }

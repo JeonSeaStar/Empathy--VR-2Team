@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        instance = this;
     }
 
 
