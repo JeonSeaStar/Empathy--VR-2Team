@@ -24,7 +24,9 @@ public class GameManager : MonoBehaviour
     public Transform bSpawn;
     public Transform cSpawn;
     [Header("¹Ì¼Ç")]
-    public bool missionClear = false;
+    public bool amissionClear = false;
+    public bool bmissionClear = false;
+    public bool cmissionClear = false;
 
     private void Awake()
     {
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
             {
                 aSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
                 player.transform.position = aSpawn.position;
-                if(missionClear == true)
+                if(amissionClear == true)
                 {
 
                 }

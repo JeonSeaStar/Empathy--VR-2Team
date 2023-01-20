@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     //public GameObject Title;
     public GameObject aSceneUI;
     [Header("AScene")]
-    public int currentBoxNum;
+    public Text leftOfBox;
     public Text boxNum;
 
     void Start()
@@ -32,8 +32,13 @@ public class UIManager : MonoBehaviour
         //if(GameManager.instance.aScene == true)
         //{
             //aSceneUI.SetActive(true);
-            currentBoxNum = GameManager.instance.currentBoxNum + 1;
-            boxNum.text = (20 - currentBoxNum).ToString();
+            boxNum.text = (20 - GameManager.instance.currentBoxNum).ToString();
         //}
+
+        if(GameManager.instance.amissionClear)
+        {
+            boxNum.enabled = false;
+            leftOfBox.text = "Clear";
+        }
     }
 }
