@@ -19,10 +19,24 @@ public class Truck : MonoBehaviour
         if(currentBoxnum >= 1)
         {
             bildingBox[currentBoxnum - 1].SetActive(true);
+            if(currentBoxnum >= 2)
+            {
+                if (bildingBox[currentBoxnum - 2].activeSelf != true)
+                {
+                    bildingBox[currentBoxnum - 2].SetActive(true);
+                }
+            }
         }
         if (currentBoxnum == maxBoxnum)
         {
             GameManager.instance.amissionClear = true;
+            for(int i =0; i<20;i++)
+            {
+                if(bildingBox[i].activeSelf != true)
+                {
+                    bildingBox[i].SetActive(true);
+                }
+            }
         }
     }
 

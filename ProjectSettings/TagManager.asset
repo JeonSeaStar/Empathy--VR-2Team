@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpawn
   - SamplesInfoPanel
   - Ground
+  - DeadZone
   layers:
   - Default
   - TransparentFX
