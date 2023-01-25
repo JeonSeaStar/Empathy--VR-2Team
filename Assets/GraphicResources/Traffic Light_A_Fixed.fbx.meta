@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 19118a4a5f035974aaabada2bbdcaa26
+guid: 7ceda6abc221973439a07dbdd3c86837
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,28 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BrakeLights
-    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
+      name: Light
+    second: {fileID: 2100000, guid: c08fc6e22b5de1e40b4904a906e2d12a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Headlights
-    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
+      name: LightGreen001
+    second: {fileID: 2100000, guid: c8cbf97b857a7f54786cf4d1122eb55e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: PixelColors
-    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
+      name: LightRed001
+    second: {fileID: 2100000, guid: e0f17be6363f8d443a62b89878c308de, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TurnLight_L
-    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
+      name: LightYellow001
+    second: {fileID: 2100000, guid: f6773005d2b989c47a540d6e0bf9accb, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: TurnLight_R
-    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
+      name: Traffic_Light_A_01
+    second: {fileID: 2100000, guid: 66af722210c79f64b9b5805a4cd62417, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -60,7 +60,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -113,7 +113,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.01
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
