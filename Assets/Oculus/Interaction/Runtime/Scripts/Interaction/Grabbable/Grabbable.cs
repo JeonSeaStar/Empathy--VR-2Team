@@ -26,6 +26,8 @@ namespace Oculus.Interaction
 {
     public class Grabbable : PointableElement, IGrabbable
     {
+
+        public bool isGrabed = false;
         [SerializeField, Interface(typeof(ITransformer)), Optional]
         private MonoBehaviour _oneGrabTransformer = null;
 
@@ -95,9 +97,11 @@ namespace Oculus.Interaction
             switch (evt.Type)
             {
                 case PointerEventType.Select:
+                    isGrabed = true;
                     EndTransform();
                     break;
                 case PointerEventType.Unselect:
+                    isGrabed = false;
                     EndTransform();
                     break;
                 case PointerEventType.Cancel:
@@ -110,9 +114,11 @@ namespace Oculus.Interaction
             switch (evt.Type)
             {
                 case PointerEventType.Select:
+                    isGrabed = true;
                     BeginTransform();
                     break;
                 case PointerEventType.Unselect:
+                    isGrabed = false;
                     BeginTransform();
                     break;
                 case PointerEventType.Move:
@@ -128,7 +134,7 @@ namespace Oculus.Interaction
             // End the transform on any existing transformer before we
             // begin the new one
             EndTransform();
-
+            
             int useGrabPoints = _selectingPoints.Count;
             if (_maxGrabPoints != -1)
             {
@@ -144,6 +150,7 @@ namespace Oculus.Interaction
                     _activeTransformer = TwoGrabTransformer;
                     break;
                 default:
+                    isGrabed = false;
                     _activeTransformer = null;
                     break;
             }
@@ -169,17 +176,17 @@ namespace Oculus.Interaction
         private void EndTransform()
         {
             if (_activeTransformer == null)
-            {
+            {      
                 return;
             }
             _activeTransformer.EndTransform();
-            _activeTransformer = null;
+            _activeTransformer = null;          
         }
 
         protected override void OnDisable()
         {
             if (_started)
-            {
+            {            
                 EndTransform();
             }
 
