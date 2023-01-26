@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     [Header("Ω√¿€")]
     //public GameObject Title;
     public GameObject aSceneUI;
+    public bool isUIOn = false;
     [Header("AScene")]
     public Text leftOfBox;
     public Text boxNum;
@@ -27,6 +28,13 @@ public class UIManager : MonoBehaviour
         AScene();
     }
 
+    void MainScene()
+    {
+        if (GameManager.instance.startScene)
+        {
+            isUIOn = true;
+        }
+    }
     void AScene()
     {
         //if(GameManager.instance.aScene == true)

@@ -7,15 +7,15 @@ public class ButtonMethod : MonoBehaviour
 {
     public void GotoA()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("A");
     }
     public void GotoB()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("B");
     }
     public void GotoC()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("C");
     }
 
 }

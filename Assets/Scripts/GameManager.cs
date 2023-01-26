@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
 
     [Header("플레이어")]
     public GameObject player;
+    public GameObject uiHelper;
     [Header("각 씬 접속 확인")]
-    public bool mainScene = true;
+    public bool startScene = true;
     public bool aScene = false;
     public bool bScene = false;
     public bool cScene = false;
@@ -48,15 +49,30 @@ public class GameManager : MonoBehaviour
 
     void GameSystem()
     {
+        if(UIManager.instance.isUIOn == true){uiHelper.SetActive(true);}
+        else { uiHelper.SetActive(false); }
+        StartScene();
         ASceneSystem();
         BSceneSystem();
         CSceneSystem();
+    }
+
+    void StartScene()
+    {
+        if (SceneManager.sceneCount == 0)
+        {
+            startScene = true;
+            aScene = false;
+            bScene = false;
+            cScene = false;          
+        }
     }
 
     void ASceneSystem()
     {
         if (SceneManager.sceneCount == 1)
         {
+            startScene = false;
             aScene = true;
             bScene = false;
             cScene = false;
@@ -71,22 +87,52 @@ public class GameManager : MonoBehaviour
             }
             bSpawn = null;
             cSpawn = null;
-
         }
+
     }
 
     void BSceneSystem()
     {
-        if (bScene)
+        if (SceneManager.sceneCount == 2)
         {
+            startScene = false;
+            aScene = false;
+            bScene = true;
+            cScene = false;
+            if (bSpawn == null)
+            {
+                bSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+                player.transform.position = bSpawn.position;
+                if (bmissionClear == true)
+                {
+
+                }
+            }
+            aSpawn = null;
+            cSpawn = null;
 
         }
     }
 
     void CSceneSystem()
     {
-        if (cScene)
+        if (SceneManager.sceneCount == 3)
         {
+            startScene = false;
+            aScene = false;
+            bScene = false;
+            cScene = true;
+            if (cSpawn == null)
+            {
+                cSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+                player.transform.position = cSpawn.position;
+                if (cmissionClear == true)
+                {
+
+                }
+            }
+            bSpawn = null;
+            cSpawn = null;
 
         }
     }
