@@ -18,4 +18,12 @@ public class ButtonMethod : MonoBehaviour
         SceneManager.LoadScene("C");
     }
 
+    public void QuitGame()
+    {
+        if(UIManager.instance.isGameOff)
+        {
+            Application.Quit();
+        }
+    }
+
 }

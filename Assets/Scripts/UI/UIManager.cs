@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     //public GameObject Title;
     public GameObject aSceneUI;
     public bool isUIOn = false;
+    public bool isGameOff = false;
     [Header("AScene")]
     public Text leftOfBox;
     public Text boxNum;
