@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public bool bScene = false;
     public bool cScene = false;
     [Header("AScene")]
-    public int currentBoxNum = -1;
+    public int currentBoxNum;
     [Header("시간관련")]
     public Time time;
     [Header("플레이어 스폰")]

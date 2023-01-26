@@ -3310,6 +3310,11 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2978202399956181225, guid: b0ea7b478f319244080bf69ddbf841d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5185099295456105267, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
       propertyPath: m_Name
