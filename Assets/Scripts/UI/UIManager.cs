@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         AScene();
+        MainScene();
     }
 
     void MainScene()

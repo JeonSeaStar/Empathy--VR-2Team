@@ -11,6 +11,9 @@ public class ConMale : MonoBehaviour
     public Transform female_con;
     public Rigidbody rg;
     public bool connect;
+    public int num = -1;
+    public scrip s;
+    public scri ss;
 
     void Update()
     {
@@ -19,7 +22,7 @@ public class ConMale : MonoBehaviour
             transform.position = female_con.position;
             transform.rotation = Quaternion.identity;
             connect = true;
-            //rg.isKinematic = true;
+            s.haha(this, ss.h);
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
@@ -37,6 +40,7 @@ public class ConMale : MonoBehaviour
         {
             female_con = other.transform;
             grap = true;
+            ss = other.GetComponent<scri>();
         }
     }
 
@@ -46,6 +50,7 @@ public class ConMale : MonoBehaviour
         {
             female_con = null;
             grap = false;
+            ss = null;
         }
     }
 }
