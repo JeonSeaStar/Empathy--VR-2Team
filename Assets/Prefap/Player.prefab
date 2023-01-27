@@ -2466,11 +2466,26 @@ PrefabInstance:
       propertyPath: _distanceInteractor
       value: 
       objectReference: {fileID: 5156720902816601657}
+    - target: {fileID: 1601671615979571433, guid: b46e030f4acfd8d4191c82d86507dae4,
+        type: 3}
+      propertyPath: _handGrabber
+      value: 
+      objectReference: {fileID: 561683825843920210}
+    - target: {fileID: 1601671616949293315, guid: b46e030f4acfd8d4191c82d86507dae4,
+        type: 3}
+      propertyPath: _handGrabber
+      value: 
+      objectReference: {fileID: 5767132888203794582}
     - target: {fileID: 3228753620495327712, guid: b46e030f4acfd8d4191c82d86507dae4,
         type: 3}
       propertyPath: m_Name
       value: Reticle
       objectReference: {fileID: 0}
+    - target: {fileID: 3486020719045023287, guid: b46e030f4acfd8d4191c82d86507dae4,
+        type: 3}
+      propertyPath: _handGrabber
+      value: 
+      objectReference: {fileID: 561683825843920210}
     - target: {fileID: 5089284658947657910, guid: b46e030f4acfd8d4191c82d86507dae4,
         type: 3}
       propertyPath: m_RootOrder
@@ -2546,6 +2561,11 @@ PrefabInstance:
       propertyPath: _distanceInteractor
       value: 
       objectReference: {fileID: 5156720902816601657}
+    - target: {fileID: 7613223307164931824, guid: b46e030f4acfd8d4191c82d86507dae4,
+        type: 3}
+      propertyPath: _handGrabber
+      value: 
+      objectReference: {fileID: 5767132888203794582}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46e030f4acfd8d4191c82d86507dae4, type: 3}
 --- !u!4 &8317543481749783257 stripped
