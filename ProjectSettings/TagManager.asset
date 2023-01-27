@@ -8,6 +8,7 @@ TagManager:
   - PlayerSpawn
   - SamplesInfoPanel
   - Ground
+  - Collider
   layers:
   - Default
   - TransparentFX
