@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ButtonMethod : MonoBehaviour
 {
+    public void GotoRoom()
+    {
+        SceneManager.LoadScene("Room");
+    }
     public void GotoA()
     {
         SceneManager.LoadScene("A");
