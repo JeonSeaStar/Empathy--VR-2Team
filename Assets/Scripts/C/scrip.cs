@@ -5,34 +5,23 @@ using UnityEngine.UI;
 
 public class scrip : MonoBehaviour
 {
-    public List<ConMale> hehe = new List<ConMale>();
-    public List<int> hihi = new List<int>();
-    public List<int> huhu = new List<int>();
-    public Text current_connect;
-
-    public void haha(ConMale cm, int i)
+    public Text current_connect_text;
+    public int current_connect
     {
-        hihi[i] = cm.num;
-        kaka();
-    }
-
-    void kaka()
-    {
-        for(int i = 0; i < huhu.Count; i++)
+        get { return current_connect; }
+        set
         {
-            if(hihi[i] == huhu[i])
-            {
-                if(i == huhu.Count - 1)
-                {
-                    Clear();
-                }
-            }
-            else { break; }
+            current_connect = value;
+            current_connect_text.text = current_connect.ToString();
+            if (current_connect == 0)
+                Clear();
         }
     }
+    public JeonSeon[] js = new JeonSeon[4];
+    public bool clear;
 
     void Clear()
     {
-
+        clear = true;
     }
 }

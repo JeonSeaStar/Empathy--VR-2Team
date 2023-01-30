@@ -34,8 +34,10 @@ public class ConMale : MonoBehaviour
             transform.position = female_con.position;
             transform.rotation = Quaternion.identity;
             connect = true;
-            s.haha(this, ss.h);
-            if (ss.h == num) { _rconnect = true; }
+            if (ss.h == num)
+            {
+                _rconnect = true;
+            }
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }

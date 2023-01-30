@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 5083349311186784837}
   - component: {fileID: 5083349311186784835}
   - component: {fileID: 5083349311186784834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
