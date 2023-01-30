@@ -6,7 +6,7 @@ public class CatSpawner : MonoBehaviour
 {
     private const int maxCat = 11;
     public GameObject[] catPrefab = new GameObject[maxCat];
-    private Queue<GameObject> catSpawnQueue = new Queue<GameObject>();
+    public Queue<GameObject> catSpawnQueue = new Queue<GameObject>();
 
     [Header("Cat Spawn Parameter")]
     public float catSpawnInterval = 3.0f;

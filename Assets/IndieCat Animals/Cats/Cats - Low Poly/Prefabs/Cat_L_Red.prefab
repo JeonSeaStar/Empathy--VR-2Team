@@ -550,7 +550,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5bc9ef312357624468ef805b70f93248, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -572,7 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: -4909890642365299836}
-  walkSpeed: 0.5
+  walkSpeed: 0.25
+  runSpeed: 3
 --- !u!54 &-8838995442637754853
 Rigidbody:
   m_ObjectHideFlags: 0
