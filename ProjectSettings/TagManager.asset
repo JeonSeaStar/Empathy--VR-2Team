@@ -8,9 +8,7 @@ TagManager:
   - PlayerSpawn
   - SamplesInfoPanel
   - Ground
-  - Collider
-  - Exit
-  - Destroy
+  - DeadZone
   layers:
   - Default
   - TransparentFX
@@ -21,7 +19,7 @@ TagManager:
   - Box
   - MaleCon
   - FemaleCon
-  - 
+  - CarColision
   - 
   - 
   - 

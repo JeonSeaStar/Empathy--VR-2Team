@@ -8,27 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BrakeLights
-    second: {fileID: 2100000, guid: 7bfda950b155e6040b53406fa41510f9, type: 2}
+    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Headlights
-    second: {fileID: 2100000, guid: 894b4f5a0d94b5d438787e977d68aa99, type: 2}
+    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PixelColors
-    second: {fileID: 2100000, guid: ef3f73fe6e5c7fe438a93ce6ad63c478, type: 2}
+    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TurnLight_L
-    second: {fileID: 2100000, guid: f99c6f8a0a5f0da4ba37478d62cd1928, type: 2}
+    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TurnLight_R
-    second: {fileID: 2100000, guid: 345356a37059fe7449ebf52ad2547105, type: 2}
+    second: {fileID: 2100000, guid: 63ac1dac8c25fd64aabb42d0c70d366d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

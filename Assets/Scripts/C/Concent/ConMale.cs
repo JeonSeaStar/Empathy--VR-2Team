@@ -11,6 +11,21 @@ public class ConMale : MonoBehaviour
     public Transform female_con;
     public Rigidbody rg;
     public bool connect;
+    public bool rconnect;
+    public bool _rconnect
+    {
+        get { return rconnect; }
+        set
+        {
+            rconnect = value;
+            js.check();
+        }
+    }
+    public int num = -1;
+    public scrip s;
+    public scri ss;
+    public Oculus.Interaction.Grabbable gb;
+    public JeonSeon js;
 
     void Update()
     {
@@ -19,15 +34,21 @@ public class ConMale : MonoBehaviour
             transform.position = female_con.position;
             transform.rotation = Quaternion.identity;
             connect = true;
-            //rg.isKinematic = true;
+            if (ss.h == num)
+            {
+                _rconnect = true;
+            }
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
         if(!connect && rg.isKinematic) { rg.isKinematic = false; }
 
-        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && connect)
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            connect = false;
+            if(connect && gb.isGrabed)
+            {
+                connect = false;
+            }
         }
     }
 
@@ -37,6 +58,7 @@ public class ConMale : MonoBehaviour
         {
             female_con = other.transform;
             grap = true;
+            ss = other.GetComponent<scri>();
         }
     }
 
@@ -46,6 +68,7 @@ public class ConMale : MonoBehaviour
         {
             female_con = null;
             grap = false;
+            ss = null;
         }
     }
 }

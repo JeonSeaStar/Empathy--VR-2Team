@@ -5,17 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class ButtonMethod : MonoBehaviour
 {
+    public void GotoRoom()
+    {
+        SceneManager.LoadScene("Room");
+    }
     public void GotoA()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("A");
     }
     public void GotoB()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("B");
     }
     public void GotoC()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene("C");
+    }
+
+    public void QuitGame()
+    {
+        if(UIManager.instance.isGameOff)
+        {
+            Application.Quit();
+        }
     }
 
 }
