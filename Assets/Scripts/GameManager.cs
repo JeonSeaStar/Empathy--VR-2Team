@@ -13,11 +13,16 @@ public class GameManager : MonoBehaviour
     public GameObject uiHelper;
     [Header("각 씬 접속 확인")]
     public bool startScene = true;
+    public bool roomScene = false;
     public bool aScene = false;
     public bool bScene = false;
     public bool cScene = false;
-    [Header("AScene")]
+    [HideInInspector]
     public int currentBoxNum;
+    [HideInInspector]
+    public int currentCatNum;
+    [HideInInspector]
+    public int currentPlugNum;
     [Header("시간관련")]
     public Time time;
     [Header("플레이어 스폰")]
@@ -52,6 +57,7 @@ public class GameManager : MonoBehaviour
         if(UIManager.instance.isUIOn == true){uiHelper.SetActive(true);}
         else { uiHelper.SetActive(false); }
         StartScene();
+        RoomScene();
         ASceneSystem();
         BSceneSystem();
         CSceneSystem();
@@ -67,10 +73,20 @@ public class GameManager : MonoBehaviour
             cScene = false;          
         }
     }
-
-    void ASceneSystem()
+    void RoomScene()
     {
         if (SceneManager.sceneCount == 1)
+        {
+            startScene = false;
+            roomScene = true;
+            aScene = false;
+            bScene = false;
+            cScene = false;
+        }
+    }
+    void ASceneSystem()
+    {
+        if (SceneManager.sceneCount == 2)
         {
             startScene = false;
             aScene = true;
@@ -80,10 +96,10 @@ public class GameManager : MonoBehaviour
             {
                 aSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
                 player.transform.position = aSpawn.position;
-                if(amissionClear == true)
-                {
+            }
+            if (amissionClear == true)
+            {
 
-                }
             }
             bSpawn = null;
             cSpawn = null;
@@ -93,7 +109,7 @@ public class GameManager : MonoBehaviour
 
     void BSceneSystem()
     {
-        if (SceneManager.sceneCount == 2)
+        if (SceneManager.sceneCount == 3)
         {
             startScene = false;
             aScene = false;
@@ -103,10 +119,10 @@ public class GameManager : MonoBehaviour
             {
                 bSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
                 player.transform.position = bSpawn.position;
-                if (bmissionClear == true)
-                {
+            }
+            if (bmissionClear == true)
+            {
 
-                }
             }
             aSpawn = null;
             cSpawn = null;
@@ -116,7 +132,7 @@ public class GameManager : MonoBehaviour
 
     void CSceneSystem()
     {
-        if (SceneManager.sceneCount == 3)
+        if (SceneManager.sceneCount == 4)
         {
             startScene = false;
             aScene = false;
@@ -126,10 +142,10 @@ public class GameManager : MonoBehaviour
             {
                 cSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
                 player.transform.position = cSpawn.position;
-                if (cmissionClear == true)
-                {
+            }
+            if (cmissionClear == true)
+            {
 
-                }
             }
             bSpawn = null;
             cSpawn = null;

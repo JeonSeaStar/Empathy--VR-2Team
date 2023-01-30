@@ -14,6 +14,7 @@ public class ConMale : MonoBehaviour
     public int num = -1;
     public scrip s;
     public scri ss;
+    public Oculus.Interaction.Grabbable gb;
 
     void Update()
     {
@@ -28,9 +29,12 @@ public class ConMale : MonoBehaviour
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
         if(!connect && rg.isKinematic) { rg.isKinematic = false; }
 
-        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger) && connect)
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            connect = false;
+            if(connect && gb.isGrabed)
+            {
+                connect = false;
+            }
         }
     }
 
