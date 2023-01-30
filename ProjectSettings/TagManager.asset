@@ -9,6 +9,9 @@ TagManager:
   - SamplesInfoPanel
   - Ground
   - DeadZone
+  - Collider
+  - Destroy
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - MaleCon
   - FemaleCon
   - CarColision
-  - 
+  - Ground
   - 
   - 
   - 

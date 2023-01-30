@@ -1871,7 +1871,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &796018714
@@ -3108,7 +3108,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2146188967}
         m_TargetAssemblyTypeName: ButtonMethod, Assembly-CSharp
-        m_MethodName: GotoB
+        m_MethodName: GotoC
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3303,8 +3303,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD604\uC7AC \uAC15\uB3D9 \uC0AC\uAC70\uB9AC \uC2E0\uD638\uB4F1\uC774
     \uACE0\uC7A5\uB098,\n\uC8FC\uBCC0 \uC8FC\uBBFC\uB4E4\uACFC \uCC28\uB7C9\uC774
-    \uACE0\uB9BD\uB418\uC5B4\n\uACE4\uB780\uD55C \uC0C1\uD669\uC774\uB77C\uACE0 \uD569\uB2C8\uB2E4!
-    \uB3C4\uC640\uC918\uC694! \uC9F8\uC778\uC18C\uB9E8~"
+    \uACE0\uB9BD\uB418\uC5B4\n\uACE4\uB780\uD55C \uC0C1\uD669\uC774\uB77C\uACE0 \uD569\uB2C8\uB2E4! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1dcba65df7d2db49af65155a0405838, type: 2}
   m_sharedMaterial: {fileID: -4170151859384130965, guid: b1dcba65df7d2db49af65155a0405838,

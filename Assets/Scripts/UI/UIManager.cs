@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    UIManager _instance;
     public static UIManager instance;
 
     [Header("Ω√¿€")]
@@ -27,29 +28,37 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
-        instance = this;
-        playerUI.SetActive(false);
-        a.SetActive(false);
-        b.SetActive(false);
-        c.SetActive(false);
+        if (_instance == null)
+        {
+            instance = this;
+        }
+
+        //playerUI.SetActive(false);
+        //a.SetActive(false);
+        //b.SetActive(false);
+        //c.SetActive(false);
+
+        //if (GameManager.instance.cScene)
+        //{
+        //    CScene();
+        //}
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        AScene();
-        if(GameManager.instance.startScene || GameManager.instance.roomScene)
-        {
-            isUIOn = true;
-            playerUI.SetActive(false);
-        }
-        else
-        {
-            isUIOn = false;
-            playerUI.SetActive(true);
-        }
+        //AScene();
+        //if(GameManager.instance.startScene || GameManager.instance.roomScene)
+        //{
+        //    isUIOn = true;
+        //    playerUI.SetActive(false);
+        //}
+        //else
+        //{
+        //    isUIOn = false;
+        //    playerUI.SetActive(true);
+        //}
         if(GameManager.instance.aScene)
         {
             AScene();
@@ -58,10 +67,10 @@ public class UIManager : MonoBehaviour
         {
             BScene();
         }
-        else if(GameManager.instance.cScene)
-        {
-            CScene();
-        }
+        //else if(GameManager.instance.cScene)
+        //{
+        //    CScene();
+        //}
     }
 
     void AScene()
@@ -80,7 +89,7 @@ public class UIManager : MonoBehaviour
         a.SetActive(false);
         b.SetActive(true);
         c.SetActive(false);
-        catNum.text = (20 - GameManager.instance.currentBoxNum).ToString();       
+        catNum.text = (10 - GameManager.instance.currentCatNum).ToString();       
         if (GameManager.instance.bmissionClear)
         {
 
@@ -91,7 +100,7 @@ public class UIManager : MonoBehaviour
         a.SetActive(false);
         b.SetActive(false);
         c.SetActive(true);
-        plugNum.text = (20 - GameManager.instance.currentBoxNum).ToString();
+        plugNum.text = "4".ToString();
         if (GameManager.instance.cmissionClear)
         {
 

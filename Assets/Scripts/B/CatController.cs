@@ -6,6 +6,7 @@ public class CatController : MonoBehaviour
 {
     public Animator anim;
     private CatSpawner catSpawner;
+    private BSceneUI bSceneUI;
 
     private bool isArrived = false;
     private bool isExit = false;
@@ -23,6 +24,7 @@ public class CatController : MonoBehaviour
     private void Start()
     {
         catSpawner = FindObjectOfType<CatSpawner>();
+        bSceneUI = FindObjectOfType<BSceneUI>();
 
         targetPos = transform.position + targetOffset;
         StartCoroutine(CatWalk());
@@ -31,6 +33,17 @@ public class CatController : MonoBehaviour
         isMove = true;
 
         anim.SetBool("isMove", isMove);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer.Equals(10))
+        {
+            if (!isArrived)
+                transform.rotation = Quaternion.LookRotation(CatRotator(targetPos));
+            else
+                transform.rotation = Quaternion.LookRotation(CatRotator(exitPos));
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +66,7 @@ public class CatController : MonoBehaviour
             isDestroy = true;
 
             catSpawner.catSpawnQueue.Dequeue();
+            bSceneUI.savedCatAmount++;
             Destroy(gameObject);
         }
     }

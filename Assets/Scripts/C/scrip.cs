@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class scrip : MonoBehaviour
 {
     public Text current_connect_text;
+    public int _current_connect;
     public int current_connect
     {
-        get { return current_connect; }
+        get { return _current_connect; }
         set
         {
-            current_connect = value;
+            _current_connect = value;
             current_connect_text.text = current_connect.ToString();
             if (current_connect == 0)
                 Clear();

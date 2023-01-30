@@ -27,7 +27,7 @@ public class CatSpawner : MonoBehaviour
     private SpawnRange catSpawnRange;
     private Vector3 rotationOffset = Vector3.zero;
 
-    private bool gameClear = false;
+    public bool gameClear = false;
 
     private void Start()
     {

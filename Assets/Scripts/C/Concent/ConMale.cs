@@ -29,25 +29,36 @@ public class ConMale : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger) && grap)
+        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
         { 
-            transform.position = female_con.position;
-            transform.rotation = Quaternion.identity;
-            connect = true;
-            if (ss.h == num)
+            if(gb.isGrabed)
             {
-                _rconnect = true;
+                transform.position = female_con.position;
+                transform.rotation = Quaternion.identity;
+                connect = true;
+                if (ss.h == num)
+                {
+                    _rconnect = true;
+                }
             }
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
         if(!connect && rg.isKinematic) { rg.isKinematic = false; }
 
-        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
+        if(gb.isGrabed)
         {
-            if(connect && gb.isGrabed)
+            rg.useGravity = false;
+        }
+        else { rg.useGravity = true; }
+
+        if(!grap)
+        {
+            if (connect)
             {
+                
                 connect = false;
+                _rconnect = false;
             }
         }
     }
