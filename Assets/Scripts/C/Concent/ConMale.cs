@@ -11,10 +11,21 @@ public class ConMale : MonoBehaviour
     public Transform female_con;
     public Rigidbody rg;
     public bool connect;
+    public bool rconnect;
+    public bool _rconnect
+    {
+        get { return rconnect; }
+        set
+        {
+            rconnect = value;
+            js.check();
+        }
+    }
     public int num = -1;
     public scrip s;
     public scri ss;
     public Oculus.Interaction.Grabbable gb;
+    public JeonSeon js;
 
     void Update()
     {
@@ -24,6 +35,7 @@ public class ConMale : MonoBehaviour
             transform.rotation = Quaternion.identity;
             connect = true;
             s.haha(this, ss.h);
+            if (ss.h == num) { _rconnect = true; }
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
