@@ -468,6 +468,7 @@ MonoBehaviour:
   bSpawn: {fileID: 0}
   cSpawn: {fileID: 0}
   amissionClear: 0
+  aMissionReset: 0
   bmissionClear: 0
   cmissionClear: 0
 --- !u!4 &346545606
@@ -501,6 +502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _controller
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733965632475302309, guid: b0ea7b478f319244080bf69ddbf841d7,
+        type: 3}
+      propertyPath: m_Name
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2770757410190762862, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
