@@ -293,12 +293,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 56900344}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &63782406 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2733965632475422951, guid: b0ea7b478f319244080bf69ddbf841d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 793272494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &83925371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,6 +3093,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &793272496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2733965632475302309, guid: b0ea7b478f319244080bf69ddbf841d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 793272494}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &793272501 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3525053363149426905, guid: b0ea7b478f319244080bf69ddbf841d7,
@@ -3738,7 +3738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7012edd7e532df4580046e52b7023bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 63782406}
   startScene: 0
   roomScene: 0
   aScene: 1
@@ -3747,9 +3746,6 @@ MonoBehaviour:
   currentBoxNum: -1
   currentCatNum: 0
   currentPlugNum: 0
-  aSpawn: {fileID: 1093448863}
-  bSpawn: {fileID: 0}
-  cSpawn: {fileID: 0}
   amissionClear: 0
   aMissionReset: 0
   bmissionClear: 0
@@ -4837,6 +4833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d716b179a0a7d419a850e26438fb38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 793272496}
   playerUI: {fileID: 1653615882}
   fade: {fileID: 1183613285}
   fadeAni: {fileID: 1183613287}

@@ -8,8 +8,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("플레이어")]
-    public GameObject player;
     [Header("각 씬 접속 확인")]
     public bool startScene = true;
     public bool roomScene = false;
@@ -22,12 +20,6 @@ public class GameManager : MonoBehaviour
     public int currentCatNum;
     [HideInInspector]
     public int currentPlugNum;
-    [Header("시간관련")]
-    public Time time;
-    [Header("플레이어 스폰")]
-    public Transform aSpawn;
-    public Transform bSpawn;
-    public Transform cSpawn;
     [Header("미션")]
     public bool amissionClear = false;
     public bool aMissionReset = false;
@@ -57,8 +49,6 @@ public class GameManager : MonoBehaviour
         StartScene();
         RoomScene();
         ASceneSystem();
-        BSceneSystem();
-        CSceneSystem();
     }
 
     void StartScene()
@@ -89,65 +79,9 @@ public class GameManager : MonoBehaviour
             startScene = false;
             aScene = true;
             bScene = false;
-            cScene = false;
-            if (aSpawn == null)
-            {
-                aSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
-                player.transform.position = aSpawn.position;
-            }
-            if (amissionClear == true)
-            {
-                player.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
-            bSpawn = null;
-            cSpawn = null;
+            cScene = false;         
         }
 
     }
 
-    void BSceneSystem()
-    {
-        if (SceneManager.sceneCount == 3)
-        {
-            startScene = false;
-            aScene = false;
-            bScene = true;
-            cScene = false;
-            if (bSpawn == null)
-            {
-                bSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
-                player.transform.position = bSpawn.position;
-            }
-            if (bmissionClear == true)
-            {
-
-            }
-            aSpawn = null;
-            cSpawn = null;
-
-        }
-    }
-
-    void CSceneSystem()
-    {
-        if (SceneManager.sceneCount == 4)
-        {
-            startScene = false;
-            aScene = false;
-            bScene = false;
-            cScene = true;
-            if (cSpawn == null)
-            {
-                cSpawn = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
-                player.transform.position = cSpawn.position;
-            }
-            if (cmissionClear == true)
-            {
-
-            }
-            bSpawn = null;
-            cSpawn = null;
-
-        }
-    }
 }

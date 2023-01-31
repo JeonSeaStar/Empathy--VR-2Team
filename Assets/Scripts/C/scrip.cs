@@ -26,5 +26,6 @@ public class scrip : MonoBehaviour
     {
         clear = true;
         fade.anime.SetTrigger(fade.hash);
+        StartCoroutine(fade.SceneLoad());
     }
 }

@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [Header("±âº»")]
+    public GameObject player;
     public GameObject playerUI;
     public GameObject fade;
     public Animator fadeAni;
@@ -49,8 +50,8 @@ public class UIManager : MonoBehaviour
         {
             fade.SetActive(true);
             aClearUI.SetActive(true);
-            GameManager.instance.player.transform.position = aClearTransform.position;
-            GameObject.FindGameObjectWithTag("Player").transform.position = aClearTransform.position;  
+            //player.transform.position = aClearTransform.position;
+            //player.transform.rotation = aClearTransform.rotation;
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
         }

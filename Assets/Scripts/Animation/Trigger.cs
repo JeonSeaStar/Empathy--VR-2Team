@@ -14,4 +14,10 @@ public class Trigger : MonoBehaviour
         GameManager.instance.aMissionReset = true;
         LodingSceneManager.LoadScene("Room");
     }
+
+    public void ChangePosition()
+    {
+        UIManager.instance.player.transform.position = UIManager.instance.aClearTransform.position;
+        UIManager.instance.player.transform.rotation = UIManager.instance.aClearTransform.rotation;
+    }
 }

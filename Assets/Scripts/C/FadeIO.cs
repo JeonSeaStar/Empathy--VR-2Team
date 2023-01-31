@@ -10,11 +10,11 @@ public class FadeIO : MonoBehaviour
     [HideInInspector] public int hash = Animator.StringToHash("IO");
     [HideInInspector] public int hash2 = Animator.StringToHash("LS");
 
-    void Start()
-    {
-        anime.SetTrigger(hash);
-        StartCoroutine(SceneLoad());
-    }
+    //void Start()
+    //{
+    //    anime.SetTrigger(hash);
+    //    StartCoroutine(SceneLoad());
+    //}
 
     public void Clear_Event_Setting()
     {
@@ -31,7 +31,7 @@ public class FadeIO : MonoBehaviour
         SceneManager.LoadScene("Room");
     }
 
-    IEnumerator SceneLoad()
+    public IEnumerator SceneLoad()
     {
         yield return new WaitForSeconds(20f);
         anime.SetTrigger(hash2);
