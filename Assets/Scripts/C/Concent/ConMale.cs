@@ -11,29 +11,54 @@ public class ConMale : MonoBehaviour
     public Transform female_con;
     public Rigidbody rg;
     public bool connect;
+    public bool rconnect;
+    public bool _rconnect
+    {
+        get { return rconnect; }
+        set
+        {
+            rconnect = value;
+            js.check();
+        }
+    }
     public int num = -1;
     public scrip s;
     public scri ss;
     public Oculus.Interaction.Grabbable gb;
+    public JeonSeon js;
 
     void Update()
     {
-        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger) && grap)
+        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
         { 
-            transform.position = female_con.position;
-            transform.rotation = Quaternion.identity;
-            connect = true;
-            s.haha(this, ss.h);
+            if(gb.isGrabed)
+            {
+                transform.position = female_con.position;
+                transform.rotation = Quaternion.identity;
+                connect = true;
+                if (ss.h == num)
+                {
+                    _rconnect = true;
+                }
+            }
         }
 
         if(connect && !rg.isKinematic) { rg.isKinematic = true; }
         if(!connect && rg.isKinematic) { rg.isKinematic = false; }
 
-        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
+        if(gb.isGrabed)
         {
-            if(connect && gb.isGrabed)
+            rg.useGravity = false;
+        }
+        else { rg.useGravity = true; }
+
+        if(!grap)
+        {
+            if (connect)
             {
+                
                 connect = false;
+                _rconnect = false;
             }
         }
     }

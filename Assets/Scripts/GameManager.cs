@@ -37,12 +37,13 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        DontDestroyOnLoad(player);
+        //DontDestroyOnLoad(player);
     }
 
     void Start()
     {
-        instance = this;
+        if(instance == null)
+            instance = this;
     }
 
 
