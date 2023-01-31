@@ -26,6 +26,7 @@ public class CClear : MonoBehaviour
         ani.Play();
         clear_npc_ani.SetTrigger(ot);
         StartCoroutine(output_text());
+        GameManager.instance.cmissionClear = true;
     }
 
     public void clear_setting()
