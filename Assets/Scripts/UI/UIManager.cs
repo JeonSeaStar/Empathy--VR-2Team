@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     [Header("AScene")]
     public GameObject a;
     public GameObject box;
-    public int totalBoxNumInt = 20;
+    public int totalBoxNumInt = 10;
     public Text totalBoxNum;
     public Text currentboxNum;
     public GameObject aClearUI;
@@ -50,6 +50,7 @@ public class UIManager : MonoBehaviour
             fade.SetActive(true);
             aClearUI.SetActive(true);
             GameManager.instance.player.transform.position = aClearTransform.position;
+            GameObject.FindGameObjectWithTag("Player").transform.position = aClearTransform.position;  
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
         }
