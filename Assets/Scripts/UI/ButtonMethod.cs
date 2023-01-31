@@ -7,24 +7,24 @@ public class ButtonMethod : MonoBehaviour
 {
     public void GotoRoom()
     {
-        SceneManager.LoadScene("Room");
+        LodingSceneManager.LoadScene("Room");
     }
     public void GotoA()
     {
-        SceneManager.LoadScene("A");
+        LodingSceneManager.LoadScene("A");
     }
     public void GotoB()
     {
-        SceneManager.LoadScene("B");
+        LodingSceneManager.LoadScene("B");
     }
     public void GotoC()
     {
-        SceneManager.LoadScene("C");
+        LodingSceneManager.LoadScene("C");
     }
 
     public void QuitGame()
     {
-            Application.Quit();
+      Application.Quit();
     }
 
 }
