@@ -29,9 +29,18 @@ public class ConMale : MonoBehaviour
 
     void Update()
     {
+        if(connect && !rg.isKinematic) { rg.isKinematic = true; }
+        if(!connect && rg.isKinematic) { rg.isKinematic = false; }
+
+        if(gb.isGrabed)
+        {
+            rg.useGravity = false;
+        }
+        else { rg.useGravity = true; }
+
         if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
-        { 
-            if(gb.isGrabed)
+        {
+            if (gb.isGrabed)
             {
                 transform.position = female_con.position;
                 transform.rotation = Quaternion.identity;
@@ -43,22 +52,17 @@ public class ConMale : MonoBehaviour
             }
         }
 
-        if(connect && !rg.isKinematic) { rg.isKinematic = true; }
-        if(!connect && rg.isKinematic) { rg.isKinematic = false; }
-
-        if(gb.isGrabed)
+        if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger))
         {
-            rg.useGravity = false;
-        }
-        else { rg.useGravity = true; }
-
-        if(!grap)
-        {
-            if (connect)
+            if (gb.isGrabed)
             {
-                
-                connect = false;
-                _rconnect = false;
+                transform.position = female_con.position;
+                transform.rotation = Quaternion.identity;
+                connect = true;
+                if (ss.h == num)
+                {
+                    _rconnect = true;
+                }
             }
         }
     }
