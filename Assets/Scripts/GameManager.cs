@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 
     [Header("플레이어")]
     public GameObject player;
-    public GameObject uiHelper;
     [Header("각 씬 접속 확인")]
     public bool startScene = true;
     public bool roomScene = false;
@@ -37,12 +36,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        //DontDestroyOnLoad(player);
     }
 
     void Start()
     {
-        if(instance == null)
+        if (instance == null)
             instance = this;
     }
 
@@ -55,8 +53,6 @@ public class GameManager : MonoBehaviour
 
     void GameSystem()
     {
-        if(UIManager.instance.isUIOn == true){uiHelper.SetActive(true);}
-        else { uiHelper.SetActive(false); }
         StartScene();
         RoomScene();
         ASceneSystem();
@@ -71,7 +67,7 @@ public class GameManager : MonoBehaviour
             startScene = true;
             aScene = false;
             bScene = false;
-            cScene = false;          
+            cScene = false;
         }
     }
     void RoomScene()
@@ -100,7 +96,7 @@ public class GameManager : MonoBehaviour
             }
             if (amissionClear == true)
             {
-
+                player.transform.rotation = new Quaternion(0, 0, 0, 0);
             }
             bSpawn = null;
             cSpawn = null;

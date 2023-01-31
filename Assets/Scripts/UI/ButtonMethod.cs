@@ -24,10 +24,7 @@ public class ButtonMethod : MonoBehaviour
 
     public void QuitGame()
     {
-        if(UIManager.instance.isGameOff)
-        {
             Application.Quit();
-        }
     }
 
 }

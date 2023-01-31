@@ -24,5 +24,6 @@ public class scrip : MonoBehaviour
     void Clear()
     {
         clear = true;
+
     }
 }
