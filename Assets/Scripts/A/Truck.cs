@@ -38,6 +38,15 @@ public class Truck : MonoBehaviour
                 }
             }
         }
+        if(GameManager.instance.aMissionReset)
+        {
+            currentBoxnum = 0;
+            for (int i = 0; i < 10; i++)
+            {             
+                    bildingBox[i].SetActive(false);
+            }
+            GameManager.instance.aMissionReset = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)

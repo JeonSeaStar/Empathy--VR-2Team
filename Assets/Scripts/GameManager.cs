@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Transform cSpawn;
     [Header("¹Ì¼Ç")]
     public bool amissionClear = false;
+    public bool aMissionReset = false;
     public bool bmissionClear = false;
     public bool cmissionClear = false;
 

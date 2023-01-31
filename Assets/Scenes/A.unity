@@ -2255,6 +2255,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 135859767661882524, guid: b0ea7b478f319244080bf69ddbf841d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 327086455880515267, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22389,6 +22394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8402888749410331553}
+  - component: {fileID: 8444963288035477391}
   - component: {fileID: 8402888749410331552}
   - component: {fileID: 513346233538633415}
   - component: {fileID: 8444963288035477390}
@@ -22521,6 +22527,18 @@ LODGroup:
     - renderer: {fileID: 8217247495323257148}
     - renderer: {fileID: 7010533124656824647}
   m_Enabled: 1
+--- !u!114 &8444963288035477391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402888749410331559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33502002f158bf340b9daadeb0515927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &8451960390222921569
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

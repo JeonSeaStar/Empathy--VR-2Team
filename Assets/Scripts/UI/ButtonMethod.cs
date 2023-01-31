@@ -21,7 +21,10 @@ public class ButtonMethod : MonoBehaviour
     {
         LodingSceneManager.LoadScene("C");
     }
-
+    public void Reset()
+    {
+        //플리즈 초기화 스크립트
+    }
     public void QuitGame()
     {
       Application.Quit();
