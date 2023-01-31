@@ -9,22 +9,19 @@ public class UIManager : MonoBehaviour
     UIManager _instance;
     public static UIManager instance;
 
-    [Header("시작")]
+    [Header("기본")]
     public GameObject playerUI;
-    public bool isUIOn = false;
-    public bool isGameOff = false;
+    public GameObject fade;
+    public Animator fadeAni;
     [Header("AScene")]
     public GameObject a;
     public GameObject box;
-    public Text boxNum;
-    [Header("BScene")]
-    public GameObject b;
-    public GameObject cat;
-    public Text catNum;
-    [Header("CScene")]
-    public GameObject c;
-    public GameObject plug;
-    public Text plugNum;
+    public int totalBoxNumInt = 20;
+    public Text totalBoxNum;
+    public Text currentboxNum;
+    public GameObject aClearUI;
+    public Animator clearAni;
+    public Transform aClearTransform;
 
     void Start()
     {
@@ -32,78 +29,29 @@ public class UIManager : MonoBehaviour
         {
             instance = this;
         }
-
-        //playerUI.SetActive(false);
-        //a.SetActive(false);
-        //b.SetActive(false);
-        //c.SetActive(false);
-
-        //if (GameManager.instance.cScene)
-        //{
-        //    CScene();
-        //}
+        fade.SetActive(false);
+        aClearUI.SetActive(false);
+        clearAni.enabled = false;
+        fadeAni = fade.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        //AScene();
-        //if(GameManager.instance.startScene || GameManager.instance.roomScene)
-        //{
-        //    isUIOn = true;
-        //    playerUI.SetActive(false);
-        //}
-        //else
-        //{
-        //    isUIOn = false;
-        //    playerUI.SetActive(true);
-        //}
-        if(GameManager.instance.aScene)
-        {
-            AScene();
-        }
-        else if(GameManager.instance.bScene)
-        {
-            BScene();
-        }
-        //else if(GameManager.instance.cScene)
-        //{
-        //    CScene();
-        //}
+        AScene();
     }
 
     void AScene()
     {
         a.SetActive(true);
-        b.SetActive(false);
-        c.SetActive(false);
-            boxNum.text = (20 - GameManager.instance.currentBoxNum).ToString();
+        totalBoxNum.text = totalBoxNumInt.ToString();
+        currentboxNum.text = GameManager.instance.currentBoxNum.ToString();
         if (GameManager.instance.amissionClear)
         {
-
-        }
-    }
-    void BScene()
-    {
-        a.SetActive(false);
-        b.SetActive(true);
-        c.SetActive(false);
-        catNum.text = (10 - GameManager.instance.currentCatNum).ToString();       
-        if (GameManager.instance.bmissionClear)
-        {
-
-        }
-    }
-    void CScene()
-    {
-        a.SetActive(false);
-        b.SetActive(false);
-        c.SetActive(true);
-        plugNum.text = "4".ToString();
-        if (GameManager.instance.cmissionClear)
-        {
-
+            fade.SetActive(true);
+            aClearUI.SetActive(true);
+            GameManager.instance.player.transform.position = aClearTransform.position;
+            fadeAni.SetTrigger("FadeOut");
+            clearAni.enabled = true;
         }
     }
 }
