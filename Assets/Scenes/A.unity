@@ -2252,7 +2252,7 @@ PrefabInstance:
     - target: {fileID: 135859767661882524, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 327086455880515267, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
@@ -3096,6 +3096,12 @@ MonoBehaviour:
 --- !u!1 &793272496 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2733965632475302309, guid: b0ea7b478f319244080bf69ddbf841d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 793272494}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &793272497 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 5185099295444018939, guid: b0ea7b478f319244080bf69ddbf841d7,
     type: 3}
   m_PrefabInstance: {fileID: 793272494}
   m_PrefabAsset: {fileID: 0}
@@ -4835,6 +4841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 793272496}
   playerUI: {fileID: 1653615882}
+  playercc: {fileID: 793272497}
   fade: {fileID: 1183613285}
   fadeAni: {fileID: 1183613287}
   a: {fileID: 793272503}

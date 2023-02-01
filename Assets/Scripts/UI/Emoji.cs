@@ -12,7 +12,7 @@ public class Emoji : MonoBehaviour
         transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.back, Camera.main.transform.rotation * Vector3.up);
     }
 
-    void on_emoji()
+    public void on_emoji()
     {
         int i = Random.Range(0, emoji.Count);
         emoji[i].SetActive(true);

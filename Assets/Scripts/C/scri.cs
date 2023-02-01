@@ -5,12 +5,13 @@ using UnityEngine;
 public class scri : MonoBehaviour
 {
     public int h;
+    public bool _connect;
     public bool connect
     {
-        get { return connect; }
+        get { return _connect; }
         set
         {
-            connect = value;
+            _connect = value;
             colonoff();
         }
     }

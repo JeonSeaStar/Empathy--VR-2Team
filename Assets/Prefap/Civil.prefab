@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 14993382379568510}
   - component: {fileID: 8338290496230606873}
   - component: {fileID: 115620206908035408}
+  - component: {fileID: 154256890684225954}
   m_Layer: 0
   m_Name: CustomizableCharacter (3)
   m_TagString: Untagged
@@ -611,6 +612,20 @@ LODGroup:
     - renderer: {fileID: 477889146904092642}
     - renderer: {fileID: 1576858077058701209}
   m_Enabled: 1
+--- !u!114 &154256890684225954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14993382379568505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &16116562746123387
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,6 +3922,7 @@ GameObject:
   - component: {fileID: 376494375836643812}
   - component: {fileID: 8555529508185998467}
   - component: {fileID: 330473828520533450}
+  - component: {fileID: 6817497841935348916}
   m_Layer: 0
   m_Name: CustomizableCharacter (2)
   m_TagString: Untagged
@@ -4506,6 +4522,20 @@ LODGroup:
     - renderer: {fileID: 264896955625263992}
     - renderer: {fileID: 1220185039192578819}
   m_Enabled: 1
+--- !u!114 &6817497841935348916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376494375836643811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &396648811501863047
 GameObject:
   m_ObjectHideFlags: 0
@@ -4550,6 +4580,7 @@ GameObject:
   - component: {fileID: 423344674681363532}
   - component: {fileID: 8530608092718557483}
   - component: {fileID: 310610028975681634}
+  - component: {fileID: 8891088744928867964}
   m_Layer: 0
   m_Name: CustomizableCharacter (5)
   m_TagString: Untagged
@@ -5149,6 +5180,20 @@ LODGroup:
     - renderer: {fileID: 248978353856659152}
     - renderer: {fileID: 1168510151776450219}
   m_Enabled: 1
+--- !u!114 &8891088744928867964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423344674681363531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &445703414334188771
 GameObject:
   m_ObjectHideFlags: 0
@@ -12409,6 +12454,7 @@ GameObject:
   - component: {fileID: 1033432543385585626}
   - component: {fileID: 9067353595299754685}
   - component: {fileID: 1150945672832805876}
+  - component: {fileID: 6290992385045534331}
   m_Layer: 0
   m_Name: CustomizableCharacter (1)
   m_TagString: Untagged
@@ -13008,6 +13054,20 @@ LODGroup:
     - renderer: {fileID: 631617406466204998}
     - renderer: {fileID: 1981611443709979965}
   m_Enabled: 1
+--- !u!114 &6290992385045534331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033432543385585629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &1034553474221547231
 GameObject:
   m_ObjectHideFlags: 0
@@ -16681,7 +16741,6 @@ MonoBehaviour:
   - {fileID: 4794949087951079015}
   - {fileID: 8526265565826844282}
   - {fileID: 4525713168284653464}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &1735516239750280467
 GameObject:
@@ -24771,7 +24830,6 @@ MonoBehaviour:
   - {fileID: 3241557302467205521}
   - {fileID: 961007023806164760}
   - {fileID: 8906558412966151165}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &2812589336754020537
 GameObject:
@@ -31216,7 +31274,6 @@ MonoBehaviour:
   - {fileID: 7637104685462804413}
   - {fileID: 4117712257258611394}
   - {fileID: 3414973649596612535}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &3485990673585669232
 GameObject:
@@ -35151,6 +35208,7 @@ GameObject:
   - component: {fileID: 3829438966744478083}
   - component: {fileID: 5090805986784412900}
   - component: {fileID: 3786227537625783725}
+  - component: {fileID: 8973971631002596571}
   m_Layer: 0
   m_Name: CustomizableCharacter
   m_TagString: Untagged
@@ -35750,6 +35808,20 @@ LODGroup:
     - renderer: {fileID: 3724599693546312479}
     - renderer: {fileID: 2374384384983358308}
   m_Enabled: 1
+--- !u!114 &8973971631002596571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829438966744478084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &3860425319632524465
 GameObject:
   m_ObjectHideFlags: 0
@@ -63788,7 +63860,6 @@ MonoBehaviour:
   - {fileID: 2178635812471617069}
   - {fileID: 1564611969328407664}
   - {fileID: 8741225009982020622}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &6759531017658877612
 GameObject:
@@ -67667,7 +67738,6 @@ MonoBehaviour:
   - {fileID: 7437302478819450308}
   - {fileID: 6793154320959922185}
   - {fileID: 291317684194974269}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &7171212818880885139
 GameObject:
@@ -70711,6 +70781,7 @@ GameObject:
   - component: {fileID: 7421991572293060585}
   - component: {fileID: 1478022229694935694}
   - component: {fileID: 7399327958102698951}
+  - component: {fileID: 2248456107990966380}
   m_Layer: 0
   m_Name: CustomizableCharacter (4)
   m_TagString: Untagged
@@ -71310,6 +71381,20 @@ LODGroup:
     - renderer: {fileID: 7031455756263368053}
     - renderer: {fileID: 8275173503561739534}
   m_Enabled: 1
+--- !u!114 &2248456107990966380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7421991572293060590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5187aba4558684a8b5663461d30ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoji: []
+  chatNPC: 0
 --- !u!1 &7436823001559681160
 GameObject:
   m_ObjectHideFlags: 0
@@ -77670,7 +77755,6 @@ MonoBehaviour:
   - {fileID: 7147983516013219251}
   - {fileID: 8859995533467200836}
   - {fileID: 2120514141258934651}
-  Bubble: {fileID: 0}
   chatNPC: 0
 --- !u!1 &8322569123284326301
 GameObject:
