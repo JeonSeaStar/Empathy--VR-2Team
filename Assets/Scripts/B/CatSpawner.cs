@@ -9,7 +9,7 @@ public class CatSpawner : MonoBehaviour
     public Queue<GameObject> catSpawnQueue = new Queue<GameObject>();
 
     [Header("Cat Spawn Parameter")]
-    public float catSpawnInterval = 3.0f;
+    public float catSpawnInterval = 15.0f;
     public int catMaxSpawnCount = 5;
 
     struct SpawnRange
@@ -27,7 +27,7 @@ public class CatSpawner : MonoBehaviour
     private SpawnRange catSpawnRange;
     private Vector3 rotationOffset = Vector3.zero;
 
-    public bool gameClear = false;
+    public static bool gameClear = false;
 
     private void Start()
     {

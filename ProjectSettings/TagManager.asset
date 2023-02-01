@@ -22,9 +22,9 @@ TagManager:
   - Box
   - MaleCon
   - FemaleCon
-  - CarColision
+  - CarCollision
   - Ground
-  - 
+  - CatCollision
   - 
   - 
   - 
