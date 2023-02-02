@@ -13,19 +13,21 @@ public class BSceneUI : MonoBehaviour
     public GameObject fade;
     public Animator fadeAni;
 
-    //private void Start()
-    //{
-    //    fade.SetActive(true);
-    //    fadeAni = fade.GetComponent<Animator>();
-    //    fadeAni.SetTrigger("FadeOut");
-    //}
+    private bool isFade = true;
+
+    private void Start()
+    {
+        isFade = true;
+        fade.SetActive(false);
+        fadeAni = fade.GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (clearCatAmount - savedCatAmount <= 0)
         {
-            CatSpawner.gameClear = true;
+            GameManager.instance.bmissionClear = true;
             leftCat.text = "0";
         }
         else
@@ -33,9 +35,23 @@ public class BSceneUI : MonoBehaviour
             leftCat.text = (clearCatAmount - savedCatAmount).ToString();
         }
 
-        if(CatSpawner.gameClear)
+        if (GameManager.instance.bmissionClear && isFade)
         {
-            fadeAni.SetTrigger("FadeOut");
+            fade.SetActive(true);
+            StartCoroutine(FadeOut());
         }
+    } 
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(2.0f);
+        
+        fadeAni.SetTrigger("FadeOut");
+        isFade = false;
+    }
+
+    private void OnApplicationQuit()
+    {
+        StopCoroutine(FadeOut());
     }
 }

@@ -98,8 +98,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: b3b03e46e631fbd4c9f96654a0498302,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: c109d9bb2660ad24c9d7708b3c27385d,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7336,9 +7338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB2F9\uC2E0\uC758 \uB3C4\uC6C0\uC73C\uB85C \uB2E4\uC2DC \uD654\uBB3C
-    \uBC30\uB2EC\uC744 \uD560 \uC218 \uC788\uAC8C \uB418\uC5C8\uC5B4\uC694!\n\uACE0\uB9C8\uC6CC\uC694
-    \uD384\uC2A4\uB9E8!\n"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1dcba65df7d2db49af65155a0405838, type: 2}
   m_sharedMaterial: {fileID: -4170151859384130965, guid: b1dcba65df7d2db49af65155a0405838,
@@ -13068,8 +13068,35 @@ PrefabInstance:
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 20.128262
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6290992385045534331, guid: dd47ff66780720649905ae0a14791dd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd47ff66780720649905ae0a14791dd1, type: 3}
+--- !u!1 &2490426637249562996 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3481088562850465954, guid: dd47ff66780720649905ae0a14791dd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2490426637249562995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2490426637249562997
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490426637249562996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2494646591970424065
 GameObject:
   m_ObjectHideFlags: 0
@@ -22544,6 +22571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33502002f158bf340b9daadeb0515927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0.5
+  text: {fileID: 1980858116}
+  talk: "\uB2F9\uC2E0\uC758 \uB3C4\uC6C0\uC73C\uB85C \uB2E4\uC2DC \uD654\uBB3C \uBC30\uB2EC\uC744
+    \uD560 \uC218 \uC788\uAC8C \uB418\uC5C8\uC5B4\uC694!\n\uACE0\uB9C8\uC6CC\uC694
+    \uD384\uC2A4\uB9E8!\n"
 --- !u!137 &8451960390222921569
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

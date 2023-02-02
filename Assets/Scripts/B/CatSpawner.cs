@@ -27,8 +27,6 @@ public class CatSpawner : MonoBehaviour
     private SpawnRange catSpawnRange;
     private Vector3 rotationOffset = Vector3.zero;
 
-    public static bool gameClear = false;
-
     private void Start()
     {
         catSpawnRange = new SpawnRange(new Vector3(97.5f, 24.32f, 370.0f), new Vector3(101.5f, 24.32f, 440.0f));
@@ -39,7 +37,7 @@ public class CatSpawner : MonoBehaviour
 
     IEnumerator SpawnCat()
     {
-        while (!gameClear)
+        while (!GameManager.instance.bmissionClear)
         {
             if (catSpawnQueue.Count <= catMaxSpawnCount - 1)
             {

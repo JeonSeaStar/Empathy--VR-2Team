@@ -11,7 +11,12 @@ public class Car : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer==11)
+        if (other.gameObject.layer == 11)
+        {
+            crashed = true;
+        }
+
+        if (other.gameObject.layer == 9)
         {
             crashed = true;
         }
@@ -20,6 +25,11 @@ public class Car : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.layer == 11)
+        {
+            crashed = false;
+        }
+
+        if (other.gameObject.layer == 9)
         {
             crashed = false;
         }
@@ -49,11 +59,11 @@ public class Car : MonoBehaviour
 
         if (transform.position.z >= 500)
         {
-            transform.position += new Vector3(0.0f, 0.0f, -300.0f);
+            transform.position += new Vector3(0.0f, 0.0f, -500.0f);
         }
         if (transform.position.z <= 100)
         {
-            transform.position += new Vector3(0.0f, 0.0f, +300.0f);
+            transform.position += new Vector3(0.0f, 0.0f, +500.0f);
         }
     }
 }

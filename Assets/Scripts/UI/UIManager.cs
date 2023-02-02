@@ -52,8 +52,6 @@ public class UIManager : MonoBehaviour
             playercc.enabled = false;
             fade.SetActive(true);
             aClearUI.SetActive(true);
-            //player.transform.position = aClearTransform.position;
-            //player.transform.rotation = aClearTransform.rotation;
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
         }

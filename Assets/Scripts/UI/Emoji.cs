@@ -5,7 +5,6 @@ using UnityEngine;
 public class Emoji : MonoBehaviour
 {
     public List<GameObject> emoji = new List<GameObject>();
-    public bool chatNPC;
 
     void Update()
     {
