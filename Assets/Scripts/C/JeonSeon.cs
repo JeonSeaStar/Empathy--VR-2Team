@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Obi;
 
 public class JeonSeon : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class JeonSeon : MonoBehaviour
         }
     }
     public scrip s;
+    public ObiSolver os;
 
     public void check()
     {

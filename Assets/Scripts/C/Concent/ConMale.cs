@@ -29,21 +29,13 @@ public class ConMale : MonoBehaviour
 
     void Update()
     {
-        if(connect && !rg.isKinematic) { rg.isKinematic = true; }
-        if(!connect && rg.isKinematic) { rg.isKinematic = false; }
-
-        if(gb.isGrabed)
-        {
-            rg.useGravity = false;
-        }
-        else { rg.useGravity = true; }
-
         if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
         {
-            if (gb.isGrabed)
+            if (gb.isGrabed && !ss.connect)
             {
                 transform.position = female_con.position;
                 transform.rotation = Quaternion.identity;
+                ss.connect = true;
                 connect = true;
                 if (ss.h == num)
                 {
@@ -52,17 +44,27 @@ public class ConMale : MonoBehaviour
             }
         }
 
-        if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger))
+        if (connect && !rg.isKinematic) { rg.isKinematic = true; }
+        if(!connect && rg.isKinematic)
+        { rg.isKinematic = false; }
+
+        if(gb.isGrabed)
         {
-            if (gb.isGrabed)
+            rg.useGravity = false;
+            js.os.gravity = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            rg.useGravity = true;
+            js.os.gravity = new Vector3(0, -9.81f, 0);
+        }
+
+        if(!grap)
+        {
+            if (connect)
             {
-                transform.position = female_con.position;
-                transform.rotation = Quaternion.identity;
-                connect = true;
-                if (ss.h == num)
-                {
-                    _rconnect = true;
-                }
+                connect = false;
+                _rconnect = false;
             }
         }
     }
@@ -81,6 +83,7 @@ public class ConMale : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
         {
+            ss.connect = false;
             female_con = null;
             grap = false;
             ss = null;

@@ -54,6 +54,7 @@ public class CClear : MonoBehaviour
         }
     }
 
+    //≈ÿΩ∫∆Æ±Ë¿Á«Â
     IEnumerator output_text()
     {
         text.text += talk[t]; 

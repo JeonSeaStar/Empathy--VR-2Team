@@ -5,16 +5,21 @@ using UnityEngine.UI;
 
 public class BSceneUI : MonoBehaviour
 {
-    public int clearCatAmount = 10;
+    public int clearCatAmount = 5;
     public int savedCatAmount = 0;
 
-    private CatSpawner catSpawner;
     public Text leftCat;
 
-    // Start is called before the first frame update
-    void Start()
+    public GameObject fade;
+    public Animator fadeAni;
+
+    private bool isFade = true;
+
+    private void Start()
     {
-        catSpawner = FindObjectOfType<CatSpawner>();
+        isFade = true;
+        fade.SetActive(false);
+        fadeAni = fade.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,12 +27,31 @@ public class BSceneUI : MonoBehaviour
     {
         if (clearCatAmount - savedCatAmount <= 0)
         {
-            catSpawner.gameClear = true;
+            GameManager.instance.bmissionClear = true;
             leftCat.text = "0";
         }
         else
         {
             leftCat.text = (clearCatAmount - savedCatAmount).ToString();
         }
+
+        if (GameManager.instance.bmissionClear && isFade)
+        {
+            fade.SetActive(true);
+            StartCoroutine(FadeOut());
+        }
+    } 
+
+    IEnumerator FadeOut()
+    {
+        yield return new WaitForSeconds(2.0f);
+        
+        fadeAni.SetTrigger("FadeOut");
+        isFade = false;
+    }
+
+    private void OnApplicationQuit()
+    {
+        StopCoroutine(FadeOut());
     }
 }

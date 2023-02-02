@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [Header("±âº»")]
     public GameObject player;
     public GameObject playerUI;
+    public CharacterController playercc;
     public GameObject fade;
     public Animator fadeAni;
     [Header("AScene")]
@@ -48,10 +49,9 @@ public class UIManager : MonoBehaviour
         currentboxNum.text = GameManager.instance.currentBoxNum.ToString();
         if (GameManager.instance.amissionClear)
         {
+            playercc.enabled = false;
             fade.SetActive(true);
             aClearUI.SetActive(true);
-            //player.transform.position = aClearTransform.position;
-            //player.transform.rotation = aClearTransform.rotation;
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
         }
