@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Truck : MonoBehaviour
 {
-    public int maxBoxnum = 20;// MAX 박스 수
+    public int maxBoxnum = 10;// MAX 박스 수
     public int currentBoxnum = 0;//치운 박스 수
-    public GameObject[] bildingBox = new GameObject[20];//치운 박스가 쌓이는 위치
+    public GameObject[] bildingBox = new GameObject[10];//치운 박스가 쌓이는 위치
 
     void Update()
     {
@@ -30,7 +30,7 @@ public class Truck : MonoBehaviour
         if (currentBoxnum == maxBoxnum)
         {
             GameManager.instance.amissionClear = true;
-            for(int i =0; i<20;i++)
+            for(int i =0; i<10;i++)
             {
                 if(bildingBox[i].activeSelf != true)
                 {
@@ -38,11 +38,20 @@ public class Truck : MonoBehaviour
                 }
             }
         }
+        if(GameManager.instance.aMissionReset)
+        {
+            currentBoxnum = 0;
+            for (int i = 0; i < 10; i++)
+            {             
+                    bildingBox[i].SetActive(false);
+            }
+            GameManager.instance.aMissionReset = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Box") && currentBoxnum < 21)
+        if (other.CompareTag("Box") && currentBoxnum < 11)
         {
             currentBoxnum += 1;
             Destroy(other.gameObject);

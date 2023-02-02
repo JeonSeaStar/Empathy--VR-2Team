@@ -20,10 +20,12 @@ public class scrip : MonoBehaviour
     }
     public JeonSeon[] js = new JeonSeon[4];
     public bool clear;
+    public FadeIO fade;
 
     void Clear()
     {
         clear = true;
-
+        fade.anime.SetTrigger(fade.hash);
+        StartCoroutine(fade.SceneLoad());
     }
 }

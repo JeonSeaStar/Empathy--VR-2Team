@@ -10,13 +10,14 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [Header("±âº»")]
+    public GameObject player;
     public GameObject playerUI;
     public GameObject fade;
     public Animator fadeAni;
     [Header("AScene")]
     public GameObject a;
     public GameObject box;
-    public int totalBoxNumInt = 20;
+    public int totalBoxNumInt = 10;
     public Text totalBoxNum;
     public Text currentboxNum;
     public GameObject aClearUI;
@@ -49,7 +50,8 @@ public class UIManager : MonoBehaviour
         {
             fade.SetActive(true);
             aClearUI.SetActive(true);
-            GameManager.instance.player.transform.position = aClearTransform.position;
+            //player.transform.position = aClearTransform.position;
+            //player.transform.rotation = aClearTransform.rotation;
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
         }
