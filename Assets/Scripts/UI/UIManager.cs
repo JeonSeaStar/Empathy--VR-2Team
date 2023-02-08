@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
 
     [Header("±âº»")]
     public GameObject player;
+    public Transform playerStartPosition;
     public GameObject playerUI;
     public CharacterController playercc;
     public GameObject fade;
@@ -35,6 +36,8 @@ public class UIManager : MonoBehaviour
         aClearUI.SetActive(false);
         clearAni.enabled = false;
         fadeAni = fade.GetComponent<Animator>();
+        player.transform.position = playerStartPosition.position;
+
     }
 
     void Update()
@@ -54,6 +57,14 @@ public class UIManager : MonoBehaviour
             aClearUI.SetActive(true);
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
+        }
+        else
+        {
+            playercc.enabled = true;
+            fade.SetActive(false);
+            aClearUI.SetActive(false);
+            fadeAni.SetTrigger("FadeIn");
+            clearAni.enabled = false;
         }
     }
 }

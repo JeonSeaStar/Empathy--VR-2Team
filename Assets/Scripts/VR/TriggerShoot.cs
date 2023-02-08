@@ -11,25 +11,13 @@ public class TriggerShoot : MonoBehaviour
     public bool shoot = false;
     public GameObject box = null;
 
-     void Update()
-    {
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) && isGrabbed == true || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) && isGrabbed == true)
-        {
-            shoot = true;
-        }
-        else { shoot = false; }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
        if(other.CompareTag("Box"))
         {
             isGrabbed = true;
             box = other.gameObject;
-            if(shoot)
-            {
-                box.transform.Translate(Vector3.forward * 500 * Time.deltaTime);
-            }
+            box.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -38,6 +26,8 @@ public class TriggerShoot : MonoBehaviour
         if (other.CompareTag("Box"))
         {
             isGrabbed = false;
+            box.GetComponent<BoxCollider>().enabled = true;
+            box = null;
         }
     }
 }

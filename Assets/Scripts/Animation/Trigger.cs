@@ -16,6 +16,7 @@ public class Trigger : MonoBehaviour
     {
         UIManager.instance.playercc.enabled = true;
         GameManager.instance.aMissionReset = true;
+        GameManager.instance.amissionClear = false;
         LodingSceneManager.LoadScene("Room");
     }
 
