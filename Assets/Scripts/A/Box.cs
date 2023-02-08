@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-
+    public AudioSource audioSource;
     private void Update()
     {
         Height();
@@ -19,7 +19,10 @@ public class Box : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        
+        if(col.CompareTag("Ground"))
+        {
+            audioSource.PlayOneShot(audioSource.clip);
+        }
         if(col.CompareTag("DeadZone"))
         {
             transform.localPosition = new Vector3(2, -13.7f, -4.5f);

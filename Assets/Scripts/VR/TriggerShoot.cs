@@ -9,27 +9,30 @@ public class TriggerShoot : MonoBehaviour
 {
     public bool isGrabbed = false;
     public bool shoot = false;
-    public GameObject box = null;
+    public AudioSource audioSource;
+    public AudioClip[] clips;//0번 펄스건//1번 박스 줍는 사운드
 
-     void Update()
+    void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) && isGrabbed == true || OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) && isGrabbed == true)
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            shoot = true;
+            OVRInput.SetControllerVibration(0.2f, 0.2f, OVRInput.Controller.RHand);
+            audioSource.PlayOneShot(clips[0]);
         }
-        else { shoot = false; }
+        if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
+        {
+            OVRInput.SetControllerVibration(0.2f, 0.2f, OVRInput.Controller.LHand);
+            audioSource.PlayOneShot(clips[0]);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-       if(other.CompareTag("Box"))
+        if (other.CompareTag("Box"))
         {
             isGrabbed = true;
-            box = other.gameObject;
-            if(shoot)
-            {
-                box.transform.Translate(Vector3.forward * 500 * Time.deltaTime);
-            }
+            audioSource.PlayOneShot(clips[1]);
+            OVRInput.SetControllerVibration(0.2f, 0.2f);
         }
     }
 
