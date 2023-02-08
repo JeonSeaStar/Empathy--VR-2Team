@@ -16,6 +16,7 @@ public class scri : MonoBehaviour
         }
     }
     public BoxCollider col;
+    public AudioSource ads;
 
     private void Awake()
     {
@@ -24,7 +25,15 @@ public class scri : MonoBehaviour
 
     void colonoff()
     {
-        if (connect) { col.enabled = false; }
-        else { col.enabled = true; }
+        if (connect)
+        {
+            col.enabled = false;
+            ads.mute = true;
+        }
+        else
+        {
+            col.enabled = true;
+            ads.mute = false;
+        }
     }
 }

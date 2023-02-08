@@ -26,6 +26,8 @@ public class ConMale : MonoBehaviour
     public scri ss;
     public Oculus.Interaction.Grabbable gb;
     public JeonSeon js;
+    public AudioClip[] audioClips;
+    public AudioSource ads;
 
     void Update()
     {
@@ -35,11 +37,17 @@ public class ConMale : MonoBehaviour
             {
                 transform.position = female_con.position;
                 transform.rotation = Quaternion.identity;
+                ads.PlayOneShot(audioClips[0]);
                 ss.connect = true;
                 connect = true;
                 if (ss.h == num)
                 {
                     _rconnect = true;
+                    ads.PlayOneShot(audioClips[1]);
+                }
+                else
+                {
+                    ads.PlayOneShot(audioClips[2]);
                 }
             }
         }
@@ -65,6 +73,8 @@ public class ConMale : MonoBehaviour
             {
                 connect = false;
                 _rconnect = false;
+                ss = null;
+                ads.PlayOneShot(audioClips[0]);
             }
         }
     }
@@ -86,7 +96,7 @@ public class ConMale : MonoBehaviour
             ss.connect = false;
             female_con = null;
             grap = false;
-            ss = null;
+            //ss = null;
         }
     }
 }
