@@ -29,7 +29,7 @@ public class CatSpawner : MonoBehaviour
 
     private void Start()
     {
-        catSpawnRange = new SpawnRange(new Vector3(97.5f, 24.32f, 370.0f), new Vector3(101.5f, 24.32f, 440.0f));
+        catSpawnRange = new SpawnRange(new Vector3(97.5f, 24.32f, 370.0f), new Vector3(101.5f, 24.32f, 410.0f));
         rotationOffset = new Vector3(0.0f, -90.0f, 0.0f);
 
         StartCoroutine(SpawnCat());
