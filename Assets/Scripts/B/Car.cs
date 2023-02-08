@@ -20,6 +20,11 @@ public class Car : MonoBehaviour
         {
             crashed = true;
         }
+
+        if(other.gameObject.tag=="Player")
+        {
+            crashed = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -30,6 +35,11 @@ public class Car : MonoBehaviour
         }
 
         if (other.gameObject.layer == 9)
+        {
+            crashed = false;
+        }
+
+        if (other.gameObject.tag == "Player")
         {
             crashed = false;
         }

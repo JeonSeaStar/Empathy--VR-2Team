@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class BSceneUI : MonoBehaviour
 {
+    public BClear bClear;
+    public CharacterController playerController;
+
     public int clearCatAmount = 5;
     public int savedCatAmount = 0;
 
@@ -38,6 +41,7 @@ public class BSceneUI : MonoBehaviour
         if (GameManager.instance.bmissionClear && isFade)
         {
             fade.SetActive(true);
+            playerController.enabled = false;
             StartCoroutine(FadeOut());
         }
     } 
@@ -45,6 +49,7 @@ public class BSceneUI : MonoBehaviour
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(2.0f);
+        bClear.ClearSpawn();
         
         fadeAni.SetTrigger("FadeOut");
         isFade = false;

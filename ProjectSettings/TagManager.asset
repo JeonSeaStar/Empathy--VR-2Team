@@ -12,6 +12,7 @@ TagManager:
   - Collider
   - Destroy
   - Exit
+  - Exit2
   layers:
   - Default
   - TransparentFX
