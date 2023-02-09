@@ -4802,7 +4802,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &423749591
 Transform:
   m_ObjectHideFlags: 0
@@ -11223,6 +11223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bClear: {fileID: 327017966}
   playerController: {fileID: 2125880818}
+  clearCats: {fileID: 423749590}
   clearCatAmount: 5
   savedCatAmount: 0
   leftCat: {fileID: 669518188}

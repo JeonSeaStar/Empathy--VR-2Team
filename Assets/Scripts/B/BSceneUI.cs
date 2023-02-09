@@ -8,6 +8,8 @@ public class BSceneUI : MonoBehaviour
     public BClear bClear;
     public CharacterController playerController;
 
+    public GameObject clearCats;
+
     public int clearCatAmount = 5;
     public int savedCatAmount = 0;
 
@@ -50,7 +52,9 @@ public class BSceneUI : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         bClear.ClearSpawn();
-        
+        clearCats.SetActive(true);
+
+
         fadeAni.SetTrigger("FadeOut");
         isFade = false;
     }
