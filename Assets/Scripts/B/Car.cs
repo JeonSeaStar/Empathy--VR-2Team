@@ -9,11 +9,14 @@ public class Car : MonoBehaviour
     Vector3 backCar;
     bool crashed = false;
 
+    public AudioSource audioSource;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 11)
         {
             crashed = true;
+            audioSource.Play();
         }
 
         if (other.gameObject.layer == 9)
@@ -21,9 +24,10 @@ public class Car : MonoBehaviour
             crashed = true;
         }
 
-        if(other.gameObject.tag=="Player")
+        if (other.gameObject.tag == "Player")
         {
             crashed = true;
+            audioSource.Play();
         }
     }
 

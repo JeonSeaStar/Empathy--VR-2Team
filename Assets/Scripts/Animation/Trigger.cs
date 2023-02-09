@@ -7,6 +7,13 @@ using TMPro;
 
 public class Trigger : MonoBehaviour
 {
+    public AudioSource audioSource;
+
+    public void StartCheering()
+    {
+        audioSource.Play();
+    }
+
     public void FadeIn()
     {
         UIManager.instance.fadeAni.SetTrigger("FadeIn");

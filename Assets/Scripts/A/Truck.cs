@@ -7,6 +7,7 @@ public class Truck : MonoBehaviour
     public int maxBoxnum = 10;// MAX 박스 수
     public int currentBoxnum = 0;//치운 박스 수
     public GameObject[] bildingBox = new GameObject[10];//치운 박스가 쌓이는 위치
+    public AudioSource audioSource;
 
     void Update()
     {
@@ -54,6 +55,7 @@ public class Truck : MonoBehaviour
         if (other.CompareTag("Box") && currentBoxnum < 11)
         {
             currentBoxnum += 1;
+            audioSource.PlayOneShot(audioSource.clip);
             Destroy(other.gameObject);
         }
     }

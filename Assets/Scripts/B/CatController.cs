@@ -10,6 +10,9 @@ public class CatController : MonoBehaviour
     private CatSpawner catSpawner;
     private BSceneUI bSceneUI;
 
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+
     private bool isArrived = false;
     private bool isExit = false;
     private bool isExit2 = false;
@@ -79,7 +82,15 @@ public class CatController : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.layer.Equals(10)) isGround = false;
+        if (collision.gameObject.layer.Equals(10))
+        {
+            isGround = false;
+        }
+
+        if (collision.gameObject.layer.Equals(10) && !isExit)
+        {
+            audioSource.PlayOneShot(clips[0]);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -89,6 +100,7 @@ public class CatController : MonoBehaviour
             if (!isArrived)
             {
                 bSceneUI.savedCatAmount++;
+                audioSource.PlayOneShot(clips[1]);
                 StartCoroutine(CatEmoji());
             }
             isArrived = true;
