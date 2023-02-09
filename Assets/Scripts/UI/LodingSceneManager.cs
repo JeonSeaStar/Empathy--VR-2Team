@@ -10,6 +10,9 @@ public class LodingSceneManager : MonoBehaviour
 {
     public static string nextScene;
     [SerializeField] Image progressBar;
+    [SerializeField] Image a;
+    [SerializeField] Image b;
+    [SerializeField] Image c;
 
     private void Start()
     {
