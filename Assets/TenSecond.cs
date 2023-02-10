@@ -13,7 +13,7 @@ public class TenSecond : MonoBehaviour
     IEnumerator TenSeconds()
     {
         yield return new WaitForSecondsRealtime(10);
-        buttonMethod.GotoRoom();
+        buttonMethod.FirstStartGotoRoom();
         StopCoroutine(TenSeconds());
     }
 }

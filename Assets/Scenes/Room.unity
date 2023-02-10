@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 5ab15073f5a86c54aa8626ab8009cdfc,
     type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: e410059c0f1ee2140a946dc3197200b0,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a4b85b273344b2d42a8ffaa920d370c0,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -9391,7 +9391,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.7355005e-29, y: 0, z: 0, w: 8e-45}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: -0.0000005864672}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0

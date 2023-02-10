@@ -28,7 +28,7 @@ public class FadeIO : MonoBehaviour
 
     public void LoadeaScene()
     {
-        LodingSceneManager.LoadScene("Room");
+        LodingSceneManager.LoadScene("Room","Non");
     }
 
     public IEnumerator SceneLoad()

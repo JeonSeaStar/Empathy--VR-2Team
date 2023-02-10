@@ -97,8 +97,10 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 41ed49e1ec53f2040a4921983d4cbb04,
+    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 5f9a59128078d2545bbb4fd7785d7252,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1651,7 +1653,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1755539732}
         m_TargetAssemblyTypeName: ButtonMethod, Assembly-CSharp
-        m_MethodName: GotoRoom
+        m_MethodName: FirstStartGotoRoom
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3618,14 +3620,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684077383}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.37600154, y: 0.41377896, z: -0.19294828, w: 0.80633795}
+  m_LocalPosition: {x: 48.97, y: 209, z: 166.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: 54.33, z: 0}
 --- !u!114 &1684077386
 MonoBehaviour:
   m_ObjectHideFlags: 0

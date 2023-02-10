@@ -23,7 +23,7 @@ public class Trigger : MonoBehaviour
     {
         UIManager.instance.playercc.enabled = true;
         GameManager.instance.aMissionReset = true;
-        LodingSceneManager.LoadScene("Room");
+        LodingSceneManager.LoadScene("Room","Non");
     }
 
     public void ChangePosition()
