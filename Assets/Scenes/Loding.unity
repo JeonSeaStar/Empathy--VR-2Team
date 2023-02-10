@@ -350,7 +350,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12836230}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.35432, y: -117.07556, z: 524.49866}
+  m_LocalPosition: {x: 24.3, y: -117.07556, z: 524.49866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13768,7 +13768,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5504504175481220259, guid: b0ea7b478f319244080bf69ddbf841d7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b0ea7b478f319244080bf69ddbf841d7, type: 3}
 --- !u!20 &482462298 stripped
 Camera:
@@ -14563,7 +14564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490051494}
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -118.445114, y: 128.60095, z: -587.49866}
+  m_LocalPosition: {x: -96.9, y: 128.60095, z: -587.49866}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34896,8 +34897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 119.44568, y: 110.37556}
-  m_SizeDelta: {x: 333.0266, y: 83.4319}
+  m_AnchoredPosition: {x: 89.16762, y: 118.9}
+  m_SizeDelta: {x: 244.3618, y: 74.9514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052140248
 MonoBehaviour:
@@ -34919,11 +34920,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB2F9\uC2E0\uC740 \uC2A4\uD2F0\uD0A4 \uAC74\uC744 \uC0AC\uC6A9\uD560
-    \uC218 \uC788\uB294 \uD788\uC5B4\uB85C\uC785\uB2C8\uB2E4.\r\n\uC591 \uC190\uC758
+  m_text: "\uB2F9\uC2E0\uC740 \uD384\uC2A4 \uAE00\uB7EC\uBE0C\uC744 \uC0AC\uC6A9\uD560
+    \uC218 \uC788\uB294 \n\uD788\uC5B4\uB85C\uC785\uB2C8\uB2E4.\r\n\uC591 \uC190\uC758
     \uCEE8\uD2B8\uB864\uB7EC\uB97C \uC774\uC6A9\uD574\uC11C \uBB38\uC81C \uC0C1\uD669\uC744
     \uD574\uACB0\uD574 \uC8FC\uC138\uC694!\r\n\r\n\uCCB4\uD5D8 \uC911 \uBA40\uBBF8\uAC00
-    \uB290\uAEF4\uC9C8 \uB550 \uADFC\uCC98\uC758 \uC5F0\uAD6C\uC6D0\uC5D0\uAC8C \uBC14\uB85C\r\n\uB9D0\uC500\uD574\uC8FC\uC138\uC694.\r\n"
+    \uB290\uAEF4\uC9C8 \uB550 \uADFC\uCC98\uC758 \n\uC5F0\uAD6C\uC6D0\uC5D0\uAC8C
+    \n\uBC14\uB85C\r         \uB9D0\uC500\uD574\uC8FC\uC138\uC694.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1dcba65df7d2db49af65155a0405838, type: 2}
   m_sharedMaterial: {fileID: -4170151859384130965, guid: b1dcba65df7d2db49af65155a0405838,

@@ -10,17 +10,18 @@ public class Menu : MonoBehaviour
  
     void Update()
     {
-        if(OVRInput.GetDown(OVRInput.RawButton.Start) && !isuiOn && SceneManager.sceneCount != 5)
+        if(OVRInput.GetDown(OVRInput.RawButton.Start))
         {
             isuiOn = true;
             menu.SetActive(true);
             Time.timeScale = 0;
-        }
-        if (OVRInput.GetDown(OVRInput.RawButton.Start) && isuiOn && SceneManager.sceneCount != 5)
-        {
-            isuiOn = false;
-            menu.SetActive(false);
-            Time.timeScale = 1;
+            //if (OVRInput.GetDown(OVRInput.RawButton.Start))
+            //{
+            //    isuiOn = false;
+            //    menu.SetActive(false);
+            //    Time.timeScale = 1;
+            //    Debug.Log("¾ÈµÅ?");
+            //}
         }
     }
     public void OffMenu()
