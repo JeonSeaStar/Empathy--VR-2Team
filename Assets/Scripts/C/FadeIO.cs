@@ -19,6 +19,7 @@ public class FadeIO : MonoBehaviour
     public void Clear_Event_Setting()
     {
         cc.clear_setting();
+        cc.playerController.enabled = false;
     }
 
     public void Clear()

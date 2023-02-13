@@ -10,6 +10,9 @@ public class CatController : MonoBehaviour
     private CatSpawner catSpawner;
     private BSceneUI bSceneUI;
 
+    public Oculus.Interaction.Grabbable grabbableObject;
+    public CapsuleCollider catCollider;
+
     public AudioSource audioSource;
     public AudioClip[] clips;
 
@@ -38,6 +41,7 @@ public class CatController : MonoBehaviour
     {
         catSpawner = FindObjectOfType<CatSpawner>();
         bSceneUI = FindObjectOfType<BSceneUI>();
+        catCollider = GetComponent<CapsuleCollider>();
 
         targetPos = transform.position + targetOffset;
         StartCoroutine(CatWalk());
@@ -54,6 +58,16 @@ public class CatController : MonoBehaviour
         {
             emojiOn = true;
             StartCoroutine(CatEmoji());
+        }
+
+        if (grabbableObject.isGrabed && catCollider.enabled)
+        {
+            catCollider.enabled = false;
+        }
+
+        if (!grabbableObject.isGrabed && !catCollider.enabled)
+        {
+            catCollider.enabled = true;
         }
     }
 

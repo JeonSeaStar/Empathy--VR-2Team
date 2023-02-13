@@ -20,13 +20,16 @@ public class CClear : MonoBehaviour
     int t = 0;
     public Animator clear_npc_ani;
     int ot = Animator.StringToHash("ot");
+    public CharacterController playerController;
 
     public void clear_ani()
     {
+        playerController.enabled = false;
         ani.Play();
         clear_npc_ani.SetTrigger(ot);
         StartCoroutine(output_text());
         GameManager.instance.cmissionClear = true;
+        playerController.enabled = false;
     }
 
     public void clear_setting()
@@ -54,7 +57,6 @@ public class CClear : MonoBehaviour
         }
     }
 
-    //≈ÿΩ∫∆Æ±Ë¿Á«Â
     IEnumerator output_text()
     {
         text.text += talk[t]; 

@@ -15011,7 +15011,7 @@ MonoBehaviour:
   - {fileID: 2157460984912013273, guid: d2a1124825ca45e488c85da8b7fb53f0, type: 3}
   - {fileID: 8145199188017877356, guid: ddafad54d64873f47a0ab37dd9b7f3f7, type: 3}
   catSpawnInterval: 15
-  catMaxSpawnCount: 5
+  catMaxSpawnCount: 2
 --- !u!1 &2077884108
 GameObject:
   m_ObjectHideFlags: 0

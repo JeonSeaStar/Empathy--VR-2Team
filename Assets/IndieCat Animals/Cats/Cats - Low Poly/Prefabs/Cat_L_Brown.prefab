@@ -2516,6 +2516,8 @@ MonoBehaviour:
   anim: {fileID: -9145313869315631128}
   catAnim: {fileID: 5541031083657591812}
   clearAnim: {fileID: 0}
+  grabbableObject: {fileID: 6016948460642576210}
+  catCollider: {fileID: 0}
   audioSource: {fileID: 604168729629836519}
   clips:
   - {fileID: 8300000, guid: cff394a3416957a488592e0b73f040b1, type: 3}

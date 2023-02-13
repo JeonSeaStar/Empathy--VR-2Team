@@ -30,7 +30,7 @@ public class scri : MonoBehaviour
             col.enabled = false;
             ads.mute = true;
         }
-        else
+        else if(!connect)
         {
             col.enabled = true;
             ads.mute = false;

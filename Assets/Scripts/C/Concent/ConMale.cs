@@ -28,6 +28,11 @@ public class ConMale : MonoBehaviour
     public JeonSeon js;
     public AudioClip[] audioClips;
     public AudioSource ads;
+    public float lerpSpeed;
+    public float t;
+    public float f;
+    public float a;
+    bool leftBool;
 
     void Update()
     {
@@ -60,11 +65,13 @@ public class ConMale : MonoBehaviour
         {
             rg.useGravity = false;
             js.os.gravity = new Vector3(0, 0, 0);
+            Haptic();
         }
         else
         {
             rg.useGravity = true;
             js.os.gravity = new Vector3(0, -9.81f, 0);
+            ss.connect = false;
         }
 
         if(!grap)
@@ -73,6 +80,7 @@ public class ConMale : MonoBehaviour
             {
                 connect = false;
                 _rconnect = false;
+                ss.connect = false;
                 ss = null;
                 ads.PlayOneShot(audioClips[0]);
             }
@@ -96,7 +104,32 @@ public class ConMale : MonoBehaviour
             ss.connect = false;
             female_con = null;
             grap = false;
-            //ss = null;
         }
+    }
+
+    void Haptic()
+    {
+        if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.RHand);
+        if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
+            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.LHand);
+        Amplitude();
+    }
+
+    void Amplitude()
+    {
+        if(a >= 0.4f) { leftBool = false; }
+        else if(a <= 0.1f) { leftBool = true; }
+
+        if (leftBool)
+        {
+            t += Time.deltaTime * lerpSpeed;
+        }
+        else
+        {
+            t -= Time.deltaTime * lerpSpeed;
+        }
+
+        a = Mathf.Lerp(0.1f, 0.4f, t);
     }
 }

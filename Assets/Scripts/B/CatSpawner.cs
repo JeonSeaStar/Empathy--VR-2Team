@@ -10,7 +10,7 @@ public class CatSpawner : MonoBehaviour
 
     [Header("Cat Spawn Parameter")]
     public float catSpawnInterval = 15.0f;
-    public int catMaxSpawnCount = 5;
+    public int catMaxSpawnCount = 2;
 
     struct SpawnRange
     {
