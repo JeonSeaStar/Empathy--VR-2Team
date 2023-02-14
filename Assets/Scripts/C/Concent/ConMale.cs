@@ -24,6 +24,7 @@ public class ConMale : MonoBehaviour
     public int num = -1;
     public scrip s;
     public scri ss;
+    public scri sss;
     public Oculus.Interaction.Grabbable gb;
     public JeonSeon js;
     public AudioClip[] audioClips;
@@ -40,8 +41,6 @@ public class ConMale : MonoBehaviour
         {
             if (gb.isGrabed && !ss.connect)
             {
-                transform.position = female_con.position;
-                transform.rotation = Quaternion.identity;
                 ads.PlayOneShot(audioClips[0]);
                 ss.connect = true;
                 connect = true;
@@ -72,6 +71,8 @@ public class ConMale : MonoBehaviour
             rg.useGravity = true;
             js.os.gravity = new Vector3(0, -9.81f, 0);
             ss.connect = false;
+            sss.connect = false;
+            sss = null;
         }
 
         if(!grap)
@@ -80,9 +81,19 @@ public class ConMale : MonoBehaviour
             {
                 connect = false;
                 _rconnect = false;
-                ss.connect = false;
+                sss.connect = false;
+                sss = null;
                 ss = null;
                 ads.PlayOneShot(audioClips[0]);
+            }
+        }
+
+        if(sss != null)
+        {
+            if (sss.connect)
+            {
+                transform.position = sss.t.position;
+                transform.rotation = Quaternion.identity;
             }
         }
     }
@@ -94,6 +105,7 @@ public class ConMale : MonoBehaviour
             female_con = other.transform;
             grap = true;
             ss = other.GetComponent<scri>();
+            sss = other.GetComponent<scri>();
         }
     }
 

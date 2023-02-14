@@ -15,16 +15,26 @@ public class scrip : MonoBehaviour
             _current_connect = value;
             current_connect_text.text = current_connect.ToString();
             if (current_connect == 0)
-                Clear();
+                StartCoroutine(Clear());
         }
     }
     public JeonSeon[] js = new JeonSeon[4];
     public bool clear;
     public FadeIO fade;
 
-    void Clear()
+    void Update()
+    {
+        if(clear && current_connect != 0)
+        {
+            StopAllCoroutines();
+            clear = false;
+        }
+    }
+
+    IEnumerator Clear()
     {
         clear = true;
+        yield return new WaitForSeconds(2f);
         fade.anime.SetTrigger(fade.hash);
         StartCoroutine(fade.SceneLoad());
     }
