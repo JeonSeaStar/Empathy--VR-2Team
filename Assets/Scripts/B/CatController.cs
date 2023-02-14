@@ -31,8 +31,10 @@ public class CatController : MonoBehaviour
     private Vector3 targetOffset = new Vector3(-30.0f, 0.0f, 0.0f);
     private Vector3 exitPos = new Vector3(77.5f, 24.32f, 351.3f);
     private Vector3 exit2Pos = new Vector3(67.8f, 24.32f, 351.3f);
-    private Vector3 destroyPos = new Vector3(68.18f, 22.2f, 362.5f);
+    private Vector3 destroyPos = new Vector3(68.18f, 14.8f, 372.3f);
     private Vector3 catPush = new Vector3(0.0f, 0.0f, 0.01f);
+    private Vector3 catFall = new Vector3(0.0f, 3.5f, 0.0f);
+    private Vector3 catScale = new Vector3(1.4f, 1.4f, 1.4f);
 
     public float walkSpeed = 0.2f;
     public float runSpeed = 2.0f;
@@ -63,11 +65,14 @@ public class CatController : MonoBehaviour
         if (grabbableObject.isGrabed && catCollider.enabled)
         {
             catCollider.enabled = false;
+            audioSource.PlayOneShot(clips[0]);
+            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
         }
 
         if (!grabbableObject.isGrabed && !catCollider.enabled)
         {
             catCollider.enabled = true;
+            transform.localScale = catScale;
         }
     }
 
@@ -84,6 +89,11 @@ public class CatController : MonoBehaviour
             else if (!isExit2)
                 transform.rotation = Quaternion.LookRotation(CatRotator(exit2Pos));
         }
+
+        if (collision.gameObject.layer.Equals(12)) // ¶³¾îÁö¸é Y +25.0f
+        {
+            transform.position += catFall;
+        }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -99,11 +109,6 @@ public class CatController : MonoBehaviour
         if (collision.gameObject.layer.Equals(10))
         {
             isGround = false;
-        }
-
-        if (collision.gameObject.layer.Equals(10) && !isExit)
-        {
-            audioSource.PlayOneShot(clips[0]);
         }
     }
 
@@ -134,7 +139,8 @@ public class CatController : MonoBehaviour
 
             transform.rotation = Quaternion.LookRotation(CatRotator(destroyPos));
         }
-        else if (other.gameObject.CompareTag("Destroy"))
+
+        if (other.gameObject.CompareTag("Destroy"))
         {
             isDestroy = true;
 
@@ -152,7 +158,7 @@ public class CatController : MonoBehaviour
     {
         while (!isArrived)
         {
-            if (isGround) transform.position = Vector3.MoveTowards(transform.position, targetPos, walkSpeed * Time.deltaTime);
+            if (!grabbableObject.isGrabed) transform.position = Vector3.MoveTowards(transform.position, targetPos, walkSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -163,7 +169,7 @@ public class CatController : MonoBehaviour
     {
         while (!isExit)
         {
-            if (isGround) transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
+            if (!grabbableObject.isGrabed) transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
             yield return null;
         }
 
@@ -187,7 +193,7 @@ public class CatController : MonoBehaviour
     {
         while (!isDestroy)
         {
-            if (isGround)
+            if (!grabbableObject.isGrabed)
             {
                 if (!isArrived)
                 {
