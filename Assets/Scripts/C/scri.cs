@@ -17,6 +17,7 @@ public class scri : MonoBehaviour
     }
     public BoxCollider col;
     public AudioSource ads;
+    public Transform t;
 
     private void Awake()
     {

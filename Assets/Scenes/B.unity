@@ -2067,6 +2067,11 @@ PrefabInstance:
       objectReference: {fileID: 201906907}
     - target: {fileID: 5185099295449573073, guid: b0ea7b478f319244080bf69ddbf841d7,
         type: 3}
+      propertyPath: Acceleration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185099295449573073, guid: b0ea7b478f319244080bf69ddbf841d7,
+        type: 3}
       propertyPath: SnapRotation
       value: 0
       objectReference: {fileID: 0}

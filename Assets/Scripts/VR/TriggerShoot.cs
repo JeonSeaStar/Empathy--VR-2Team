@@ -27,6 +27,7 @@ public class TriggerShoot : MonoBehaviour
         //    audioSource.PlayOneShot(clips[1]);
         //    OVRInput.SetControllerVibration(0.2f, 0.1f);
         //}
+
     }
 
     private void OnTriggerEnter(Collider other)

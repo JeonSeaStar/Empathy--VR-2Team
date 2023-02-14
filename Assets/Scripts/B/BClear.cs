@@ -38,6 +38,7 @@ public class BClear : MonoBehaviour
     {
         yield return new WaitForSeconds(10.0f);
 
-        LodingSceneManager.LoadScene("Room","Non");
+        GameManager.instance.bmissionClear = false;
+        LodingSceneManager.LoadScene("Room", "Non");
     }
 }
