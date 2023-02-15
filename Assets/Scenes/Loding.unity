@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 23963eed8d9ee414587e90697df0c2d9, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 8822e67c22d6a3f41b93502f1ad9f524, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10205071, g: 0.45117274, b: 0.7539063, a: 1}
+  m_IndirectSpecularColor: {r: 0.44653323, g: 0.43735808, b: 0.553009, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: aafd59f568673ba408a9db0c3654a8a4,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -16090,7 +16091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &542693507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34788,6 +34789,7 @@ GameObject:
   - component: {fileID: 1052140247}
   - component: {fileID: 1052140249}
   - component: {fileID: 1052140248}
+  - component: {fileID: 1052140250}
   m_Layer: 5
   m_Name: StartText
   m_TagString: Untagged
@@ -34812,7 +34814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105.28, y: 118.9}
+  m_AnchoredPosition: {x: 32.500004, y: 110.5}
   m_SizeDelta: {x: 280, y: 74.9514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1052140248
@@ -34850,8 +34852,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -34918,6 +34920,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052140246}
   m_CullTransparentMesh: 1
+--- !u!114 &1052140250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052140246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1060304465
 GameObject:
   m_ObjectHideFlags: 0
@@ -45882,7 +45899,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a8dc287fa8fe8ab4eb4d92c0c373dff2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -121.4
+      value: -149.1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8dc287fa8fe8ab4eb4d92c0c373dff2,
         type: 3}

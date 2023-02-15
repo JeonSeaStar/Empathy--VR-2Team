@@ -34,6 +34,7 @@ public class ConMale : MonoBehaviour
     public float f;
     public float a;
     bool leftBool;
+    public GameObject go;
 
     void Update()
     {
@@ -47,6 +48,7 @@ public class ConMale : MonoBehaviour
                 if (ss.h == num)
                 {
                     _rconnect = true;
+                    gb.enabled = false;
                     ads.PlayOneShot(audioClips[1]);
                 }
                 else
@@ -92,6 +94,7 @@ public class ConMale : MonoBehaviour
         {
             if (sss.connect)
             {
+                go.SetActive(false);
                 transform.position = sss.t.position;
                 transform.rotation = Quaternion.identity;
             }
