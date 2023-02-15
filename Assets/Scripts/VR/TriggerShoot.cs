@@ -14,12 +14,12 @@ public class TriggerShoot : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            OVRInput.SetControllerVibration(0.2f, 0.1f, OVRInput.Controller.RHand);
+            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.RHand);
             audioSource.PlayOneShot(audioSource.clip);
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
         {
-            OVRInput.SetControllerVibration(0.2f, 0.1f, OVRInput.Controller.LHand);
+            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.LHand);
             audioSource.PlayOneShot(audioSource.clip);
         }
         //if (og.isGrabbed)
@@ -27,6 +27,7 @@ public class TriggerShoot : MonoBehaviour
         //    audioSource.PlayOneShot(clips[1]);
         //    OVRInput.SetControllerVibration(0.2f, 0.1f);
         //}
+
     }
 
     private void OnTriggerEnter(Collider other)

@@ -8,46 +8,47 @@ public class Car : MonoBehaviour
     Vector3 frontCar;
     Vector3 backCar;
     bool crashed = false;
+    private float time = 0.0f;
 
     public AudioSource audioSource;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 11)
+        if (other.gameObject.layer == 11 && !crashed)
         {
             crashed = true;
             audioSource.Play();
         }
 
-        if (other.gameObject.layer == 9)
+        if (other.gameObject.layer == 9 && !crashed)
         {
             crashed = true;
         }
 
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !crashed)
         {
             crashed = true;
             audioSource.Play();
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == 11)
-        {
-            crashed = false;
-        }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    if (other.gameObject.layer == 11)
+    //    {
+    //        crashed = false;
+    //    }
 
-        if (other.gameObject.layer == 9)
-        {
-            crashed = false;
-        }
+    //    if (other.gameObject.layer == 9)
+    //    {
+    //        crashed = false;
+    //    }
 
-        if (other.gameObject.tag == "Player")
-        {
-            crashed = false;
-        }
-    }
+    //    if (other.gameObject.tag == "Player")
+    //    {
+    //        crashed = false;
+    //    }
+    //}
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,14 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
+
+        if (time >= 5.0f)
+        {
+            time = 0.0f;
+            crashed = false;
+        }
+
         if (!crashed)
         {
             if (transform.rotation.y == 0)
