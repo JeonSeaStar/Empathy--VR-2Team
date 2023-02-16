@@ -25,6 +25,8 @@ public class UIManager : MonoBehaviour
     public Animator clearAni;
     public Transform aClearTransform;
 
+    private bool isClearPos = false;
+
     void Start()
     {
         if (_instance == null)
@@ -40,6 +42,20 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         AScene();
+
+        if (isClearPos)
+        {
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            {
+                isClearPos = false;
+                LodingSceneManager.LoadScene("Room", "Non");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            {
+                isClearPos = false;
+                LodingSceneManager.LoadScene("Room", "Non");
+            }
+        }
     }
 
     void AScene()
@@ -54,6 +70,7 @@ public class UIManager : MonoBehaviour
             aClearUI.SetActive(true);
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
+            isClearPos = true;
         }
     }
 }

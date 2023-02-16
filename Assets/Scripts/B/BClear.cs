@@ -7,6 +7,8 @@ public class BClear : MonoBehaviour
     public Transform player;
     public Transform spawnPoint;
 
+    private bool isClearPos = false;
+
     struct ObjectSpawn
     {
         public ObjectSpawn(Vector3 pos, Quaternion rot)
@@ -26,19 +28,43 @@ public class BClear : MonoBehaviour
         playerSpawn = new ObjectSpawn(spawnPoint.position, spawnPoint.rotation);
     }
 
+    private void Update()
+    {
+        if (isClearPos)
+        {
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            {
+                StopCoroutine(GoRoom());
+                GameManager.instance.bmissionClear = false;
+                isClearPos = false;
+                LodingSceneManager.LoadScene("Room", "Non");
+            }
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            {
+                StopCoroutine(GoRoom());
+                GameManager.instance.bmissionClear = false;
+                isClearPos = false;
+                LodingSceneManager.LoadScene("Room", "Non");
+            }
+        }
+    }
+
     public void ClearSpawn()
     {
         player.position = playerSpawn.objectPosition;
         player.rotation = playerSpawn.objectRotation;
+
+        isClearPos = true;
 
         StartCoroutine(GoRoom());
     }
 
     IEnumerator GoRoom()
     {
-        yield return new WaitForSeconds(10.0f);
+        yield return new WaitForSeconds(20.0f);
 
         GameManager.instance.bmissionClear = false;
+        isClearPos = false;
         LodingSceneManager.LoadScene("Room", "Non");
     }
 }
