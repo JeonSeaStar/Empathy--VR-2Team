@@ -14,8 +14,8 @@ public class JeonSeon : MonoBehaviour
         {
             _con = value;
 
-            if (con) { s.current_connect--; }
-            else if(!con) { s.current_connect++; }
+            if (con) { s.current_connect++; }
+            else if(!con) { s.current_connect--; }
         }
     }
     public scrip s;
@@ -26,6 +26,7 @@ public class JeonSeon : MonoBehaviour
         if (males[0]._rconnect && males[1]._rconnect)
         {
             con = true;
+            os.gravity = new Vector3(0, 0, 0);
         }
         else if(!males[0]._rconnect || !males[1]._rconnect)
         {

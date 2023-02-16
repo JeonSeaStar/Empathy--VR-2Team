@@ -14,7 +14,7 @@ public class scrip : MonoBehaviour
         {
             _current_connect = value;
             current_connect_text.text = current_connect.ToString();
-            if (current_connect == 0)
+            if (current_connect == 4)
                 StartCoroutine(Clear());
         }
     }
@@ -24,7 +24,7 @@ public class scrip : MonoBehaviour
 
     void Update()
     {
-        if(clear && current_connect != 0)
+        if(clear && current_connect != 4)
         {
             StopAllCoroutines();
             clear = false;

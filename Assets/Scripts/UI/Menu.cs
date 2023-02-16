@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
 
     void OnMenu()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.Start)&& !isuiOn)
+        if (OVRInput.GetDown(OVRInput.RawButton.B)&& !isuiOn)
         {
             if(SceneManager.GetActiveScene().buildIndex !=5 && 
                 SceneManager.GetActiveScene().buildIndex != 0 && 

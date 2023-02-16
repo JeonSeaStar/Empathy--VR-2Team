@@ -16,20 +16,8 @@ public class Car : MonoBehaviour
     {
         if (other.gameObject.layer == 11 && !crashed)
         {
-            audioSource.Play();
-        }
-
-        if (other.gameObject.tag == "Player" && !crashed)
-        {
-            audioSource.Play();
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.layer == 11 && !crashed)
-        {
             crashed = true;
+            audioSource.Play();
         }
 
         if (other.gameObject.layer == 9 && !crashed)
@@ -40,6 +28,25 @@ public class Car : MonoBehaviour
         if (other.gameObject.tag == "Player" && !crashed)
         {
             crashed = true;
+            audioSource.Play();
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.layer == 11)
+        {
+            time = 0.0f;
+        }
+
+        if (other.gameObject.layer == 9)
+        {
+            time = 0.0f;
+        }
+
+        if (other.gameObject.tag == "Player")
+        {
+            time = 0.0f;
         }
     }
 

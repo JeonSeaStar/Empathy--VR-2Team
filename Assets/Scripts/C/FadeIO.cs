@@ -7,14 +7,31 @@ public class FadeIO : MonoBehaviour
 {
     public Animator anime;
     public CClear cc;
+    public scrip ss;
     [HideInInspector] public int hash = Animator.StringToHash("IO");
     [HideInInspector] public int hash2 = Animator.StringToHash("LS");
+
 
     //void Start()
     //{
     //    anime.SetTrigger(hash);
     //    StartCoroutine(SceneLoad());
     //}
+
+    void Update()
+    {
+        if(ss.clear)
+        {
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            {
+                anime.SetTrigger(hash2);
+            }
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            {
+                anime.SetTrigger(hash2);
+            }
+        }
+    }
 
     public void Clear_Event_Setting()
     {
