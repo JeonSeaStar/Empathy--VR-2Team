@@ -23,6 +23,7 @@ public class Car : MonoBehaviour
         if (other.gameObject.layer == 9 && !crashed)
         {
             crashed = true;
+            time = 0.0f;
         }
 
         if (other.gameObject.tag == "Player" && !crashed)
@@ -39,10 +40,10 @@ public class Car : MonoBehaviour
             time = 0.0f;
         }
 
-        if (other.gameObject.layer == 9)
-        {
-            time = 0.0f;
-        }
+        //if (other.gameObject.layer == 9)
+        //{
+        //    crashed = true;
+        //}
 
         if (other.gameObject.tag == "Player")
         {
