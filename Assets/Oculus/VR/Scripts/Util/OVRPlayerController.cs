@@ -20,6 +20,7 @@
 
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -166,6 +167,8 @@ public class OVRPlayerController : MonoBehaviour
     private float buttonRotation = 0f;
     private bool ReadyToSnapTurn; // Set to true when a snap turn has occurred, code requires one frame of centered thumbstick to enable another snap turn.
     private bool playerControllerEnabled = false;
+
+    public Image warning;
 
     void Start()
     {
@@ -648,6 +651,14 @@ public class OVRPlayerController : MonoBehaviour
             Vector3 euler = transform.rotation.eulerAngles;
             euler.y = InitialYRotation;
             transform.rotation = Quaternion.Euler(euler);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.layer == 13)
+        {
+            warning.gameObject.SetActive(true);
         }
     }
 }
