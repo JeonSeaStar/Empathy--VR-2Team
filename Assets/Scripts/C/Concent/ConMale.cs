@@ -4,6 +4,7 @@ using UnityEngine;
 using OVR;
 using Oculus;
 using OculusSampleFramework;
+using UnityEngine.XR;
 
 public class ConMale : MonoBehaviour
 {
