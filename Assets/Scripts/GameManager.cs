@@ -9,12 +9,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("각 씬 접속 확인")]
-    public bool startScene = true;
-    public bool roomScene = false;
-    public bool aScene = false;
-    public bool bScene = false;
-    public bool cScene = false;
     [HideInInspector]
     public int currentBoxNum;
     [HideInInspector]
@@ -41,48 +35,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        GameSystem();
-    }
-
-
-    void GameSystem()
-    {
-        StartScene();
-        RoomScene();
-        ASceneSystem();
-    }
-
-    void StartScene()
-    {
-        if (SceneManager.sceneCount == 0)
-        {
-            startScene = true;
-            aScene = false;
-            bScene = false;
-            cScene = false;
-        }
-    }
-    void RoomScene()
-    {
-        if (SceneManager.sceneCount == 1)
-        {
-            startScene = false;
-            roomScene = true;
-            aScene = false;
-            bScene = false;
-            cScene = false;
-        }
-    }
-    void ASceneSystem()
-    {
-        if (SceneManager.sceneCount == 2)
-        {
-            startScene = false;
-            aScene = true;
-            bScene = false;
-            cScene = false;         
-        }
-
+             
     }
 
 }

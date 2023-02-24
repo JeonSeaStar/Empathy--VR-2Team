@@ -154,6 +154,9 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: e463f60a8113d0c4aa62573fa1190484, type: 3}
   - {fileID: 8300000, guid: 640140304debfc04fab818ef601e9990, type: 3}
+  gb: {fileID: 5035793921234676622}
+  rigid: {fileID: 6226574691355619320}
+  bc: {fileID: 5437985843592936439}
 --- !u!114 &5035793921234676622
 MonoBehaviour:
   m_ObjectHideFlags: 0

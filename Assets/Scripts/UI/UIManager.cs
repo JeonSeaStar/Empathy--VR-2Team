@@ -14,14 +14,19 @@ public class UIManager : MonoBehaviour
     public GameObject playerUI;
     public CharacterController playercc;
     public GameObject fade;
+    public GameObject fadeFailed;
     public Animator fadeAni;
+    public Animator fadeFailedAni;
+    public Timer timer;
     [Header("AScene")]
     public GameObject a;
     public GameObject box;
     public int totalBoxNumInt = 10;
     public Text totalBoxNum;
     public Text currentboxNum;
+    public GameObject timerUI;
     public GameObject aClearUI;
+    public GameObject aFailedUI;
     public Animator clearAni;
     public Transform aClearTransform;
 
@@ -34,6 +39,7 @@ public class UIManager : MonoBehaviour
             instance = this;
         }
         fade.SetActive(false);
+        timerUI.SetActive(true);
         aClearUI.SetActive(false);
         clearAni.enabled = false;
         fadeAni = fade.GetComponent<Animator>();
@@ -66,11 +72,20 @@ public class UIManager : MonoBehaviour
         if (GameManager.instance.amissionClear)
         {
             playercc.enabled = false;
+            timerUI.SetActive(false);
             fade.SetActive(true);
             aClearUI.SetActive(true);
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
             isClearPos = true;
+        }
+        if(timer.Time <= 0)
+        {
+            playercc.enabled = false;
+            timerUI.SetActive(false);
+            fadeFailed.SetActive(true);
+            aFailedUI.SetActive(true);
+            fadeFailedAni.SetTrigger("FadeOut");
         }
     }
 }

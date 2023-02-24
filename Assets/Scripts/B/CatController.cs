@@ -46,7 +46,7 @@ public class CatController : MonoBehaviour
         catCollider = GetComponent<CapsuleCollider>();
 
         targetPos = transform.position + targetOffset;
-        StartCoroutine(CatWalk());
+        if (!clearCat) StartCoroutine(CatWalk());
         StartCoroutine(CatAnimation());
 
         isMove = true;
@@ -193,21 +193,25 @@ public class CatController : MonoBehaviour
     {
         while (!isDestroy)
         {
-            if (!grabbableObject.isGrabed)
+            if (!clearCat)
             {
-                if (!isArrived)
+                if (!grabbableObject.isGrabed)
                 {
-                    anim.SetFloat("speed", walkSpeed);
+                    if (!isArrived)
+                    {
+                        anim.SetFloat("speed", walkSpeed);
+                    }
+                    else
+                    {
+                        anim.SetFloat("speed", runSpeed);
+                    }
                 }
                 else
                 {
-                    anim.SetFloat("speed", runSpeed);
+                    anim.SetFloat("speed", 0.0f);
                 }
             }
-            else
-            {
-                anim.SetFloat("speed", 0.0f);
-            }
+            else anim.SetFloat("speed", 0.0f);
 
             yield return null;
         }
