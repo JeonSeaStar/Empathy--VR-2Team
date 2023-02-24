@@ -21,6 +21,8 @@ public class Timer : MonoBehaviour
     public Text min;
     public Text sec;
     public Animator fade;
+    public Image timerImage;
+    public Sprite fireTimer;
 
     void Start()
     {
@@ -34,6 +36,7 @@ public class Timer : MonoBehaviour
         if (Time > 0)
         {
             Time -= 1;
+            if(Time == 30) { timerImage.sprite = fireTimer; }
             StartCoroutine(TimerCorutine());
             //text.text = time.ToString();
         }
