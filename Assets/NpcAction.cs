@@ -15,4 +15,12 @@ public class NpcAction : MonoBehaviour
     {
 
     }
+
+    void CharacterAni(bool b)
+    {
+        foreach (var item in animators)
+        {
+
+        }
+    }
 }
