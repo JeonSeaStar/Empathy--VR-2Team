@@ -27,7 +27,18 @@ public class ButtonMethod : MonoBehaviour
     }
     public void Reset()
     {
-        //플리즈 초기화 스크립트
+        if (GameManager.instance.amissionClear)
+        {
+            GameManager.instance.amissionClear = false;
+        }
+        else if(GameManager.instance.bmissionClear)
+        {
+            GameManager.instance.bmissionClear = false;
+        }
+        else if(GameManager.instance.cmissionClear)
+        {
+            GameManager.instance.cmissionClear = false;
+        }
     }
     public void QuitGame()
     {

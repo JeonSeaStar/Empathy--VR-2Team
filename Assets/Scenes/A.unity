@@ -16035,8 +16035,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588669692}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 191648.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.996, y: 0.996, z: 0.996}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16047,7 +16047,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3576.0176, y: -52.73025}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 366.84, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &594245428
@@ -23220,7 +23220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0ce96c43c35cef1469e52ffd0b612e91, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -25110,6 +25110,7 @@ GameObject:
   - component: {fileID: 880978792}
   - component: {fileID: 880978794}
   - component: {fileID: 880978793}
+  - component: {fileID: 880978795}
   m_Layer: 5
   m_Name: Min
   m_TagString: Untagged
@@ -25151,7 +25152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -25179,6 +25180,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880978791}
   m_CullTransparentMesh: 1
+--- !u!210 &880978795
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880978791}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &886807092
 GameObject:
   m_ObjectHideFlags: 0
@@ -36150,6 +36162,7 @@ GameObject:
   - component: {fileID: 1253870290}
   - component: {fileID: 1253870292}
   - component: {fileID: 1253870291}
+  - component: {fileID: 1253870293}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -36215,6 +36228,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253870289}
   m_CullTransparentMesh: 1
+--- !u!210 &1253870293
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253870289}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &1255367018
 GameObject:
   m_ObjectHideFlags: 0
@@ -54504,6 +54528,7 @@ GameObject:
   - component: {fileID: 1868486114}
   - component: {fileID: 1868486116}
   - component: {fileID: 1868486115}
+  - component: {fileID: 1868486117}
   m_Layer: 5
   m_Name: Sec
   m_TagString: Untagged
@@ -54545,7 +54570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -54573,6 +54598,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868486113}
   m_CullTransparentMesh: 1
+--- !u!210 &1868486117
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868486113}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
 --- !u!1 &1872747975
 GameObject:
   m_ObjectHideFlags: 0
@@ -56604,7 +56640,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936079639}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9}
+  m_LocalPosition: {x: 0, y: 0, z: 27.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67161,7 +67197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -87426,7 +87462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -110088,7 +110124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 0ce96c43c35cef1469e52ffd0b612e91, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -114200,6 +114236,7 @@ GameObject:
   - component: {fileID: 725160841492478083}
   - component: {fileID: 1882594654894647426}
   - component: {fileID: 7264420988313861760}
+  - component: {fileID: 7264420988313861761}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -114248,7 +114285,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1c4bacbb60f632b4d873a42ba7a50307, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9bc53fc48e8d9664da316174255ea514, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114259,6 +114296,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &7264420988313861761
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7264420988313861759}
+  m_Enabled: 1
+  m_SortingLayerID: -1119662647
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!224 &7280955390637184239
 RectTransform:
   m_ObjectHideFlags: 0

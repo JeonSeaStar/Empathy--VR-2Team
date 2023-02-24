@@ -1016,7 +1016,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119607804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.53715634}
+  m_LocalPosition: {x: 0, y: 0, z: 0.124}
   m_LocalScale: {x: 0.77, y: 0.6884491, z: 0.6123902}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1025,7 +1025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.07371192, y: 0.16986221}
+  m_AnchoredPosition: {x: 0.07371192, y: 0.259}
   m_SizeDelta: {x: 0.9279, y: 1.162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119607806
@@ -4901,7 +4901,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145151598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.206}
+  m_LocalPosition: {x: 0, y: 0, z: 0.096}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5990,7 +5990,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399963261}
   m_LocalRotation: {x: 0.32695925, y: -0, z: -0, w: 0.9450385}
-  m_LocalPosition: {x: 0, y: 0, z: 0.211}
+  m_LocalPosition: {x: 0, y: 0, z: -0.217}
   m_LocalScale: {x: 0.77, y: 0.6884491, z: 0.6123902}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5999,8 +5999,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 38.169, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3062, y: 0.1286}
-  m_SizeDelta: {x: 1.942, y: 2.3622}
+  m_AnchoredPosition: {x: 0.061, y: 0.1286}
+  m_SizeDelta: {x: 1.725, y: 2.3622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399963263
 MonoBehaviour:
@@ -6048,7 +6048,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1066189062}
         m_TargetAssemblyTypeName: ButtonMethod, Assembly-CSharp
-        m_MethodName: GotoRoom
+        m_MethodName: Reset
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

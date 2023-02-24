@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public int currentPlugNum;
     [Header("¹Ì¼Ç")]
     public bool amissionClear = false;
-    public bool aMissionReset = false;
     public bool bmissionClear = false;
     public bool cmissionClear = false;
 
