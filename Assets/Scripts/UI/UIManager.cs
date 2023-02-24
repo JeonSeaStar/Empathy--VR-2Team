@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     public GameObject timerUI;
     public GameObject aClearUI;
     public GameObject aFailedUI;
+    public GameObject anyButtonPress;
     public Animator clearAni;
     public Transform aClearTransform;
 
@@ -42,6 +43,7 @@ public class UIManager : MonoBehaviour
         timerUI.SetActive(true);
         aClearUI.SetActive(false);
         clearAni.enabled = false;
+        anyButtonPress.SetActive(false);
         fadeAni = fade.GetComponent<Animator>();
     }
 
@@ -74,6 +76,7 @@ public class UIManager : MonoBehaviour
             playercc.enabled = false;
             timerUI.SetActive(false);
             fade.SetActive(true);
+            anyButtonPress.SetActive(true);
             aClearUI.SetActive(true);
             fadeAni.SetTrigger("FadeOut");
             clearAni.enabled = true;
