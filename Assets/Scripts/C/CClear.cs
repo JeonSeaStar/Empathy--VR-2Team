@@ -30,6 +30,7 @@ public class CClear : MonoBehaviour
     public List<Animator> f;
     public List<Animator> g;
     public List<Animator> h;
+    public GameObject z;
 
     public void clear_ani()
     {
