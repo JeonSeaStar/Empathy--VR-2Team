@@ -14,8 +14,8 @@ public class Timer : MonoBehaviour
         set
         {
             currentTime = value;
-            min.text = (currentTime / 60).ToString();
-            sec.text = (currentTime % 60).ToString();
+            min.text = (currentTime / 60).ToString("D2");
+            sec.text = (currentTime % 60).ToString("D2");
         }
     }
     public Text min;
@@ -23,6 +23,8 @@ public class Timer : MonoBehaviour
     public Animator fade;
     public Image timerImage;
     public Sprite fireTimer;
+    public Animation anime;
+    public AudioSource audi;
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class Timer : MonoBehaviour
         if (Time > 0)
         {
             Time -= 1;
-            if(Time == 30) { timerImage.sprite = fireTimer; }
+            if(Time == 30) { TimeLeft(); }
             StartCoroutine(TimerCorutine());
             //text.text = time.ToString();
         }
@@ -49,5 +51,12 @@ public class Timer : MonoBehaviour
     private void Trigger()
     {
         fade.SetTrigger("FailedFadeIn");
+    }
+
+    void TimeLeft()
+    {
+        timerImage.sprite = fireTimer;
+        anime.Play();
+        audi.PlayOneShot(audi.clip);
     }
 }

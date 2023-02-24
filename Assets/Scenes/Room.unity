@@ -5026,6 +5026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168372037}
+  - component: {fileID: 1168372038}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -5053,6 +5054,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168372038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168372036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc2ec1816d076340936f4e9bfc25be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radioTMP: {fileID: 1726016649}
+  radioClearText: "\uBC29\uAE08 \uB4E4\uC5B4\uC628 \uC18D\uBCF4\uC785\uB2C8\uB2E4.\n\uC2E0\uD638\uB4F1
+    \uACE0\uC7A5\uC73C\uB85C \uC778\uD55C \uAD50\uD1B5 \uD63C\uC7A1\uC740\n\uD55C
+    \uC2DC\uBBFC\uC758 \uB3C4\uC6C0\uC73C\uB85C \uD574\uACB0\uB410\uB2E4\uACE0\uD569\uB2C8\uB2E4."
+  radioNClearText: "\uD604\uC7AC \uBC31\uD654\uC810 \uC0AC\uAC70\uB9AC\uAC00 \uC2E0\uD638\uB4F1
+    \uACE0\uC7A5\uC73C\uB85C \uAD50\uD1B5 \uD63C\uC7A1\uC774\n\uC2EC\uAC01\uD558\uB2E4\uACE0
+    \uD569\uB2C8\uB2E4. \uBE44\uC0C1 \uC804\uC6D0\uC774 \uD544\uC694\uD55C \uC0C1\uD669\uC778\uB370,\n\uC804\uC6D0
+    \uACF5\uAE09\uC774 \uC27D\uC9C0 \uC54A\uB2E4\uB124\uC694. \uD604\uC7A5 \uC5F0\uACB0\uD574
+    \uBCF4\uACA0\uC2B5\uB2C8\uB2E4."
 --- !u!224 &1177508533 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8279183870424490042, guid: b0ea7b478f319244080bf69ddbf841d7,

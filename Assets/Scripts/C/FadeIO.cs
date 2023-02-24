@@ -16,6 +16,7 @@ public class FadeIO : MonoBehaviour
     public CharacterController playerController;
     public GameObject timer;
     public GameObject z;
+    public GameObject x;
 
     void Update()
     {
@@ -23,10 +24,14 @@ public class FadeIO : MonoBehaviour
         {
             if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
             {
+                z.SetActive(false);
+                x.SetActive(false);
                 anime.SetTrigger(hash2);
             }
             if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
             {
+                z.SetActive(false);
+                x.SetActive(false);
                 anime.SetTrigger(hash2);
             }
         }
