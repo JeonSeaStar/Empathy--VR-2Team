@@ -14,6 +14,7 @@ public class FadeIO : MonoBehaviour
     public Transform t;
     public Transform p;
     public CharacterController playerController;
+    public GameObject timer;
 
     void Update()
     {
@@ -32,6 +33,7 @@ public class FadeIO : MonoBehaviour
 
     public void Clear_Event_Setting()
     {
+        timer.SetActive(false);
         cc.clear_setting();
         cc.playerController.enabled = false;
     }

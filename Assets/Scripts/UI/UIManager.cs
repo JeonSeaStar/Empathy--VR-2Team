@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
     public int totalBoxNumInt = 10;
     public Text totalBoxNum;
     public Text currentboxNum;
+    public GameObject timerUI;
     public GameObject aClearUI;
     public GameObject aFailedUI;
     public Animator clearAni;
@@ -38,6 +39,7 @@ public class UIManager : MonoBehaviour
             instance = this;
         }
         fade.SetActive(false);
+        timerUI.SetActive(true);
         aClearUI.SetActive(false);
         clearAni.enabled = false;
         fadeAni = fade.GetComponent<Animator>();
@@ -70,6 +72,7 @@ public class UIManager : MonoBehaviour
         if (GameManager.instance.amissionClear)
         {
             playercc.enabled = false;
+            timerUI.SetActive(false);
             fade.SetActive(true);
             aClearUI.SetActive(true);
             fadeAni.SetTrigger("FadeOut");
@@ -79,6 +82,7 @@ public class UIManager : MonoBehaviour
         if(timer.Time <= 0)
         {
             playercc.enabled = false;
+            timerUI.SetActive(false);
             fadeFailed.SetActive(true);
             aFailedUI.SetActive(true);
             fadeFailedAni.SetTrigger("FadeOut");
