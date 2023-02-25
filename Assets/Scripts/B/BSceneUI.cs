@@ -50,7 +50,7 @@ public class BSceneUI : MonoBehaviour
             StartCoroutine(FadeOut());
         }
 
-        if (timer.Time <= 0)
+        if (timer.Time <= 0 && isFade)
         {
             fade.SetActive(true);
             playerController.enabled = false;

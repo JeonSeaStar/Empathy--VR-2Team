@@ -9,6 +9,8 @@ public class BClear : MonoBehaviour
 
     private bool isClearPos = false;
 
+    public GameObject pressButton;
+
     struct ObjectSpawn
     {
         public ObjectSpawn(Vector3 pos, Quaternion rot)
@@ -61,6 +63,9 @@ public class BClear : MonoBehaviour
 
     IEnumerator GoRoom()
     {
+        yield return new WaitForSeconds(4.0f);
+        pressButton.SetActive(true);
+
         yield return new WaitForSeconds(20.0f);
 
         GameManager.instance.bmissionClear = false;

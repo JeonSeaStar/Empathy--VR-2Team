@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: b3b03e46e631fbd4c9f96654a0498302,
     type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: c109d9bb2660ad24c9d7708b3c27385d,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: e7c420642ed7a824998c4ccab47ad1c0,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -10845,7 +10845,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 52916ff8bcbe0fc4a9ae25661e3a943f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 13ab465df3dc91e44873a965d7c2c754, type: 2}
 --- !u!4 &374623205
 Transform:
   m_ObjectHideFlags: 0
@@ -18353,7 +18353,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588669692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 165.5}
+  m_LocalPosition: {x: 0, y: 0, z: 351}
   m_LocalScale: {x: 0.99600005, y: 0.99600005, z: 0.99600005}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62766,20 +62766,20 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9466458, b: 0.8537736, a: 1}
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.755
-    m_Bias: 0
-    m_NormalBias: 0
-    m_NearPlane: 0.1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -62824,14 +62824,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714557811}
-  m_LocalRotation: {x: 0.5235438, y: -0.24973834, z: 0.31692433, w: 0.75039434}
-  m_LocalPosition: {x: -95, y: 186.1, z: 107}
+  m_LocalRotation: {x: 0.37600154, y: 0.41377896, z: -0.19294828, w: 0.80633795}
+  m_LocalPosition: {x: 48.97, y: 209, z: 166.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 70.739, y: 352.518, z: 400.478}
+  m_LocalEulerAnglesHint: {x: 50, y: 54.33, z: 0}
 --- !u!1 &1714950742
 GameObject:
   m_ObjectHideFlags: 0
@@ -70142,7 +70142,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uBC84\uD2BC\uC744 \uB204\uB974\uBA74 \uB2E4\uC74C \uC7A5\uBA74\uC73C\uB85C
-    \uB118\uC5B4\uAC11\uB2C8\uB2E4 ?"
+    \uB118\uC5B4\uAC11\uB2C8\uB2E4 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cefc019cab4cbdf42a0ef27d23653938, type: 2}
   m_sharedMaterial: {fileID: 5764929765483534589, guid: cefc019cab4cbdf42a0ef27d23653938,

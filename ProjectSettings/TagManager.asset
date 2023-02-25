@@ -13,6 +13,7 @@ TagManager:
   - Destroy
   - Exit
   - Exit2
+  - ts
   layers:
   - Default
   - TransparentFX

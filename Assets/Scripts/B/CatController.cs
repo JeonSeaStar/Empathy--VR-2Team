@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CatController : MonoBehaviour
 {
+    public GameObject player;
     public Animator anim;
     public Animation catAnim;
     public Animation clearAnim;
@@ -39,8 +40,11 @@ public class CatController : MonoBehaviour
     public float walkSpeed = 0.2f;
     public float runSpeed = 2.0f;
 
+    private bool thanks = false;
+
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("ts");
         catSpawner = FindObjectOfType<CatSpawner>();
         bSceneUI = FindObjectOfType<BSceneUI>();
         catCollider = GetComponent<CapsuleCollider>();
@@ -57,6 +61,12 @@ public class CatController : MonoBehaviour
     private void Update()
     {
         if (GameManager.instance.bmissionClear && clearCat && !emojiOn)
+        {
+            emojiOn = true;
+            StartCoroutine(CatEmoji());
+        }
+
+        if (bSceneUI.timer.Time <= 0 && clearCat && !emojiOn)
         {
             emojiOn = true;
             StartCoroutine(CatEmoji());
@@ -121,10 +131,11 @@ public class CatController : MonoBehaviour
                 bSceneUI.savedCatAmount++;
                 audioSource.PlayOneShot(clips[1]);
                 StartCoroutine(CatEmoji());
+
+                StartCoroutine(CatThanks()); // 감사 표시
             }
             isArrived = true;
 
-            transform.rotation = Quaternion.LookRotation(CatRotator(exitPos));
             StartCoroutine(CatExit());
         }
         else if (other.gameObject.CompareTag("Exit"))
@@ -154,6 +165,26 @@ public class CatController : MonoBehaviour
         return destination - transform.position;
     }
 
+    IEnumerator CatThanks()
+    {
+        while (!isGround) { }
+        transform.rotation = Quaternion.LookRotation(CatRotator(player.transform.position)); // 나를 바라봐
+        StartCoroutine(LookMe());
+
+        anim.SetTrigger("Thanks");
+        yield return new WaitForSeconds(5.3f);
+        thanks = true;
+    }
+
+    IEnumerator LookMe()
+    {
+        while (!thanks)
+        {
+            transform.LookAt(player.transform);
+            yield return null;
+        }
+    }
+
     IEnumerator CatWalk()
     {
         while (!isArrived)
@@ -169,13 +200,20 @@ public class CatController : MonoBehaviour
     {
         while (!isExit)
         {
-            if (!grabbableObject.isGrabed) transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
+            if (thanks)
+            {
+                transform.rotation = Quaternion.LookRotation(CatRotator(exitPos));
+                if (!grabbableObject.isGrabed) transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
+            }
             yield return null;
         }
 
         while (!isExit2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, exit2Pos, runSpeed * Time.deltaTime);
+            if (thanks)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, exit2Pos, runSpeed * Time.deltaTime);
+            }
             yield return null;
         }
 
