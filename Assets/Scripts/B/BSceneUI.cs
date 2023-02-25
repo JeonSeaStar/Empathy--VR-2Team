@@ -9,6 +9,7 @@ public class BSceneUI : MonoBehaviour
     public CharacterController playerController;
 
     public GameObject clearCats;
+    public GameObject failCats;
 
     public int clearCatAmount = 5;
     public int savedCatAmount = 0;
@@ -19,6 +20,8 @@ public class BSceneUI : MonoBehaviour
     public Animator fadeAni;
 
     private bool isFade = true;
+
+    public Timer timer;
 
     private void Start()
     {
@@ -37,7 +40,7 @@ public class BSceneUI : MonoBehaviour
         }
         else
         {
-            leftCat.text = (clearCatAmount - savedCatAmount).ToString();
+            leftCat.text = savedCatAmount.ToString();
         }
 
         if (GameManager.instance.bmissionClear && isFade)
@@ -46,13 +49,31 @@ public class BSceneUI : MonoBehaviour
             playerController.enabled = false;
             StartCoroutine(FadeOut());
         }
-    } 
+
+        if (timer.Time <= 0)
+        {
+            fade.SetActive(true);
+            playerController.enabled = false;
+            StartCoroutine(FailFadeOut());
+        }
+    }
 
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(2.0f);
         bClear.ClearSpawn();
         clearCats.SetActive(true);
+
+
+        fadeAni.SetTrigger("FadeOut");
+        isFade = false;
+    }
+
+    IEnumerator FailFadeOut()
+    {
+        yield return new WaitForSeconds(2.0f);
+        bClear.ClearSpawn();
+        failCats.SetActive(true);
 
 
         fadeAni.SetTrigger("FadeOut");

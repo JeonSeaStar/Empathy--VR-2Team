@@ -870,8 +870,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -899,7 +899,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.78708076, z: 0.83442485, w: 1.3346486}
+  m_margin: {x: -0.04471588, y: 0.7551241, z: 1.3225664, w: 3.1741967}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4139,6 +4139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 9d75f2468c4fe4b4bb704096030d35f6,
         type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9d75f2468c4fe4b4bb704096030d35f6,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
@@ -4146,7 +4151,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 28683777a41a724458626b47e32e1d00, type: 2}
+      objectReference: {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
     - target: {fileID: 919132149155446097, guid: 9d75f2468c4fe4b4bb704096030d35f6,
         type: 3}
       propertyPath: m_Name
@@ -4184,8 +4189,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mr: {fileID: 949904769}
+  high: {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
   origin: {fileID: 2100000, guid: 28683777a41a724458626b47e32e1d00, type: 2}
   clear: {fileID: 2100000, guid: 234ecc99e9a90684193478ec70122b3c, type: 2}
+  text: {fileID: 77934053}
 --- !u!23 &949904769 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9d75f2468c4fe4b4bb704096030d35f6,

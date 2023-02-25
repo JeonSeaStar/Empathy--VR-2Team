@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
 
     [Header("±âº»")]
     public GameObject player;
-    public GameObject playerUI;
     public CharacterController playercc;
     public GameObject fade;
     public GameObject fadeFailed;
@@ -41,6 +40,7 @@ public class UIManager : MonoBehaviour
         }
         fade.SetActive(false);
         timerUI.SetActive(true);
+        box.SetActive(true);
         aClearUI.SetActive(false);
         clearAni.enabled = false;
         anyButtonPress.SetActive(false);
@@ -75,6 +75,7 @@ public class UIManager : MonoBehaviour
         {
             playercc.enabled = false;
             timerUI.SetActive(false);
+            box.SetActive(false);
             fade.SetActive(true);
             anyButtonPress.SetActive(true);
             aClearUI.SetActive(true);
@@ -86,6 +87,7 @@ public class UIManager : MonoBehaviour
         {
             playercc.enabled = false;
             timerUI.SetActive(false);
+            box.SetActive(false);
             fadeFailed.SetActive(true);
             aFailedUI.SetActive(true);
             fadeFailedAni.SetTrigger("FadeOut");
