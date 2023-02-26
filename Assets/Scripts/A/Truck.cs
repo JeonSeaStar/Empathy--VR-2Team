@@ -9,6 +9,18 @@ public class Truck : MonoBehaviour
     public GameObject[] bildingBox = new GameObject[10];//치운 박스가 쌓이는 위치
     public AudioSource audioSource;
 
+    private void Start()
+    {
+       if(!GameManager.instance.amissionClear)
+        {
+            currentBoxnum = 0;
+            for (int i = 0; i < 10; i++)
+            {               
+                    bildingBox[i].SetActive(false);
+            }
+        }
+    }
+
     void Update()
     {
         OnBox();
