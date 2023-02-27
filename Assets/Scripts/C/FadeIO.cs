@@ -18,6 +18,7 @@ public class FadeIO : MonoBehaviour
     public GameObject z;
     public GameObject x;
     public Timer scTimer;
+    public GameObject goal;
 
     void Update()
     {
@@ -44,6 +45,7 @@ public class FadeIO : MonoBehaviour
     {
         scTimer.StopTimer();
         timer.SetActive(false);
+        goal.SetActive(false);
         cc.clear_setting();
         cc.playerController.enabled = false;
     }

@@ -14616,6 +14616,8 @@ MonoBehaviour:
   fade: {fileID: 2071698508}
   fadeAni: {fileID: 2071698510}
   timer: {fileID: 2025271689}
+  countUI: {fileID: 507961001}
+  timerUI: {fileID: 611810526}
 --- !u!4 &1387302270
 Transform:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class BSceneUI : MonoBehaviour
     private bool isFade = true;
 
     public Timer timer;
+    public GameObject countUI;
+    public GameObject timerUI;
 
     private void Start()
     {
@@ -62,7 +64,9 @@ public class BSceneUI : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         timer.StopTimer();
-        //timer.gameObject.SetActive(false);
+        timerUI.SetActive(false);
+        countUI.SetActive(false);
+
         bClear.ClearSpawn();
         clearCats.SetActive(true);
 
