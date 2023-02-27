@@ -70423,7 +70423,7 @@ MonoBehaviour:
   _visibleDuringSelect: 0
   _distanceInteractor: {fileID: 345387728252910296}
   _renderer: {fileID: 3934497676717431746}
-  _centerEye: {fileID: 0}
+  _centerEye: {fileID: 24858495}
   _defaultIcon: {fileID: 2800000, guid: 4aa4a1b9a03d9b54d80515831235fbe9, type: 3}
   _constantScreenSize: 1
 --- !u!1 &3934497676717431748
@@ -70544,7 +70544,7 @@ MonoBehaviour:
   _visibleDuringSelect: 0
   _distanceInteractor: {fileID: 5156720903018499308}
   _renderer: {fileID: 3934497676756812390}
-  _centerEye: {fileID: 0}
+  _centerEye: {fileID: 24858495}
   _defaultIcon: {fileID: 2800000, guid: 4aa4a1b9a03d9b54d80515831235fbe9, type: 3}
   _constantScreenSize: 1
 --- !u!33 &3934497676873447688
@@ -70585,7 +70585,7 @@ MonoBehaviour:
   _visibleDuringSelect: 0
   _distanceInteractor: {fileID: 345387728252910296}
   _renderer: {fileID: 3934497676873447691}
-  _centerEye: {fileID: 0}
+  _centerEye: {fileID: 24858495}
   _defaultIcon: {fileID: 2800000, guid: 4aa4a1b9a03d9b54d80515831235fbe9, type: 3}
   _constantScreenSize: 1
 --- !u!23 &3934497676873447691
@@ -70725,7 +70725,7 @@ MonoBehaviour:
   _visibleDuringSelect: 0
   _distanceInteractor: {fileID: 5156720903018499308}
   _renderer: {fileID: 3934497677702832548}
-  _centerEye: {fileID: 0}
+  _centerEye: {fileID: 24858495}
   _defaultIcon: {fileID: 2800000, guid: 4aa4a1b9a03d9b54d80515831235fbe9, type: 3}
   _constantScreenSize: 1
 --- !u!4 &3934497677702832550

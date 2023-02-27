@@ -23,17 +23,19 @@ public class FadeIO : MonoBehaviour
     {
         if(ss.clear)
         {
-            if (OVRInput.Get(OVRInput.RawButton.Any))
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
             {
                 z.SetActive(false);
                 x.SetActive(false);
                 anime.SetTrigger(hash2);
+                GameManager.instance.cmissionClear = true;
             }
-            if (OVRInput.Get(OVRInput.RawButton.Any))
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
             {
                 z.SetActive(false);
                 x.SetActive(false);
                 anime.SetTrigger(hash2);
+                GameManager.instance.cmissionClear = true;
             }
         }
     }
