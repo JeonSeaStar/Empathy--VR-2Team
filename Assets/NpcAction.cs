@@ -10,6 +10,15 @@ public class NpcAction : MonoBehaviour
     public List<Animator> bubbleAni = new List<Animator>();
     int bubbleHash = Animator.StringToHash("Bubble");
 
+    Vector3 targetPosition;
+    public Transform playerTransform;
+    public Vector3 roatation;
+
+    private void Update()
+    {
+        //if (look) { LookPlayer(); }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -40,11 +49,31 @@ public class NpcAction : MonoBehaviour
         {
             yield return new WaitForSeconds(ani.GetComponent<BubbleEvent>().delay);
             ani.SetBool(bubbleHash, b);
+            LookPlayer();
         }
         else
         {
             yield return new WaitForSeconds(0f);
             ani.SetBool(bubbleHash, b);
+            ResetRotation();
+        }
+    }
+
+    void LookPlayer()
+    {
+        foreach (var item in animators)
+        {
+            //item.GetComponent<HeadChaser>().look = true;
+            item.GetComponent<HeadChaser>().LookAtMe();
+        }
+    }
+
+    void ResetRotation()
+    {
+        foreach (var item in animators)
+        {
+            //item.GetComponent<HeadChaser>().look = false;
+            item.GetComponent<HeadChaser>().ResetRotation();
         }
     }
 }

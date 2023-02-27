@@ -34,14 +34,14 @@ public class BClear : MonoBehaviour
     {
         if (isClearPos)
         {
-            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 StopCoroutine(GoRoom());
                 GameManager.instance.bmissionClear = false;
                 isClearPos = false;
                 LodingSceneManager.LoadScene("Room", "Non");
             }
-            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 StopCoroutine(GoRoom());
                 GameManager.instance.bmissionClear = false;
@@ -63,6 +63,7 @@ public class BClear : MonoBehaviour
 
     IEnumerator GoRoom()
     {
+        /////
         yield return new WaitForSeconds(4.0f);
         pressButton.SetActive(true);
 

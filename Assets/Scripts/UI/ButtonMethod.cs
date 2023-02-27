@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonMethod : MonoBehaviour
 {
+    public GameObject cleared;
+
     public void FirstStartGotoRoom()
     {
         LodingSceneManager.LoadScene("Room", "s");
@@ -15,15 +17,42 @@ public class ButtonMethod : MonoBehaviour
     }
     public void GotoA()
     {
-        LodingSceneManager.LoadScene("A", "a");
+        if (!GameManager.instance.amissionClear)
+        {
+            LodingSceneManager.LoadScene("A", "a");
+        }
+        if (GameManager.instance.amissionClear && cleared != null)
+        {
+            cleared.SetActive(true);
+        }
     }
     public void GotoB()
     {
-        LodingSceneManager.LoadScene("B", "b");
+        if (!GameManager.instance.bmissionClear)
+        {
+            LodingSceneManager.LoadScene("B", "b");
+        }
+        if (GameManager.instance.bmissionClear && cleared != null)
+        {
+            cleared.SetActive(true);
+        }
     }
     public void GotoC()
     {
-        LodingSceneManager.LoadScene("C", "c");
+        if (!GameManager.instance.cmissionClear)
+        {
+            LodingSceneManager.LoadScene("C", "c");
+        }
+        if (GameManager.instance.cmissionClear && cleared != null)
+        {
+            cleared.SetActive(true);
+        }
+    }
+
+    public void GotoRoomAndReset()
+    {
+        LodingSceneManager.LoadScene("Room", "Non");
+        ResetMission();
     }
     public void ResetMission()
     {
@@ -40,6 +69,7 @@ public class ButtonMethod : MonoBehaviour
             GameManager.instance.cmissionClear = false;
         }
     }
+
     public void QuitGame()
     {
         Application.Quit();

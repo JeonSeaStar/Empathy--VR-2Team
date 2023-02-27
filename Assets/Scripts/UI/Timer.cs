@@ -40,7 +40,6 @@ public class Timer : MonoBehaviour
             Time -= 1;
             if(Time == 30) { TimeLeft(); }
             StartCoroutine(TimerCorutine());
-            //text.text = time.ToString();
         }
         else if (Time <= 0)
         {
@@ -58,5 +57,10 @@ public class Timer : MonoBehaviour
         timerImage.sprite = fireTimer;
         anime.Play();
         audi.PlayOneShot(audi.clip);
+    }
+
+    public void StopTimer()
+    {
+        StopAllCoroutines();
     }
 }

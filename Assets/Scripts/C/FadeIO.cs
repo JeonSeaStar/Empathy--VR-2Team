@@ -17,18 +17,19 @@ public class FadeIO : MonoBehaviour
     public GameObject timer;
     public GameObject z;
     public GameObject x;
+    public Timer scTimer;
 
     void Update()
     {
         if(ss.clear)
         {
-            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 z.SetActive(false);
                 x.SetActive(false);
                 anime.SetTrigger(hash2);
             }
-            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 z.SetActive(false);
                 x.SetActive(false);
@@ -39,6 +40,7 @@ public class FadeIO : MonoBehaviour
 
     public void Clear_Event_Setting()
     {
+        scTimer.StopTimer();
         timer.SetActive(false);
         cc.clear_setting();
         cc.playerController.enabled = false;

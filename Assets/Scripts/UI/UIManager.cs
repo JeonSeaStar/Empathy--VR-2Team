@@ -75,6 +75,7 @@ public class UIManager : MonoBehaviour
         {
             playercc.enabled = false;
             timerUI.SetActive(false);
+            timer.StopTimer();
             box.SetActive(false);
             fade.SetActive(true);
             anyButtonPress.SetActive(true);

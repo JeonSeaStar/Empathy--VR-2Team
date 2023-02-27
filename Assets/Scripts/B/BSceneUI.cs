@@ -61,6 +61,8 @@ public class BSceneUI : MonoBehaviour
     IEnumerator FadeOut()
     {
         yield return new WaitForSeconds(2.0f);
+        timer.StopTimer();
+        //timer.gameObject.SetActive(false);
         bClear.ClearSpawn();
         clearCats.SetActive(true);
 
