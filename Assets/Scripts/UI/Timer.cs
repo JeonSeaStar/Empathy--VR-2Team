@@ -32,13 +32,13 @@ public class Timer : MonoBehaviour
         StartCoroutine(TimerCorutine());
     }
 
-    IEnumerator TimerCorutine()
+    public IEnumerator TimerCorutine()
     {
         yield return new WaitForSecondsRealtime(1);
         if (Time > 0)
         {
             Time -= 1;
-            if(Time == 30) { TimeLeft(); }
+            if (Time == 30) { TimeLeft(); }
             StartCoroutine(TimerCorutine());
         }
         else if (Time <= 0)

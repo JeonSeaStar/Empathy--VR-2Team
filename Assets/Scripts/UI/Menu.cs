@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     public GameObject menu;
+    public Timer timer;
     bool isuiOn = false;
  
     void Update()
@@ -21,6 +22,7 @@ public class Menu : MonoBehaviour
                 SceneManager.GetActiveScene().buildIndex != 0 && 
                 SceneManager.GetActiveScene().buildIndex != 1)
             {
+                timer.StopTimer();
                 isuiOn = true;
                 menu.SetActive(true);
                 Time.timeScale = 0;
@@ -30,6 +32,7 @@ public class Menu : MonoBehaviour
 
     public void OffMenu()
     {
+        StartCoroutine(timer.TimerCorutine());
         isuiOn = false;
         menu.SetActive(false);
         Time.timeScale = 1;
