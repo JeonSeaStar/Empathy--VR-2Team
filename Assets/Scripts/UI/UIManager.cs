@@ -53,12 +53,12 @@ public class UIManager : MonoBehaviour
 
         if (isClearPos)
         {
-            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 isClearPos = false;
                 LodingSceneManager.LoadScene("Room", "Non");
             }
-            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            if (OVRInput.Get(OVRInput.RawButton.Any))
             {
                 isClearPos = false;
                 LodingSceneManager.LoadScene("Room", "Non");
