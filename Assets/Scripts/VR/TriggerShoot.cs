@@ -8,25 +8,27 @@ using OculusSampleFramework;
 public class TriggerShoot : MonoBehaviour
 {
     public AudioSource audioSource;
-    public ParticleSystem ps;
+    public AudioClip ac;
+    OVRHapticsClip oc;
+    private void Start()
+    {
+        oc = new OVRHapticsClip(ac);
+    }
 
     void Update()
     {
         if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.RHand);
+            //OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.RHand);
             audioSource.PlayOneShot(audioSource.clip);
+            OVRHaptics.RightChannel.Preempt(oc);
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
         {
-            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.LHand);
+            //OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.LHand);
             audioSource.PlayOneShot(audioSource.clip);
+            OVRHaptics.LeftChannel.Preempt(oc);
         }
-        //if (og.isGrabbed)
-        //{
-        //    audioSource.PlayOneShot(clips[1]);
-        //    OVRInput.SetControllerVibration(0.2f, 0.1f);
-        //}
 
     }
 

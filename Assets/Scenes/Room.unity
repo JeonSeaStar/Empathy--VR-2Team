@@ -48753,7 +48753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1111139824196437764}
-  ps: {fileID: 0}
+  ac: {fileID: 8300000, guid: 4b9f5b20f7aea4d4981bef2853e3cb9c, type: 3}
 --- !u!114 &6577444045340439424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52901,7 +52901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2039241920623456448}
-  ps: {fileID: 0}
+  ac: {fileID: 8300000, guid: 4b9f5b20f7aea4d4981bef2853e3cb9c, type: 3}
 --- !u!114 &7154205318561142333
 MonoBehaviour:
   m_ObjectHideFlags: 0

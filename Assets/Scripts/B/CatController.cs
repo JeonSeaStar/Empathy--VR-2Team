@@ -42,12 +42,20 @@ public class CatController : MonoBehaviour
 
     private bool thanks = false;
 
+    public AudioClip ac;
+    OVRHapticsClip oc;
+    bool rClick;
+    bool lClick;
+    bool rightPlayH = false;
+    bool leftPlayH = false;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("ts");
         catSpawner = FindObjectOfType<CatSpawner>();
         bSceneUI = FindObjectOfType<BSceneUI>();
         catCollider = GetComponent<CapsuleCollider>();
+        oc = new OVRHapticsClip(ac);
 
         targetPos = transform.position + targetOffset;
         if (!clearCat) StartCoroutine(CatWalk());
@@ -83,6 +91,40 @@ public class CatController : MonoBehaviour
         {
             catCollider.enabled = true;
             transform.localScale = catScale;
+        }
+
+
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
+        {
+            rClick = true;
+        }
+        if (grabbableObject.isGrabed && rClick && !rightPlayH)
+        {
+            OVRHaptics.RightChannel.Preempt(oc);
+            rightPlayH = true;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
+        {
+            lClick = true;
+        }
+        if (grabbableObject.isGrabed && lClick && !leftPlayH)
+        {
+            OVRHaptics.LeftChannel.Preempt(oc);
+            leftPlayH = true;
+        }
+
+        if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
+        {
+            rClick = false;
+            rightPlayH = false;
+            OVRHaptics.RightChannel.Clear();
+        }
+
+        if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger))
+        {
+            lClick = false;
+            leftPlayH = false;
+            OVRHaptics.LeftChannel.Clear();
         }
     }
 

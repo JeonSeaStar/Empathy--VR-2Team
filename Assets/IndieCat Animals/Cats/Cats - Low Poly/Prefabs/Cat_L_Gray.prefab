@@ -1857,6 +1857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af671b228033dee40ad67564fd8798d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   anim: {fileID: 6856631507730219017}
   catAnim: {fileID: 9132694094788353010}
   clearAnim: {fileID: 0}
@@ -1869,6 +1870,7 @@ MonoBehaviour:
   clearCat: 0
   walkSpeed: 0.2
   runSpeed: 2
+  ac: {fileID: 8300000, guid: 3e44e90c1539add41a8051a71ab3eba1, type: 3}
 --- !u!54 &-5015355272784198952
 Rigidbody:
   m_ObjectHideFlags: 0

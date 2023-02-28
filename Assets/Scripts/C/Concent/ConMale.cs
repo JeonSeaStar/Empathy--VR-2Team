@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using OVR;
-using Oculus;
-using OculusSampleFramework;
-using UnityEngine.XR;
 
 public class ConMale : MonoBehaviour
 {
@@ -49,10 +45,65 @@ public class ConMale : MonoBehaviour
     public CClear cc;
     public int numm;
 
+    public AudioClip ac;
+    OVRHapticsClip oc;
+    bool rClick;
+    bool lClick;
+    bool rightPlayH = false;
+    bool leftPlayH = false;
+
+    private void Start()
+    {
+        oc = new OVRHapticsClip(ac);
+    }
+
     void Update()
     {
+        if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
+        {
+            rClick = true;
+        }
+        if (gb.isGrabed && rClick && !rightPlayH)
+        {
+            OVRHaptics.RightChannel.Preempt(oc);
+            rightPlayH = true;
+        }
+        if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
+        {
+            lClick = true;
+        }
+        if (gb.isGrabed && lClick && !leftPlayH)
+        {
+            OVRHaptics.LeftChannel.Preempt(oc);
+            leftPlayH = true;
+        }
+
+
+        //if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger) && gb.isGrabed)
+        //{
+        //    OVRHaptics.RightChannel.Preempt(oc);
+        //}
+
         if (OVRInput.GetUp(OVRInput.RawButton.RHandTrigger))
         {
+            rClick = false;
+            rightPlayH = false;
+            OVRHaptics.RightChannel.Clear();
+            if (gb.isGrabed && !ss.connect)
+            {
+                ads.PlayOneShot(audioClips[0]);
+                ss.connect = true;
+                sss = ss;
+                sss.connect = true;
+                connect = true;
+            }
+        }
+
+        if (OVRInput.GetUp(OVRInput.RawButton.LHandTrigger))
+        {
+            lClick = false;
+            leftPlayH = false;
+            OVRHaptics.LeftChannel.Clear();
             if (gb.isGrabed && !ss.connect)
             {
                 ads.PlayOneShot(audioClips[0]);
@@ -71,7 +122,7 @@ public class ConMale : MonoBehaviour
         {
             rg.useGravity = false;
             //js.os.gravity = new Vector3(0, 0, 0);
-            Haptic();
+            //Haptic();
         }
         else
         {
@@ -137,11 +188,11 @@ public class ConMale : MonoBehaviour
 
     void Haptic()
     {
-        if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
-            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.RHand);
-        if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
-            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.LHand);
-        Amplitude();
+        //if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+        //    OVRInput.SetControllerVibration(f, a, OVRInput.Controller.RHand);
+        //if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
+        //    OVRInput.SetControllerVibration(f, a, OVRInput.Controller.LHand);
+        //Amplitude();
     }
 
     void Amplitude()
