@@ -122,7 +122,7 @@ public class ConMale : MonoBehaviour
         {
             rg.useGravity = false;
             //js.os.gravity = new Vector3(0, 0, 0);
-            //Haptic();
+            Haptic();
         }
         else
         {
@@ -188,11 +188,11 @@ public class ConMale : MonoBehaviour
 
     void Haptic()
     {
-        //if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
-        //    OVRInput.SetControllerVibration(f, a, OVRInput.Controller.RHand);
-        //if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
-        //    OVRInput.SetControllerVibration(f, a, OVRInput.Controller.LHand);
-        //Amplitude();
+        if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.RHand);
+        if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
+            OVRInput.SetControllerVibration(f, a, OVRInput.Controller.LHand);
+        Amplitude();
     }
 
     void Amplitude()

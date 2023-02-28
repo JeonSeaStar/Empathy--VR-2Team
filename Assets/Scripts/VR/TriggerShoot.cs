@@ -19,37 +19,16 @@ public class TriggerShoot : MonoBehaviour
     {
         if (OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
         {
-            //OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.RHand);
+            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.RHand);
             audioSource.PlayOneShot(audioSource.clip);
             OVRHaptics.RightChannel.Preempt(oc);
         }
         if (OVRInput.GetDown(OVRInput.RawButton.LHandTrigger))
         {
-            //OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.LHand);
+            OVRInput.SetControllerVibration(0.2f, 0.4f, OVRInput.Controller.LHand);
             audioSource.PlayOneShot(audioSource.clip);
             OVRHaptics.LeftChannel.Preempt(oc);
         }
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //if (other.CompareTag("Box"))
-        //{
-        //    og = other.gameObject.GetComponent<OVRGrabbable>();
-        //    playSound = true;
-        //    OVRInput.SetControllerVibration(0.2f, 0.1f);
-        //    if(playSound)
-        //    {
-        //        audioSource.PlayOneShot(clips[1]);
-        //        playSound = false;
-        //    }
-        //    //og = other.GetComponent<OVRGrabbable>();
-        //}
-        //if (og.isGrabbed)
-        //{
-        //    audioSource.PlayOneShot(clips[1]);
-        //    OVRInput.SetControllerVibration(0.2f, 0.1f);
-        //}
     }
 }

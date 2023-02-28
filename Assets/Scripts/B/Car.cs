@@ -12,6 +12,8 @@ public class Car : MonoBehaviour
 
     public AudioSource audioSource;
 
+    Animation anim;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 11 && !crashed)
@@ -54,6 +56,8 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animation>();
+
         frontCar = new Vector3(0.0f, 0.0f, carSpeed);
         backCar = new Vector3(0.0f, 0.0f, -carSpeed);
     }
@@ -71,6 +75,8 @@ public class Car : MonoBehaviour
 
         if (!crashed)
         {
+            if (!anim.isPlaying) anim.Play();
+
             if (transform.rotation.y == 0)
             {
                 transform.position += frontCar * Time.deltaTime;
@@ -79,6 +85,10 @@ public class Car : MonoBehaviour
             {
                 transform.position += backCar * Time.deltaTime;
             }
+        }
+        else
+        {
+            if (anim.isPlaying) anim.Stop();
         }
 
         if (transform.position.z >= 500)

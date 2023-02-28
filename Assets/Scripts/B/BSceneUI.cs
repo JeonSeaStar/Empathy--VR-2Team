@@ -78,6 +78,10 @@ public class BSceneUI : MonoBehaviour
     IEnumerator FailFadeOut()
     {
         yield return new WaitForSeconds(2.0f);
+        timer.StopTimer();
+        timerUI.SetActive(false);
+        countUI.SetActive(false);
+
         bClear.ClearSpawn();
         failCats.SetActive(true);
 

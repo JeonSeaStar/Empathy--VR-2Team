@@ -20,9 +20,11 @@ public class FadeIO : MonoBehaviour
     public Timer scTimer;
     public GameObject goal;
 
+    bool failed;
+
     void Update()
     {
-        if(ss.clear)
+        if(ss.clear || failed)
         {
             if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
             {
@@ -69,11 +71,16 @@ public class FadeIO : MonoBehaviour
 
     public void FailedEvent()
     {
+        scTimer.StopTimer();
+        timer.SetActive(false);
+        goal.SetActive(false);
+        z.SetActive(true);
         p.position = t.position;
         p.rotation = t.rotation;
         failedNPC.SetActive(true);
         playerController.enabled = false;
 
+        failed = true;
         Invoke("ls", 15.0f);
     }
 
