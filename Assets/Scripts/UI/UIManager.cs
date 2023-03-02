@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     public GameObject anyButtonPress;
     public Animator clearAni;
     public Transform aClearTransform;
+    public Animator[] civilani = new Animator[24];
 
     private bool isClearPos = false;
 
@@ -86,6 +87,10 @@ public class UIManager : MonoBehaviour
         }
         if(timer.Time <= 0)
         {
+            for(int i = 0; i < 24; i++)
+            {
+                civilani[i].SetTrigger("Sad");
+            }
             playercc.enabled = false;
             timerUI.SetActive(false);
             box.SetActive(false);
