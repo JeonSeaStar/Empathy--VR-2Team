@@ -18,6 +18,7 @@ public class scri : MonoBehaviour
     public BoxCollider col;
     public AudioSource ads;
     public Transform t;
+    public Animation guideAni;
 
     private void Awake()
     {
@@ -30,11 +31,13 @@ public class scri : MonoBehaviour
         {
             col.enabled = false;
             ads.mute = true;
+            guideAni.gameObject.SetActive(false);
         }
         else if(!connect)
         {
             col.enabled = true;
             ads.mute = false;
+            guideAni.gameObject.SetActive(true);
         }
     }
 }

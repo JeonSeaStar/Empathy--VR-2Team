@@ -73,7 +73,7 @@ public class NpcAction : MonoBehaviour
         foreach (var item in animators)
         {
             //item.GetComponent<HeadChaser>().look = false;
-            item.GetComponent<HeadChaser>().ResetRotation();
+            StartCoroutine(item.GetComponent<HeadChaser>().ResetRotation());
         }
     }
 }

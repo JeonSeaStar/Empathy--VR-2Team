@@ -19,7 +19,7 @@ public class ButtonMethod : MonoBehaviour
     {
         if (!GameManager.instance.amissionClear)
         {
-            LodingSceneManager.LoadScene("A", "a");
+            LodingSceneManager.LoadScene("A2", "a");
         }
         if (GameManager.instance.amissionClear && cleared != null)
         {
@@ -30,7 +30,7 @@ public class ButtonMethod : MonoBehaviour
     {
         if (!GameManager.instance.bmissionClear)
         {
-            LodingSceneManager.LoadScene("B", "b");
+            LodingSceneManager.LoadScene("B2", "b");
         }
         if (GameManager.instance.bmissionClear && cleared != null)
         {
@@ -41,7 +41,7 @@ public class ButtonMethod : MonoBehaviour
     {
         if (!GameManager.instance.cmissionClear)
         {
-            LodingSceneManager.LoadScene("C", "c");
+            LodingSceneManager.LoadScene("C2", "c");
         }
         if (GameManager.instance.cmissionClear && cleared != null)
         {
