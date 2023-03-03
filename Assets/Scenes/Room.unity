@@ -1171,7 +1171,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187183517}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 62.62}
+  m_LocalPosition: {x: 0, y: 0, z: 191.64}
   m_LocalScale: {x: 225.36887, y: 225.36887, z: 225.36887}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1181,8 +1181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 448.2, y: 248.26}
-  m_SizeDelta: {x: 3.19, y: 2.37}
+  m_AnchoredPosition: {x: 448.2, y: 358.86}
+  m_SizeDelta: {x: 2.05, y: 1.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187183519
 MonoBehaviour:
@@ -3997,6 +3997,7 @@ GameObject:
   - component: {fileID: 890808964}
   - component: {fileID: 890808963}
   - component: {fileID: 890808962}
+  - component: {fileID: 890808965}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -4119,6 +4120,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890808960}
   m_CullTransparentMesh: 1
+--- !u!114 &890808965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890808960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96406f603bef584fa1ad5a5b61dc1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderers:
+  - {fileID: 949904769}
+  material:
+  - {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
+  - {fileID: 2100000, guid: 56a5f4157eea60f4d852f6303983ac33, type: 2}
+--- !u!23 &894388139 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 68b3c3a699919aa43bbb3adb83e89269,
+    type: 3}
+  m_PrefabInstance: {fileID: 55489510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &912508465
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5994,6 +6018,7 @@ GameObject:
   - component: {fileID: 1359408684}
   - component: {fileID: 1359408683}
   - component: {fileID: 1359408682}
+  - component: {fileID: 1359408685}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6116,6 +6141,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359408680}
   m_CullTransparentMesh: 1
+--- !u!114 &1359408685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359408680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96406f603bef584fa1ad5a5b61dc1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderers:
+  - {fileID: 23393677248061686}
+  - {fileID: 23100047869535280}
+  material:
+  - {fileID: 2100000, guid: 36d0908e98dc6074190278a5e5c8d187, type: 2}
+  - {fileID: 2100000, guid: baeb234598a16354791add4d45c19682, type: 2}
 --- !u!1 &1394844756
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,6 +6411,7 @@ GameObject:
   - component: {fileID: 1407970608}
   - component: {fileID: 1407970607}
   - component: {fileID: 1407970606}
+  - component: {fileID: 1407970609}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6491,6 +6535,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407970604}
   m_CullTransparentMesh: 1
+--- !u!114 &1407970609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407970604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96406f603bef584fa1ad5a5b61dc1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderers:
+  - {fileID: 894388139}
+  material:
+  - {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
+  - {fileID: 2100000, guid: 56a5f4157eea60f4d852f6303983ac33, type: 2}
 --- !u!1 &1549696600
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,7 +6653,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549762052}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.257}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25700027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6603,7 +6664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.122, y: 0.31704712}
+  m_AnchoredPosition: {x: -0.45095825, y: -0.17388916}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1584107518

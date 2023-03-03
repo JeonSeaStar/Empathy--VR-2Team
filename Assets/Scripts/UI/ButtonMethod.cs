@@ -7,6 +7,7 @@ public class ButtonMethod : MonoBehaviour
 {
     public GameObject cleared;
 
+
     public void FirstStartGotoRoom()
     {
         LodingSceneManager.LoadScene("Room", "s");
