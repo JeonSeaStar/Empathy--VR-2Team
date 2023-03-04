@@ -66,18 +66,18 @@ public class InterectPolice : MonoBehaviour
             //chat.SetActive(true);
             yield return new WaitForSecondsRealtime(3);
             chat.SetActive(false);
-            StartCoroutine(InterectRotate2());
+            StartCoroutine(InteractRotate2());
         }
     }
 
-    IEnumerator InterectRotate2()
+    IEnumerator InteractRotate2()
     {
         t -= 0.01f;
         yield return new WaitForSeconds(0.01f);
         transform.rotation = Quaternion.Lerp(first, transform.rotation, t);
         if (t > 0)
         {
-            StartCoroutine(InterectRotate2());
+            StartCoroutine(InteractRotate2());
         }
         else
         {

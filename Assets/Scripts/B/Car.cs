@@ -7,8 +7,10 @@ public class Car : MonoBehaviour
     public float carSpeed = 4.0f;
     Vector3 frontCar;
     Vector3 backCar;
-    bool crashed = false;
-    private float time = 0.0f;
+    public bool crashed = false;
+    public float time = 0.0f;
+
+    bool isCar = false;
 
     public AudioSource audioSource;
 
@@ -24,6 +26,7 @@ public class Car : MonoBehaviour
 
         if (other.gameObject.layer == 9 && !crashed)
         {
+            isCar = true;
             crashed = true;
             time = 0.0f;
         }

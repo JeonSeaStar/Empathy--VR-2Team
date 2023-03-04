@@ -6,13 +6,14 @@ using TMPro;
 public class ClearUI : MonoBehaviour
 {
     public TextMeshProUGUI radioTMP;
-    public SpriteRenderer Clear_Stamp;
+    public GameObject Clear_Stamp;
     [TextArea] public string radioClearText;
     [TextArea] public string radioNClearText;
 
     void Awake()
     {
-        Clear_Stamp.enabled = false;
+        Clear_Stamp.SetActive(false);
+        radioTMP.text = radioNClearText;
         ClearUi();
     }
 
@@ -20,13 +21,13 @@ public class ClearUI : MonoBehaviour
     {
         if (GameManager.instance.cmissionClear)
         {
-            Clear_Stamp.enabled = true;
+            Clear_Stamp.SetActive(true);
             radioTMP.text = radioClearText;
         }
         else
         {
-            Clear_Stamp.enabled = false;
-            radioTMP.text = radioClearText;
+            Clear_Stamp.SetActive(false);
+            radioTMP.text = radioNClearText;
         }
             
     }

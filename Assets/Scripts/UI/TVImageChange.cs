@@ -10,11 +10,11 @@ public class TVImageChange : MonoBehaviour
     public Material origin;
     public Material clear;
     public TMP_Text text;
-    public SpriteRenderer Clear_Stamp;
+    public GameObject Clear_Stamp;
 
     void Start()
     {
-        Clear_Stamp.enabled = false;
+        Clear_Stamp.SetActive(false);
         mr.materials = new Material[2] {high,origin };
         text.text = "방금 들어온 소식 입니다, \n" +
             "사거리에서 과적 차량이 미끄러지면서 \n" +
@@ -26,7 +26,7 @@ public class TVImageChange : MonoBehaviour
     {
         if (GameManager.instance.amissionClear)
         {
-            Clear_Stamp.enabled = true;
+            Clear_Stamp.SetActive(true);
             mr.materials = new Material[2] { high, clear };
             text.text = "방금 들어온 소식 입니다, \n" +
                 "사거리 현장이 정리되면서 \n" +
@@ -34,7 +34,7 @@ public class TVImageChange : MonoBehaviour
         }
         else
         {
-            Clear_Stamp.enabled = false;
+            Clear_Stamp.SetActive(false);
             mr.materials = new Material[2] { high, origin };
             text.text = "방금 들어온 소식 입니다, \n" +
                 "사거리에서 과적 차량이 미끄러지면서 \n" +

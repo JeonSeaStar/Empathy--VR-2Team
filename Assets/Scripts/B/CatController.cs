@@ -49,6 +49,10 @@ public class CatController : MonoBehaviour
     bool rightPlayH = false;
     bool leftPlayH = false;
 
+    float t = 0;
+    bool turned = false;
+    Quaternion first;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("ts");
@@ -223,6 +227,7 @@ public class CatController : MonoBehaviour
         while (!thanks)
         {
             transform.LookAt(player.transform);
+            first = transform.rotation;
             yield return null;
         }
     }
@@ -244,8 +249,21 @@ public class CatController : MonoBehaviour
         {
             if (thanks)
             {
-                transform.rotation = Quaternion.LookRotation(CatRotator(exitPos));
-                if (!grabbableObject.isGrabed) transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
+                if (!turned)
+                {
+                    anim.SetFloat("speed", walkSpeed);
+                    t += Time.deltaTime;
+                    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(CatRotator(exitPos)), t);
+                    if (t >= 1)
+                    {
+                        turned = true;
+                    }
+                }
+                //transform.rotation = Quaternion.LookRotation(CatRotator(exitPos));
+                if (!grabbableObject.isGrabed && turned)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, exitPos, runSpeed * Time.deltaTime);
+                }
             }
             yield return null;
         }
@@ -283,7 +301,7 @@ public class CatController : MonoBehaviour
                     }
                     else
                     {
-                        anim.SetFloat("speed", runSpeed);
+                        if (turned) anim.SetFloat("speed", runSpeed);
                     }
                 }
                 else
