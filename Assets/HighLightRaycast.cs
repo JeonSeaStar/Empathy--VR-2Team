@@ -23,4 +23,20 @@ public class HighLightRaycast : MonoBehaviour, IPointerEnterHandler,IPointerExit
             item.material = material[0];
         }
     }
+
+    public void OnMouseOver()
+    {
+        foreach (var item in meshRenderers)
+        {
+            item.material = material[1];
+        }
+    }
+
+    public void OnMouseExit()
+    {
+        foreach (var item in meshRenderers)
+        {
+            item.material = material[0];
+        }
+    }
 }
