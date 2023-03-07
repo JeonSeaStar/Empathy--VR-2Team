@@ -459,7 +459,8 @@ namespace UnityEngine.EventSystems
 
             // Process the first mouse button fully
             ProcessMousePress(leftButtonData);
-            ProcessMove(leftButtonData.buttonData);
+            //ProcessMove(leftButtonData.buttonData);
+            OriginalProcessMove(leftButtonData);
             ProcessDrag(leftButtonData.buttonData);
 
             // Now process right / middle clicks
@@ -602,6 +603,18 @@ namespace UnityEngine.EventSystems
 
         private readonly MouseState m_MouseState = new MouseState();
 
+        protected override void ProcessMove(PointerEventData pointerEvent) //추가한 부분
+        {
+            var targetGO = pointerEvent.pointerCurrentRaycast.gameObject;
+            HandlePointerExitAndEnter(pointerEvent, targetGO);
+        }
+
+        private void OriginalProcessMove(MouseButtonEventData data) //추가한 부분
+        {
+            var pointerEvent = data.buttonData;
+            var targetGO = pointerEvent.pointerCurrentRaycast.gameObject;
+            HandlePointerExitAndEnter(pointerEvent, targetGO);
+        }
 
         // The following 2 functions are equivalent to PointerInputModule.GetMousePointerEventData but are customized to
         // get data for ray pointers and canvas mouse pointers.
@@ -916,4 +929,6 @@ namespace UnityEngine.EventSystems
             return scrollDelta;
         }
     };
+
+
 }

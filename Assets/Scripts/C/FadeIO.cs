@@ -24,21 +24,23 @@ public class FadeIO : MonoBehaviour
 
     void Update()
     {
-        if(ss.clear || failed)
+        if (ss.clear || failed)
         {
             if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
             {
                 z.SetActive(false);
                 x.SetActive(false);
                 anime.SetTrigger(hash2);
-                GameManager.instance.cmissionClear = true;
+                if (ss.clear) GameManager.instance.cmissionClear = true;
+                if (failed) GameManager.instance.cmissionClear = false;
             }
             if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
             {
                 z.SetActive(false);
                 x.SetActive(false);
                 anime.SetTrigger(hash2);
-                GameManager.instance.cmissionClear = true;
+                if (ss.clear) GameManager.instance.cmissionClear = true;
+                if (failed) GameManager.instance.cmissionClear = false;
             }
         }
     }
@@ -60,7 +62,7 @@ public class FadeIO : MonoBehaviour
 
     public void LoadeaScene()
     {
-        LodingSceneManager.LoadScene("Room","Non");
+        LodingSceneManager.LoadScene("Room", "Non");
     }
 
     public IEnumerator SceneLoad()

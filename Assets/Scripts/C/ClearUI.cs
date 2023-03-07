@@ -12,7 +12,7 @@ public class ClearUI : MonoBehaviour
 
     void Awake()
     {
-        Clear_Stamp.SetActive(false);
+        Clear_Stamp.SetActive(false);                                          
         radioTMP.text = radioNClearText;
         ClearUi();
     }

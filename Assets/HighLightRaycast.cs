@@ -7,6 +7,8 @@ public class HighLightRaycast : MonoBehaviour, IPointerEnterHandler,IPointerExit
 {
     public MeshRenderer[] meshRenderers;
     public Material[] material;
+    public GameObject origin;
+    public GameObject highlight;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -14,6 +16,8 @@ public class HighLightRaycast : MonoBehaviour, IPointerEnterHandler,IPointerExit
         {
             item.material = material[1];
         }
+        //origin.SetActive(false);
+        //highlight.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -22,21 +26,23 @@ public class HighLightRaycast : MonoBehaviour, IPointerEnterHandler,IPointerExit
         {
             item.material = material[0];
         }
+        //origin.SetActive(true);
+        //highlight.SetActive(false);
     }
 
-    public void OnMouseOver()
-    {
-        foreach (var item in meshRenderers)
-        {
-            item.material = material[1];
-        }
-    }
+    //public void OnMouseOver()
+    //{
+    //    foreach (var item in meshRenderers)
+    //    {
+    //        item.material = material[1];
+    //    }
+    //}
 
-    public void OnMouseExit()
-    {
-        foreach (var item in meshRenderers)
-        {
-            item.material = material[0];
-        }
-    }
+    //public void OnMouseExit()
+    //{
+    //    foreach (var item in meshRenderers)
+    //    {
+    //        item.material = material[0];
+    //    }
+    //}
 }

@@ -19,10 +19,10 @@ public class TVImageChange : MonoBehaviour
         text.text = "방금 들어온 소식 입니다, \n" +
             "사거리에서 과적 차량이 미끄러지면서 \n" +
             "교통 혼잡이 심화되고 있습니다.";
+        Change();
     }
 
-
-    void Update()
+   void Change()
     {
         if (GameManager.instance.amissionClear)
         {
