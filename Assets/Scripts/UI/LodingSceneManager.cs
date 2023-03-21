@@ -15,12 +15,12 @@ public class LodingSceneManager : MonoBehaviour
     [SerializeField] GameObject start;
     [SerializeField] GameObject back;
     [SerializeField] Image progressBar;
-    [SerializeField] Image a;
-    [SerializeField] Image b;
-    [SerializeField] Image c;
-    [SerializeField] GameObject ag;
-    [SerializeField] GameObject bg;
-    [SerializeField] GameObject cg;
+    [SerializeField] Image aimage;
+    [SerializeField] Image bimage;
+    [SerializeField] Image cimage;
+    [SerializeField] GameObject agameObject;
+    [SerializeField] GameObject bgameObject;
+    [SerializeField] GameObject cgameObject;
 
     private void Start()
     {
@@ -41,25 +41,25 @@ public class LodingSceneManager : MonoBehaviour
         anyText.enabled = false;
         start.SetActive(false);
         back.SetActive(false);
-        a.enabled = false;
-        b.enabled = false;
-        c.enabled = false;
-        ag.SetActive(false);
-        bg.SetActive(false);
-        cg.SetActive(false);
+        aimage.enabled = false;
+        bimage.enabled = false;
+        cimage.enabled = false;
+        agameObject.SetActive(false);
+        bgameObject.SetActive(false);
+        cgameObject.SetActive(false);
         switch (toolTip)
         {
             case "a":
-                a.enabled = true;              
-                ag.SetActive(true);
+                aimage.enabled = true;              
+                agameObject.SetActive(true);
                 break;
             case "b":
-                b.enabled = true;               
-                bg.SetActive(true);
+                bimage.enabled = true;               
+                bgameObject.SetActive(true);
                 break;
             case "c":
-                c.enabled = true;            
-                cg.SetActive(true);
+                cimage.enabled = true;            
+                cgameObject.SetActive(true);
                 break;
             case "s":
                 start.SetActive(true);            

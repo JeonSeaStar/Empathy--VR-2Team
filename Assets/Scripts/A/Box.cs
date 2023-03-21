@@ -11,28 +11,28 @@ public class Box : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] audioClip;
     bool isGrounded = true;
-    public Grabbable gb;
+    public Grabbable grabbable;
     public Rigidbody rigid;
-    public BoxCollider bc;
+    public BoxCollider boxCollider;
 
     private void Start()
     {
-        gb = GetComponent<Grabbable>();
+        grabbable = GetComponent<Grabbable>();
     }
 
     private void Update()
     {
         Height();
-        if (gb.isGrabed )
+        if (grabbable.isGrabed )
         {
-            bc.enabled = false;
+            boxCollider.enabled = false;
             rigid.useGravity = false;
             gameObject.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
         }
 
-        if (!gb.isGrabed)
+        if (!grabbable.isGrabed)
         {
-            bc.enabled = true;
+            boxCollider.enabled = true;
             rigid.useGravity = true;
             gameObject.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
         }
