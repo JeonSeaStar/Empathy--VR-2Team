@@ -7,7 +7,7 @@ public class FadeIO : MonoBehaviour
 {
     public Animator anime;
     public CClear cc;
-    public scrip ss;
+    public SocketChecker ss;
     [HideInInspector] public int hash = Animator.StringToHash("IO");
     [HideInInspector] public int hash2 = Animator.StringToHash("LS");
     public GameObject failedNPC;

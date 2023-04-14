@@ -27,11 +27,11 @@ public class ConMale : MonoBehaviour
         }
     }
     public int num = -1;
-    public scrip s;
-    public scri ss;
-    public scri sss;
+    public SocketChecker s;
+    public Socket firstSocket;
+    public Socket secondSocket;
     public Oculus.Interaction.Grabbable gb;
-    public JeonSeon js;
+    public Cable js;
     public AudioClip[] audioClips;
     public AudioSource ads;
     public float lerpSpeed;
@@ -89,12 +89,12 @@ public class ConMale : MonoBehaviour
             rClick = false;
             rightPlayH = false;
             OVRHaptics.RightChannel.Clear();
-            if (gb.isGrabed && !ss.connect)
+            if (gb.isGrabed && !firstSocket.connect)
             {
                 ads.PlayOneShot(audioClips[0]);
-                ss.connect = true;
-                sss = ss;
-                sss.connect = true;
+                firstSocket.connect = true;
+                secondSocket = firstSocket;
+                secondSocket.connect = true;
                 connect = true;
             }
         }
@@ -104,12 +104,12 @@ public class ConMale : MonoBehaviour
             lClick = false;
             leftPlayH = false;
             OVRHaptics.LeftChannel.Clear();
-            if (gb.isGrabed && !ss.connect)
+            if (gb.isGrabed && !firstSocket.connect)
             {
                 ads.PlayOneShot(audioClips[0]);
-                ss.connect = true;
-                sss = ss;
-                sss.connect = true;
+                firstSocket.connect = true;
+                secondSocket = firstSocket;
+                secondSocket.connect = true;
                 connect = true;
             }
         }
@@ -128,25 +128,25 @@ public class ConMale : MonoBehaviour
         {
             rg.useGravity = true;
             //js.os.gravity = new Vector3(0, -9.81f, 0);
-            ss.connect = false;
-            sss.connect = false;
-            sss = null;
+            firstSocket.connect = false;
+            secondSocket.connect = false;
+            secondSocket = null;
 
             if (connect)
             {
                 connect = false;
                 _rconnect = false;
-                sss.connect = false;
-                sss = null;
-                ss = null;
+                secondSocket.connect = false;
+                secondSocket = null;
+                firstSocket = null;
             }
         }
 
-        if(sss != null)
+        if(secondSocket != null)
         {
-            if (sss.connect)
+            if (secondSocket.connect)
             {
-                if (sss.h == num)
+                if (secondSocket.h == num)
                 {
                     go.SetActive(false);
                     if (!_rconnect)
@@ -155,11 +155,11 @@ public class ConMale : MonoBehaviour
             }
         }
 
-        if (ss != null)
+        if (firstSocket != null)
         {
             if(connect)
             {
-                transform.position = ss.t.position;
+                transform.position = firstSocket.t.position;
                 transform.rotation = Quaternion.Euler(ro);
             }
         }
@@ -171,8 +171,8 @@ public class ConMale : MonoBehaviour
         {
             female_con = other.transform;
             grap = true;
-            ss = other.GetComponent<scri>();
-            sss = other.GetComponent<scri>();
+            firstSocket = other.GetComponent<Socket>();
+            secondSocket = other.GetComponent<Socket>();
         }
     }
 
@@ -180,7 +180,7 @@ public class ConMale : MonoBehaviour
     {
         if (other.gameObject.layer == 8)
         {
-            ss.connect = false;
+            firstSocket.connect = false;
             female_con = null;
             grap = false;
         }
@@ -217,21 +217,21 @@ public class ConMale : MonoBehaviour
         switch(i)
         {
             case 0:
-                return cc.a;
+                return cc.citizenA;
             case 1:
-                return cc.b;
+                return cc.citizenB;
             case 2:
-                return cc.c;
+                return cc.citizenC;
             case 3:
-                return cc.d;
+                return cc.citizenD;
             case 4:
-                return cc.e;
+                return cc.citizenE;
             case 5:
-                return cc.f;
+                return cc.citizenF;
             case 6:
-                return cc.g;
+                return cc.citizenG;
             case 7:
-                return cc.h;
+                return cc.citizenH;
             default:
                 return null;
         }
