@@ -49849,12 +49849,12 @@ MonoBehaviour:
   start: {fileID: 12836230}
   back: {fileID: 592877233}
   progressBar: {fileID: 784241485}
-  a: {fileID: 1971540853}
-  b: {fileID: 1735831683}
-  c: {fileID: 1137054792}
-  ag: {fileID: 1955840590}
-  bg: {fileID: 1230388597}
-  cg: {fileID: 793054888}
+  aimage: {fileID: 1971540853}
+  bimage: {fileID: 1735831683}
+  cimage: {fileID: 1137054792}
+  agameObject: {fileID: 1955840590}
+  bgameObject: {fileID: 1230388597}
+  cgameObject: {fileID: 793054888}
 --- !u!4 &1501047191
 Transform:
   m_ObjectHideFlags: 0
