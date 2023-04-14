@@ -580,6 +580,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 36290979}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &36290982 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 9d75f2468c4fe4b4bb704096030d35f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 36290979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &36290983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5602d7b19f0453e48a1ad9bbd1d2ec91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 36290982}
   high: {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
   origin: {fileID: 2100000, guid: 28683777a41a724458626b47e32e1d00, type: 2}
   clear: {fileID: 2100000, guid: 234ecc99e9a90684193478ec70122b3c, type: 2}
@@ -873,8 +879,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0.026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 211126233}
+  m_Children: []
   m_Father: {fileID: 1339753864}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1654,12 +1659,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211126232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.020000756, y: 1.2096496, z: 0.02239976}
-  m_LocalScale: {x: 0.025, y: 0.024999993, z: 1}
+  m_LocalPosition: {x: 0.5180007, y: 0.72600025, z: 0.050400227}
+  m_LocalScale: {x: 0.025, y: 0.024999991, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 77934052}
-  m_RootOrder: 0
+  m_Father: {fileID: 890808961}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &211126234
 SpriteRenderer:
@@ -5013,6 +5018,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1339753864}
+  - {fileID: 211126233}
   m_Father: {fileID: 1211173235}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5500,7 +5506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5602d7b19f0453e48a1ad9bbd1d2ec91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 949904769}
   high: {fileID: 2100000, guid: a271134a96db5564b8f6ce51fcbe8b14, type: 2}
   origin: {fileID: 2100000, guid: 28683777a41a724458626b47e32e1d00, type: 2}
   clear: {fileID: 2100000, guid: 234ecc99e9a90684193478ec70122b3c, type: 2}
