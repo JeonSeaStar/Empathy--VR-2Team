@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class CClear : MonoBehaviour
 {
     public Animation ani;
-    public List<Animator> ill;
-    public List<Animation> ill_emoji;
-    public List<Animator> yi;
-    public List<Animation> yi_emoji;
+    public List<Animator> firstAnimetion;
+    public List<Animation> firstEmojiAnimetion;
+    public List<Animator> secondAnimation;
+    public List<Animation> secondEmojiAnimation;
     int walk_hash = Animator.StringToHash("Walking");
     int cheer_hash = Animator.StringToHash("Cheering");
     public Transform player;
@@ -22,14 +22,14 @@ public class CClear : MonoBehaviour
     public Animator clear_npc_ani;
     int ot = Animator.StringToHash("ot");
     public CharacterController playerController;
-    public List<Animator> a;
-    public List<Animator> b;
-    public List<Animator> c;
-    public List<Animator> d;
-    public List<Animator> e;
-    public List<Animator> f;
-    public List<Animator> g;
-    public List<Animator> h;
+    public List<Animator> citizenA;
+    public List<Animator> citizenB;
+    public List<Animator> citizenC;
+    public List<Animator> citizenD;
+    public List<Animator> citizenE;
+    public List<Animator> citizenF;
+    public List<Animator> citizenG;
+    public List<Animator> citizenH;
     public GameObject z;
 
     public void clear_ani()
@@ -51,19 +51,19 @@ public class CClear : MonoBehaviour
 
     void ill_walk_event()
     {
-        for(int i = 0; i < ill.Count; i++)
+        for(int i = 0; i < firstAnimetion.Count; i++)
         {
-            ill[i].SetTrigger(walk_hash);
-            ill_emoji[i].Play();
+            firstAnimetion[i].SetTrigger(walk_hash);
+            firstEmojiAnimetion[i].Play();
         }
     }
 
     void yi_walk_event()
     {
-        for (int i = 0; i < yi.Count; i++)
+        for (int i = 0; i < secondAnimation.Count; i++)
         {
-            yi[i].SetTrigger(walk_hash);
-            yi_emoji[i].Play();
+            secondAnimation[i].SetTrigger(walk_hash);
+            secondEmojiAnimation[i].Play();
         }
     }
 
