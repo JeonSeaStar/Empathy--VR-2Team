@@ -24,11 +24,14 @@ public class SocketChecker : MonoBehaviour
 
     void Update()
     {
-        if(clear && current_connect != 4)
-        {
-            StopAllCoroutines();
-            clear = false;
-        }
+        //if(clear && current_connect != 4)
+        //{
+        //    StopAllCoroutines();
+        //    clear = false;
+        //}
+
+
+        if (Input.GetKeyDown(KeyCode.C)) { StartCoroutine(Clear()); }
     }
 
     IEnumerator Clear()
