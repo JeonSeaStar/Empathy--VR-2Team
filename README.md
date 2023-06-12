@@ -41,7 +41,19 @@
 
 ### 인게임 사진
 #### * 주인공의 방
+
 #### * A 시나리오(화물 정리)
-#### * B 시나리오(화물 정리)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/33b03e0c-9425-4c5f-bde7-c394e007a3fd)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/59d01b68-2cdc-450d-b297-9134aa32c62f)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/c7c9d385-9600-418d-9185-768c26c2d8ee)
+
+#### * B 시나리오(동물 구조)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/b44d01f2-ecb0-4896-bc09-f6f88ea2b6c6)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/e43b88e9-e842-40ef-b7d1-9e0a49adc851)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/cfbc6849-d431-469c-b5f0-94a0e7e629f0)
+
 #### * C 시나리오(화물 정리)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/f986e412-63c5-49f7-99cb-b1fa89e7e91c)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/d0ecbc35-85c7-439a-9714-f34d878c27b1)
+
 <br/> 
