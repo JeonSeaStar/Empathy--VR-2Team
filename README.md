@@ -12,10 +12,16 @@
 
 ### 게임 개요
 * 대상: 
-* 플랫폼
+* 플랫폼: Oculus Rift
+
+<br/>
+
+### 시놉시스
+
+<br/>
 
 ### 게임 순환 구조
-사진 첨부
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/1a699e78-7327-4c27-b8f7-f51adc2d9d1c)
 
 <br/>
 <br/>
