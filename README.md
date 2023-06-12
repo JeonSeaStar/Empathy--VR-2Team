@@ -10,16 +10,6 @@
 <br/>
 <br/>
 
-### 게임 순환 구조
-![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/1a699e78-7327-4c27-b8f7-f51adc2d9d1c)
-
-<br/>
-<br/>
-
-
-<br/>
-<br/>
-
 ### 사용기술
 <div>
 <img src="https://img.shields.io/badge/Unity-000000?style=flat-square&logo=Unity&logoColor=white"/>
@@ -28,6 +18,13 @@
  
 <br/>
 <br/>
+
+### 게임 순환 구조
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/1a699e78-7327-4c27-b8f7-f51adc2d9d1c)
+
+<br/>
+<br/>
+
 
 ### 인게임 사진
 #### * 주인공의 방
