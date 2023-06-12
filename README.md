@@ -45,6 +45,7 @@
 ![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/cfbc6849-d431-469c-b5f0-94a0e7e629f0)
 
 #### * C 시나리오(화물 정리)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/f05707d9-503f-47d5-bea4-af49d70df176)
 ![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/f986e412-63c5-49f7-99cb-b1fa89e7e91c)
 ![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/d0ecbc35-85c7-439a-9714-f34d878c27b1)
 
