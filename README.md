@@ -10,16 +10,6 @@
 <br/>
 <br/>
 
-### 게임 개요
-* 대상: 
-* 플랫폼: Oculus Rift
-
-<br/>
-
-### 시놉시스
-
-<br/>
-
 ### 게임 순환 구조
 ![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/1a699e78-7327-4c27-b8f7-f51adc2d9d1c)
 
@@ -41,6 +31,8 @@
 
 ### 인게임 사진
 #### * 주인공의 방
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/5601fa9f-bac6-4b23-9c41-c222b9c976bf)
+![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/65d5432a-8453-4c36-8f59-851d999c2bcc)
 
 #### * A 시나리오(화물 정리)
 ![image](https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/33b03e0c-9425-4c5f-bde7-c394e007a3fd)
