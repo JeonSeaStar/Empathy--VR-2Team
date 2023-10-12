@@ -10,10 +10,14 @@
 <br/>
 <br/>
 
+<img src="https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/8362d20f-a67b-4f69-9e59-70be025e054a" width="150" height="150"/>
+
+
+
 ### 멤버
-|테스트|테스트|테스트|
-|:-----------------:|:-----------------:|:-----------------:|
-|[tuost](https://github.com/tuost)|[OwlCoffee](https://github.com/OwlCoffee)|[JeonSeaStar](https://github.com/JeonSeaStar)|
+||<img src="https://github.com/JeonSeaStar/Empathy--VR-2Team/assets/88014706/8362d20f-a67b-4f69-9e59-70be025e054a" width="150" height="150"/>|||
+|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+|[tuost](https://github.com/tuost)|[OwlCoffee](https://github.com/OwlCoffee)|[JeonSeaStar](https://github.com/JeonSeaStar)|[Toddoward](https://github.com/Toddoward)|
 
 ### 사용기술
 <div>
