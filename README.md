@@ -10,6 +10,11 @@
 <br/>
 <br/>
 
+### 멤버
+|------|------|------|
+|테스트1|테스트2|테스트3|
+|tuost(https://github.com/tuost)|OwlCoffee(https://github.com/OwlCoffee)|JeonSeaStar(https://github.com/JeonSeaStar)|
+
 ### 사용기술
 <div>
 <img src="https://img.shields.io/badge/Unity-000000?style=flat-square&logo=Unity&logoColor=white"/>
