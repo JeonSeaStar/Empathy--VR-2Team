@@ -11,7 +11,8 @@
 <br/>
 
 ### 멤버
-|-----------------|-----------------|-----------------|
+|테스트|테스트|테스트|
+|:-----------------:|:-----------------:|:-----------------:|
 |[tuost](https://github.com/tuost)|[OwlCoffee](https://github.com/OwlCoffee)|[JeonSeaStar](https://github.com/JeonSeaStar)|
 
 ### 사용기술
